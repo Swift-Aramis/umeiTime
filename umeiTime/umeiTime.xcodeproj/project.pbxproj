@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B6FC5C65C7D04867E935390 /* Pods_umeiTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C17737A4852187EEF4D106 /* Pods_umeiTime.framework */; };
+		B8CA9A67215CE29E00906E35 /* ScreenConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A66215CE29E00906E35 /* ScreenConst.swift */; };
+		B8CA9A69215CE49D00906E35 /* UIViewFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A68215CE49D00906E35 /* UIViewFrame.swift */; };
+		B8CA9A6B215CE65900906E35 /* UIViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A6A215CE65900906E35 /* UIViewShadow.swift */; };
+		B8CA9A6D215CF30A00906E35 /* UIViewBorderCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A6C215CF30A00906E35 /* UIViewBorderCorner.swift */; };
+		B8CA9A6F215CF39D00906E35 /* UIViewParentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A6E215CF39D00906E35 /* UIViewParentController.swift */; };
+		B8CA9A71215CFC9B00906E35 /* UIViewAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A70215CFC9B00906E35 /* UIViewAnimations.swift */; };
+		B8CA9A73215CFCD500906E35 /* UIViewLoads.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A72215CFCD400906E35 /* UIViewLoads.swift */; };
+		B8CA9A79215D0E5600906E35 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A78215D0E5600906E35 /* BaseController.swift */; };
+		B8CA9A7B215D0E8200906E35 /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A7A215D0E8200906E35 /* BaseNavController.swift */; };
+		B8CA9A7E215D103E00906E35 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A7D215D103E00906E35 /* ColorExtensions.swift */; };
 		B8DB33F1213FC50400C78101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB33F0213FC50400C78101 /* AppDelegate.swift */; };
 		B8DB33F3213FC50400C78101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB33F2213FC50400C78101 /* ViewController.swift */; };
 		B8DB33F6213FC50400C78101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DB33F4213FC50400C78101 /* Main.storyboard */; };
@@ -15,6 +26,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13C17737A4852187EEF4D106 /* Pods_umeiTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_umeiTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E894133B268F52E9CD10036 /* Pods-umeiTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-umeiTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-umeiTime/Pods-umeiTime.release.xcconfig"; sourceTree = "<group>"; };
+		B8CA9A66215CE29E00906E35 /* ScreenConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenConst.swift; sourceTree = "<group>"; };
+		B8CA9A68215CE49D00906E35 /* UIViewFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFrame.swift; sourceTree = "<group>"; };
+		B8CA9A6A215CE65900906E35 /* UIViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewShadow.swift; sourceTree = "<group>"; };
+		B8CA9A6C215CF30A00906E35 /* UIViewBorderCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBorderCorner.swift; sourceTree = "<group>"; };
+		B8CA9A6E215CF39D00906E35 /* UIViewParentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewParentController.swift; sourceTree = "<group>"; };
+		B8CA9A70215CFC9B00906E35 /* UIViewAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAnimations.swift; sourceTree = "<group>"; };
+		B8CA9A72215CFCD400906E35 /* UIViewLoads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewLoads.swift; sourceTree = "<group>"; };
+		B8CA9A78215D0E5600906E35 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		B8CA9A7A215D0E8200906E35 /* BaseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
+		B8CA9A7D215D103E00906E35 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		B8DB33ED213FC50400C78101 /* umeiTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = umeiTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8DB33F0213FC50400C78101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8DB33F2213FC50400C78101 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +45,7 @@
 		B8DB33F7213FC50600C78101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8DB33FA213FC50600C78101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8DB33FC213FC50600C78101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2F280C12D12744214BBFEC6 /* Pods-umeiTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-umeiTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-umeiTime/Pods-umeiTime.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +53,122 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B6FC5C65C7D04867E935390 /* Pods_umeiTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24D1C9532334B2E3A6B61099 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13C17737A4852187EEF4D106 /* Pods_umeiTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BF9DEAE30BB0DA196393583 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2F280C12D12744214BBFEC6 /* Pods-umeiTime.debug.xcconfig */,
+				3E894133B268F52E9CD10036 /* Pods-umeiTime.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B8CA9A61215CE26300906E35 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA9A75215D0AFF00906E35 /* UIScreenTools */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		B8CA9A62215CE26300906E35 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		B8CA9A63215CE26300906E35 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B8CA9A64215CE26300906E35 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA9A76215D0DFB00906E35 /* Global */,
+				B8CA9A77215D0E0300906E35 /* Base */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B8CA9A65215CE26300906E35 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA9A74215D0ADE00906E35 /* UIViewExtensions */,
+				B8CA9A7C215D102500906E35 /* ColorExtensions */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B8CA9A74215D0ADE00906E35 /* UIViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA9A68215CE49D00906E35 /* UIViewFrame.swift */,
+				B8CA9A6A215CE65900906E35 /* UIViewShadow.swift */,
+				B8CA9A6C215CF30A00906E35 /* UIViewBorderCorner.swift */,
+				B8CA9A6E215CF39D00906E35 /* UIViewParentController.swift */,
+				B8CA9A72215CFCD400906E35 /* UIViewLoads.swift */,
+				B8CA9A70215CFC9B00906E35 /* UIViewAnimations.swift */,
+			);
+			path = UIViewExtensions;
+			sourceTree = "<group>";
+		};
+		B8CA9A75215D0AFF00906E35 /* UIScreenTools */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA9A66215CE29E00906E35 /* ScreenConst.swift */,
+			);
+			path = UIScreenTools;
+			sourceTree = "<group>";
+		};
+		B8CA9A76215D0DFB00906E35 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		B8CA9A77215D0E0300906E35 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA9A78215D0E5600906E35 /* BaseController.swift */,
+				B8CA9A7A215D0E8200906E35 /* BaseNavController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B8CA9A7C215D102500906E35 /* ColorExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA9A7D215D103E00906E35 /* ColorExtensions.swift */,
+			);
+			path = ColorExtensions;
+			sourceTree = "<group>";
+		};
 		B8DB33E4213FC50400C78101 = {
 			isa = PBXGroup;
 			children = (
 				B8DB33EF213FC50400C78101 /* umeiTime */,
 				B8DB33EE213FC50400C78101 /* Products */,
+				9BF9DEAE30BB0DA196393583 /* Pods */,
+				24D1C9532334B2E3A6B61099 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +183,11 @@
 		B8DB33EF213FC50400C78101 /* umeiTime */ = {
 			isa = PBXGroup;
 			children = (
+				B8CA9A64215CE26300906E35 /* Classes */,
+				B8CA9A65215CE26300906E35 /* Extensions */,
+				B8CA9A61215CE26300906E35 /* Tools */,
+				B8CA9A62215CE26300906E35 /* Libs */,
+				B8CA9A63215CE26300906E35 /* Resources */,
 				B8DB33F0213FC50400C78101 /* AppDelegate.swift */,
 				B8DB33F2213FC50400C78101 /* ViewController.swift */,
 				B8DB33F4213FC50400C78101 /* Main.storyboard */,
@@ -71,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8DB33FF213FC50600C78101 /* Build configuration list for PBXNativeTarget "umeiTime" */;
 			buildPhases = (
+				8EB950F184CEFB6F2EB0E44B /* [CP] Check Pods Manifest.lock */,
 				B8DB33E9213FC50400C78101 /* Sources */,
 				B8DB33EA213FC50400C78101 /* Frameworks */,
 				B8DB33EB213FC50400C78101 /* Resources */,
+				D47832146F7201526351EA3F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +266,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8EB950F184CEFB6F2EB0E44B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-umeiTime-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D47832146F7201526351EA3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-umeiTime/Pods-umeiTime-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-umeiTime/Pods-umeiTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B8DB33E9213FC50400C78101 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8CA9A69215CE49D00906E35 /* UIViewFrame.swift in Sources */,
+				B8CA9A71215CFC9B00906E35 /* UIViewAnimations.swift in Sources */,
+				B8CA9A79215D0E5600906E35 /* BaseController.swift in Sources */,
+				B8CA9A73215CFCD500906E35 /* UIViewLoads.swift in Sources */,
+				B8CA9A6B215CE65900906E35 /* UIViewShadow.swift in Sources */,
+				B8CA9A67215CE29E00906E35 /* ScreenConst.swift in Sources */,
+				B8CA9A6F215CF39D00906E35 /* UIViewParentController.swift in Sources */,
+				B8CA9A7B215D0E8200906E35 /* BaseNavController.swift in Sources */,
 				B8DB33F3213FC50400C78101 /* ViewController.swift in Sources */,
 				B8DB33F1213FC50400C78101 /* AppDelegate.swift in Sources */,
+				B8CA9A6D215CF30A00906E35 /* UIViewBorderCorner.swift in Sources */,
+				B8CA9A7E215D103E00906E35 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +475,7 @@
 		};
 		B8DB3400213FC50600C78101 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2F280C12D12744214BBFEC6 /* Pods-umeiTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +494,7 @@
 		};
 		B8DB3401213FC50600C78101 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E894133B268F52E9CD10036 /* Pods-umeiTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

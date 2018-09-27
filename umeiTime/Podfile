@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'umeiTime' do
+  
+  use_frameworks!
+  # Pods for umeiTime
+
+  pod 'ESPullToRefresh'
+  pod 'Moya'
+  pod 'HandyJSON'
+  pod 'Kingfisher'
+  pod 'R.swift'
+
+end
