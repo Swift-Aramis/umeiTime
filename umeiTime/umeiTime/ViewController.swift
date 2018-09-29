@@ -18,9 +18,12 @@ class ViewController: UIViewController {
         tmpView.size = CGSize(width: 100, height: 100)
         tmpView.centerX = view.centerX
         tmpView.bottom = 144
-        tmpView.backgroundColor = UIColor.red
+        tmpView.backgroundColor = AppColor.darkBlack
         tmpView.roundCorners([.topLeft, .topRight], radius: 10)
         tmpView.fadeOut(duration: 2)
+        
+        view.addSubview(tmpLabel)
+        tmpLabel.frame = tmpView.frame
         
         let tmpView2 = UIView()
         view.addSubview(tmpView2)
@@ -33,6 +36,9 @@ class ViewController: UIViewController {
         tmpView2.alpha = 0
         tmpView2.fadeIn(duration: 2)
         
+        view.addSubview(tmpLabel2)
+        tmpLabel2.frame = tmpView2.frame
+
         let tmpView3 = UIView()
         view.addSubview(tmpView3)
         tmpView3.size = CGSize(width: 100, height: 100)
@@ -71,6 +77,32 @@ class ViewController: UIViewController {
         tmpView6.roundCorners([.topLeft, .topRight], radius: 10)
         tmpView6.shake(direction: .horizontal)
     }
+    
+    private let tmpLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+        label.textColor = UIColor.black
+        label.textAlignment = .left
+        let font = UIFont.preferredFont(forTextStyle: .body)
+        let boldFont = font.monospaced
+        label.font = font
+        label.numberOfLines = 0
+        label.text = "111111"
+        return label
+    }()
+    
+    private let tmpLabel2: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+        label.textColor = UIColor.black
+        label.textAlignment = .left
+        let font = UIFont.preferredFont(forTextStyle: .body)
+        let boldFont = font.fit
+        label.font = boldFont
+        label.numberOfLines = 0
+        label.text = "111111"
+        return label
+    }()
 
 
 }

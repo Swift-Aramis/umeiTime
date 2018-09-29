@@ -26,8 +26,9 @@ public let iPhone6: Bool = ScreenHeight == 667 ? true : false
 public let iPhone5: Bool = ScreenHeight <= 568 ? true : false
 
 //MARK: - BarHeight
-public let statusBarHeight = UIApplication.shared.statusBarFrame.height
-public let navBarHeight = statusBarHeight + 44
-public let tabBarHeight = iPhoneX ? 83 : 49
-public let bottomBarHeight = iPhoneX ? 34 : 0
+public let StatusBarHeight = UIApplication.shared.statusBarFrame.height
+public let SafeAreaBottomInset = iPhoneX ? 34 : 0
+public let NavBarHeight = StatusBarHeight + 44
+public let TabBarHeight = SafeAreaBottomInset + 49
+
 

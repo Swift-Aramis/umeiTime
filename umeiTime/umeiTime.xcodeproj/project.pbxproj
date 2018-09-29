@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0B6FC5C65C7D04867E935390 /* Pods_umeiTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C17737A4852187EEF4D106 /* Pods_umeiTime.framework */; };
+		B8951674215DF9D500F459CB /* GlobalAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8951673215DF9D500F459CB /* GlobalAppearance.swift */; };
+		B8951676215DF9F700F459CB /* GlobalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8951675215DF9F700F459CB /* GlobalService.swift */; };
+		B895167A215DFB8800F459CB /* GlobalFontConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8951679215DFB8800F459CB /* GlobalFontConfig.swift */; };
+		B895167C215DFBA600F459CB /* GlobalColorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895167B215DFBA600F459CB /* GlobalColorConfig.swift */; };
+		B895167F215E00E300F459CB /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895167E215E00E300F459CB /* FontExtensions.swift */; };
 		B8CA9A67215CE29E00906E35 /* ScreenConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A66215CE29E00906E35 /* ScreenConst.swift */; };
 		B8CA9A69215CE49D00906E35 /* UIViewFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A68215CE49D00906E35 /* UIViewFrame.swift */; };
 		B8CA9A6B215CE65900906E35 /* UIViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A6A215CE65900906E35 /* UIViewShadow.swift */; };
@@ -23,11 +28,17 @@
 		B8DB33F6213FC50400C78101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DB33F4213FC50400C78101 /* Main.storyboard */; };
 		B8DB33F8213FC50600C78101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8DB33F7213FC50600C78101 /* Assets.xcassets */; };
 		B8DB33FB213FC50600C78101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DB33F9213FC50600C78101 /* LaunchScreen.storyboard */; };
+		B8E5556D215F1C5C00D695B0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E5556C215F1C5C00D695B0 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13C17737A4852187EEF4D106 /* Pods_umeiTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_umeiTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E894133B268F52E9CD10036 /* Pods-umeiTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-umeiTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-umeiTime/Pods-umeiTime.release.xcconfig"; sourceTree = "<group>"; };
+		B8951673215DF9D500F459CB /* GlobalAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAppearance.swift; sourceTree = "<group>"; };
+		B8951675215DF9F700F459CB /* GlobalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalService.swift; sourceTree = "<group>"; };
+		B8951679215DFB8800F459CB /* GlobalFontConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFontConfig.swift; sourceTree = "<group>"; };
+		B895167B215DFBA600F459CB /* GlobalColorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColorConfig.swift; sourceTree = "<group>"; };
+		B895167E215E00E300F459CB /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
 		B8CA9A66215CE29E00906E35 /* ScreenConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenConst.swift; sourceTree = "<group>"; };
 		B8CA9A68215CE49D00906E35 /* UIViewFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFrame.swift; sourceTree = "<group>"; };
 		B8CA9A6A215CE65900906E35 /* UIViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewShadow.swift; sourceTree = "<group>"; };
@@ -45,6 +56,7 @@
 		B8DB33F7213FC50600C78101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8DB33FA213FC50600C78101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8DB33FC213FC50600C78101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8E5556C215F1C5C00D695B0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		F2F280C12D12744214BBFEC6 /* Pods-umeiTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-umeiTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-umeiTime/Pods-umeiTime.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +89,138 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B8951663215DC8B000F459CB /* Murmur */ = {
+			isa = PBXGroup;
+			children = (
+				B8951664215DC8B000F459CB /* Controller */,
+				B8951665215DC8B000F459CB /* Model */,
+				B8951666215DC8B000F459CB /* View */,
+			);
+			path = Murmur;
+			sourceTree = "<group>";
+		};
+		B8951664215DC8B000F459CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B8951665215DC8B000F459CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B8951666215DC8B000F459CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B8951667215DC8B000F459CB /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				B8951668215DC8B000F459CB /* Controller */,
+				B8951669215DC8B000F459CB /* Model */,
+				B895166A215DC8B000F459CB /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		B8951668215DC8B000F459CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B8951669215DC8B000F459CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B895166A215DC8B000F459CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B895166B215DC8B000F459CB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B895166C215DC8B000F459CB /* Controller */,
+				B895166D215DC8B000F459CB /* Model */,
+				B895166E215DC8B000F459CB /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B895166C215DC8B000F459CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B895166D215DC8B000F459CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B895166E215DC8B000F459CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B895166F215DC8B000F459CB /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				B8951670215DC8B000F459CB /* Controller */,
+				B8951671215DC8B000F459CB /* Model */,
+				B8951672215DC8B000F459CB /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		B8951670215DC8B000F459CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B8951671215DC8B000F459CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B8951672215DC8B000F459CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B895167D215E00CD00F459CB /* FontExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				B895167E215E00E300F459CB /* FontExtensions.swift */,
+			);
+			path = FontExtensions;
+			sourceTree = "<group>";
+		};
 		B8CA9A61215CE26300906E35 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +232,7 @@
 		B8CA9A62215CE26300906E35 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				B8E5556C215F1C5C00D695B0 /* R.generated.swift */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -104,6 +249,10 @@
 			children = (
 				B8CA9A76215D0DFB00906E35 /* Global */,
 				B8CA9A77215D0E0300906E35 /* Base */,
+				B895166B215DC8B000F459CB /* Home */,
+				B8951663215DC8B000F459CB /* Murmur */,
+				B895166F215DC8B000F459CB /* Message */,
+				B8951667215DC8B000F459CB /* Mine */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -111,6 +260,7 @@
 		B8CA9A65215CE26300906E35 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B895167D215E00CD00F459CB /* FontExtensions */,
 				B8CA9A74215D0ADE00906E35 /* UIViewExtensions */,
 				B8CA9A7C215D102500906E35 /* ColorExtensions */,
 			);
@@ -141,6 +291,10 @@
 		B8CA9A76215D0DFB00906E35 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				B8951673215DF9D500F459CB /* GlobalAppearance.swift */,
+				B8951675215DF9F700F459CB /* GlobalService.swift */,
+				B8951679215DFB8800F459CB /* GlobalFontConfig.swift */,
+				B895167B215DFBA600F459CB /* GlobalColorConfig.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -232,6 +386,7 @@
 				TargetAttributes = {
 					B8DB33EC213FC50400C78101 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -297,6 +452,7 @@
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PageMenu/PageMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
@@ -307,6 +463,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PageMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
@@ -326,14 +483,20 @@
 				B8CA9A71215CFC9B00906E35 /* UIViewAnimations.swift in Sources */,
 				B8CA9A79215D0E5600906E35 /* BaseController.swift in Sources */,
 				B8CA9A73215CFCD500906E35 /* UIViewLoads.swift in Sources */,
+				B895167C215DFBA600F459CB /* GlobalColorConfig.swift in Sources */,
 				B8CA9A6B215CE65900906E35 /* UIViewShadow.swift in Sources */,
 				B8CA9A67215CE29E00906E35 /* ScreenConst.swift in Sources */,
 				B8CA9A6F215CF39D00906E35 /* UIViewParentController.swift in Sources */,
+				B8951674215DF9D500F459CB /* GlobalAppearance.swift in Sources */,
 				B8CA9A7B215D0E8200906E35 /* BaseNavController.swift in Sources */,
 				B8DB33F3213FC50400C78101 /* ViewController.swift in Sources */,
+				B8E5556D215F1C5C00D695B0 /* R.generated.swift in Sources */,
+				B8951676215DF9F700F459CB /* GlobalService.swift in Sources */,
+				B895167F215E00E300F459CB /* FontExtensions.swift in Sources */,
 				B8DB33F1213FC50400C78101 /* AppDelegate.swift in Sources */,
 				B8CA9A6D215CF30A00906E35 /* UIViewBorderCorner.swift in Sources */,
 				B8CA9A7E215D103E00906E35 /* ColorExtensions.swift in Sources */,
+				B895167A215DFB8800F459CB /* GlobalFontConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +650,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiyunjia.umeiTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -506,7 +669,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiyunjia.umeiTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
