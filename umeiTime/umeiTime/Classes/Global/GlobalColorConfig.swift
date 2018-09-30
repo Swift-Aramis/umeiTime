@@ -9,10 +9,15 @@
 import UIKit
 
 struct AppColor {
-    //MARK: - Black
-    static let darkBlack = Color(hexString: "#333333")
-    static let normalBlack = Color(hexString: "#666666")
     
     //MARK: - Gray
-    static let normalGray = Color(hexString: "#999999")
+    static let normalGray = Color(hexString: "#999999")!
+    
+    //MARK: - Black
+    static let darkBlack = Color(hexString: "#333333")!
+    static let normalBlack = Color(hexString: "#666666")!
+    
+    //MARK: - TabbarTextColor
+    static let tabbarSelectedColor = Color(hexString: "#1E1E1E")!
+    static let tabbarNormalColor = Color(hexString: "#979797")!
 }

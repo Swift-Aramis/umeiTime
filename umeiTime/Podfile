@@ -13,5 +13,7 @@ target 'umeiTime' do
   pod 'Kingfisher'
   pod 'R.swift'
   pod 'PageMenu'
+  pod 'ESTabBarController-swift'
+  pod 'Closures'
   
 end
