@@ -15,5 +15,7 @@ class BaseController: UIViewController {
         view.backgroundColor = UIColor.white
     }
     
-
+    deinit {
+        print("\(self.debugDescription) --- 销毁")
+    }
 }

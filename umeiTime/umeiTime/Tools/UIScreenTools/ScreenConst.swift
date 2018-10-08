@@ -11,8 +11,8 @@ import UIKit
 //MARK: - ScreenConst
 public let ScreenBounds = UIScreen.main.bounds
 public let ScreenSize = ScreenBounds.size
-public let ScreenWidth = ScreenSize.width
-public let ScreenHeight = ScreenSize.height
+public let ScreenWidth: CGFloat = ScreenSize.width
+public let ScreenHeight: CGFloat = ScreenSize.height
 
 //MARK: - ScaleFunc
 public func scale(_ x: CGFloat) -> CGFloat {
@@ -26,9 +26,9 @@ public let iPhone6: Bool = ScreenHeight == 667 ? true : false
 public let iPhone5: Bool = ScreenHeight <= 568 ? true : false
 
 //MARK: - BarHeight
-public let StatusBarHeight = UIApplication.shared.statusBarFrame.height
-public let SafeAreaBottomInset = iPhoneX ? 34 : 0
-public let NavBarHeight = StatusBarHeight + 44
-public let TabBarHeight = SafeAreaBottomInset + 49
+public let StatusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
+public let SafeAreaBottomInset: CGFloat = iPhoneX ? 34 : 0
+public let NavBarHeight: CGFloat = StatusBarHeight + 44
+public let TabBarHeight: CGFloat = SafeAreaBottomInset + 49
 
 

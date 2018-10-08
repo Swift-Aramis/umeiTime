@@ -21,7 +21,7 @@ class RootTabBarController: ESTabBarController {
             ESTabBarItem(TabBarBouncesContentView(), title: "消息", image: R.image.tabbar_msg_normal(), selectedImage: R.image.tabbar_msg_selected()),
             ESTabBarItem(TabBarBouncesContentView(), title: "我的", image: R.image.tabbar_mine_normal(), selectedImage: R.image.tabbar_mine_selected())
         ]
-        
+
         let controllers = [HomeController(),
                            MurMurController(),
                            MessageController(),
@@ -30,10 +30,11 @@ class RootTabBarController: ESTabBarController {
         for (i, viewController) in controllers.enumerated() {
             viewController.tabBarItem = tabBarItems[i]
         }
-        
+
         self.viewControllers = controllers.map({ (viewController) in
             return BaseNavController(rootViewController: viewController)
         })
+        
     }
 }
 
@@ -44,6 +45,7 @@ class TabBarBasicContentView: ESTabBarItemContentView {
         highlightTextColor = AppColor.tabbarSelectedColor
         iconColor = AppColor.tabbarNormalColor
         highlightIconColor = AppColor.tabbarSelectedColor
+        renderingMode = .alwaysOriginal
     }
     
     required init?(coder aDecoder: NSCoder) {

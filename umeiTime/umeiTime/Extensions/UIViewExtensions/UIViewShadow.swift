@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIView {
     
-    @IBInspectable public var shadowcColor: UIColor? {
+    public var shadowcColor: UIColor? {
         get {
             guard let color = layer.shadowColor else { return nil }
             return UIColor(cgColor: color)
@@ -20,7 +20,7 @@ public extension UIView {
         }
     }
     
-    @IBInspectable public var shadowOffset: CGSize {
+    public var shadowOffset: CGSize {
         get {
             return layer.shadowOffset
         }
@@ -29,7 +29,7 @@ public extension UIView {
         }
     }
     
-    @IBInspectable public var shadowOpacity: Float {
+    public var shadowOpacity: Float {
         get {
             return layer.shadowOpacity
         }
@@ -38,7 +38,7 @@ public extension UIView {
         }
     }
     
-    @IBInspectable public var shadowRadius: CGFloat {
+    public var shadowRadius: CGFloat {
         get {
             return layer.shadowRadius
         }
@@ -50,11 +50,11 @@ public extension UIView {
     /// Add shadow to view.
     ///
     /// - Parameters:
-    ///   - color: shadow color (default is #137992).
+    ///   - color: shadow color (default is black).
     ///   - radius: shadow radius (default is 3).
-    ///   - offset: shadow offset (default is .zero).
-    ///   - opacity: shadow opacity (default is 0.5).
-    public func addShadow(ofColor color: UIColor = UIColor(red: 0.07, green: 0.47, blue: 0.57, alpha: 1.0), radius: CGFloat = 3, offset: CGSize = .zero, opacity: Float = 0.5) {
+    ///   - offset: shadow offset (Defaults to (0, -3)).
+    ///   - opacity: shadow opacity (default is 0.2) , [0,1] range
+    public func addShadow(ofColor color: UIColor = UIColor.black, radius: CGFloat = 3, offset: CGSize = CGSize(width: 0, height: -2), opacity: Float = 0.2) {
         layer.shadowColor = color.cgColor
         layer.shadowOffset = offset
         layer.shadowRadius = radius

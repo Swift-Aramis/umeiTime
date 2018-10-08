@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeClassCell" customModule="umeiTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="171" height="108"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="171" height="108"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l8L-Mx-AkQ">
+                        <rect key="frame" x="0.0" y="0.0" width="171" height="108"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gr8-II-cPu">
+                        <rect key="frame" x="0.0" y="78" width="171" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晚安少年" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXf-K0-0hg">
+                                <rect key="frame" x="15" y="0.0" width="141" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.19881742294520549" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KXf-K0-0hg" secondAttribute="trailing" constant="15" id="Flq-W5-tIb"/>
+                            <constraint firstAttribute="bottom" secondItem="KXf-K0-0hg" secondAttribute="bottom" id="LOm-yz-727"/>
+                            <constraint firstItem="KXf-K0-0hg" firstAttribute="top" secondItem="Gr8-II-cPu" secondAttribute="top" id="NvB-zZ-VJ3"/>
+                            <constraint firstItem="KXf-K0-0hg" firstAttribute="leading" secondItem="Gr8-II-cPu" secondAttribute="leading" constant="15" id="evW-hu-UcT"/>
+                            <constraint firstAttribute="height" constant="30" id="gre-mO-zhk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Gr8-II-cPu" firstAttribute="leading" secondItem="l8L-Mx-AkQ" secondAttribute="leading" id="BkI-Of-12a"/>
+                <constraint firstItem="l8L-Mx-AkQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IUH-Jb-u49"/>
+                <constraint firstItem="l8L-Mx-AkQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WVI-2b-YRD"/>
+                <constraint firstAttribute="trailing" secondItem="l8L-Mx-AkQ" secondAttribute="trailing" id="aS4-Fo-mpn"/>
+                <constraint firstItem="Gr8-II-cPu" firstAttribute="bottom" secondItem="l8L-Mx-AkQ" secondAttribute="bottom" id="mGa-G8-5IR"/>
+                <constraint firstAttribute="bottom" secondItem="l8L-Mx-AkQ" secondAttribute="bottom" id="unL-r5-Rgp"/>
+                <constraint firstItem="Gr8-II-cPu" firstAttribute="trailing" secondItem="l8L-Mx-AkQ" secondAttribute="trailing" id="weE-gy-n9G"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-135.19999999999999" y="72.863568215892059"/>
+        </collectionViewCell>
+    </objects>
+</document>
