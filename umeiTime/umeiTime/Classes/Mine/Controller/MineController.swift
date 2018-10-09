@@ -15,14 +15,14 @@ class MineController: BaseController {
     
     private lazy var dataSource: [[NormalCellModel]] = {
         var section = [[NormalCellModel]]()
-        let sectionOne = [NormalCellModel(icon: "", title: "我的收藏"),
-                          NormalCellModel(icon: "", title: "我的图集"),
-                          NormalCellModel(icon: "", title: "我赞过的")]
+        let sectionOne = [NormalCellModel(icon: "mine_icon_collect", title: "我的收藏"),
+                          NormalCellModel(icon: "mine_icon_atlas", title: "我的图集"),
+                          NormalCellModel(icon: "mine_icon_praise", title: "我赞过的")]
         section.append(sectionOne)
         let sectionTwo = [NormalCellModel(icon: "", title: "开屏图集"),
                           NormalCellModel(icon: "", title: "图文卡片")]
         section.append(sectionTwo)
-        let sectionThree = [NormalCellModel(icon: "", title: "设置"),
+        let sectionThree = [NormalCellModel(icon: "mine_icon_setting", title: "设置"),
                             NormalCellModel(icon: "", title: "关于优美")]
         section.append(sectionThree)
         return section
@@ -30,6 +30,7 @@ class MineController: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "我的"
         setupTableView()
     }
 

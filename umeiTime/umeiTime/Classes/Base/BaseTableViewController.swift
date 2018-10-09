@@ -20,6 +20,28 @@ class BaseTableViewController: BaseController {
 
     }
     
+    override var description: String {
+#if DEBUG
+        if !self.isViewLoaded {
+            return super.description
+        }
+        
+        var result = super.description + "\ntableView:\t\t\t\t" + self.tableView.description
+        let sections = self.tableView.dataSource?.numberOfSections!(in: self.tableView) ?? 0
+        if sections > 0 {
+            var sectionCountString = String(format: "\ndataCount(%@):\t\t\t\t(\n", Int(sections))
+            for i in 0..<sections {
+                let rows = self.tableView.dataSource?.tableView(self.tableView, numberOfRowsInSection: i) ?? 0
+                sectionCountString += String(format: "\t\t\t\t\t\t\tsection%@ - rows%@%@\n", i, rows, i < sections - 1 ? "," : "")
+            }
+            sectionCountString += "\t\t\t\t\t\t)"
+            result += sectionCountString
+        }
+        return result
+#else
+        return super.description
+#endif
+    }
     
 
 }

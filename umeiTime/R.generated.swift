@@ -31,12 +31,28 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 11 images.
+  /// This `R.image` struct is generated, and contains static references to 19 images.
   struct image {
     /// Image `icon_look`.
     static let icon_look = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_look")
+    /// Image `mine_icon_atlas`.
+    static let mine_icon_atlas = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_icon_atlas")
+    /// Image `mine_icon_collect`.
+    static let mine_icon_collect = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_icon_collect")
+    /// Image `mine_icon_praise`.
+    static let mine_icon_praise = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_icon_praise")
+    /// Image `mine_icon_setting`.
+    static let mine_icon_setting = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_icon_setting")
+    /// Image `msg_icon_comment`.
+    static let msg_icon_comment = Rswift.ImageResource(bundle: R.hostingBundle, name: "msg_icon_comment")
+    /// Image `msg_icon_like`.
+    static let msg_icon_like = Rswift.ImageResource(bundle: R.hostingBundle, name: "msg_icon_like")
+    /// Image `msg_icon_sys`.
+    static let msg_icon_sys = Rswift.ImageResource(bundle: R.hostingBundle, name: "msg_icon_sys")
     /// Image `nav_icon_back`.
     static let nav_icon_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_back")
+    /// Image `nav_icon_friend`.
+    static let nav_icon_friend = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_friend")
     /// Image `nav_icon_search`.
     static let nav_icon_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_search")
     /// Image `tabbar_home_normal`.
@@ -61,9 +77,49 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_look, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "mine_icon_atlas", bundle: ..., traitCollection: ...)`
+    static func mine_icon_atlas(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_icon_atlas, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mine_icon_collect", bundle: ..., traitCollection: ...)`
+    static func mine_icon_collect(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_icon_collect, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mine_icon_praise", bundle: ..., traitCollection: ...)`
+    static func mine_icon_praise(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_icon_praise, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mine_icon_setting", bundle: ..., traitCollection: ...)`
+    static func mine_icon_setting(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_icon_setting, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "msg_icon_comment", bundle: ..., traitCollection: ...)`
+    static func msg_icon_comment(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.msg_icon_comment, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "msg_icon_like", bundle: ..., traitCollection: ...)`
+    static func msg_icon_like(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.msg_icon_like, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "msg_icon_sys", bundle: ..., traitCollection: ...)`
+    static func msg_icon_sys(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.msg_icon_sys, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "nav_icon_back", bundle: ..., traitCollection: ...)`
     static func nav_icon_back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.nav_icon_back, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "nav_icon_friend", bundle: ..., traitCollection: ...)`
+    static func nav_icon_friend(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.nav_icon_friend, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "nav_icon_search", bundle: ..., traitCollection: ...)`

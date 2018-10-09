@@ -12,14 +12,20 @@ class MessageController: BaseController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var dataSource: [NormalCellModel] = [NormalCellModel(icon: "", title: "系统消息"),
-                                                 NormalCellModel(icon: "", title: "点赞消息"),
-                                                 NormalCellModel(icon: "", title: "评论消息")]
+    private var dataSource: [NormalCellModel] = [NormalCellModel(icon: "msg_icon_sys", title: "系统消息"),
+                                                 NormalCellModel(icon: "msg_icon_like", title: "点赞消息"),
+                                                 NormalCellModel(icon: "msg_icon_comment", title: "评论消息")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "消息"
+        setupNavItem()
         setupTableView()
+    }
+    
+    private func setupNavItem() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_icon_friend"), style: .plain, handler: { [weak self] in
+        })
     }
 
 }

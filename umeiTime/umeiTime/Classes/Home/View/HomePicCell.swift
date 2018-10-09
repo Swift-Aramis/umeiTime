@@ -12,7 +12,7 @@ class HomePicCell: UITableViewCell {
 
     @IBOutlet weak var bgView: UIView! {
         didSet {
-            bgView.addShadow()
+            bgView.addShadow(ofColor: Color(hexString: "#BEBDBD")!, radius: 3, offset: CGSize(width: 0, height: 2), opacity: 0.45)
         }
     }
     
