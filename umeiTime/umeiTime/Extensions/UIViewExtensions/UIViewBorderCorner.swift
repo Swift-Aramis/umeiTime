@@ -45,6 +45,18 @@ public extension UIView {
         }
     }
     
+    @IBInspectable public var avatarRadius: Bool {
+        get {
+            return self.avatarRadius
+        }
+        set {
+            if newValue {
+                layer.cornerRadius = min(self.width, self.height)/2
+                layer.masksToBounds = true
+            }
+        }
+    }
+    
     /// Set some or all corners radiuses of view.
     ///
     /// - Parameters:

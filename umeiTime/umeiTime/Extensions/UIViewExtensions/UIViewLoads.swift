@@ -28,5 +28,9 @@ public extension UIView {
         return UINib(nibName: name, bundle: bundle).instantiate(withOwner: nil, options: nil).first as? UIView
     }
     
+    /// Load view from nib.
+    public class func loadViewFromNib() -> UIView? {
+        return Bundle.main.loadNibNamed("\(self)", owner: nil, options: nil)?.first as? UIView
+    }
     
 }

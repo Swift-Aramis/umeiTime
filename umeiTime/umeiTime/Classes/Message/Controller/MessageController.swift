@@ -11,9 +11,10 @@ import UIKit
 class MessageController: BaseController {
 
     @IBOutlet weak var tableView: UITableView!
-    private var dataSource: [[String: String]] = [["icon": "", "title": "系统消息"],
-                                                  ["icon": "", "title": "点赞消息"],
-                                                  ["icon": "", "title": "评论消息"]]
+    
+    private var dataSource: [NormalCellModel] = [NormalCellModel(icon: "", title: "系统消息"),
+                                                 NormalCellModel(icon: "", title: "点赞消息"),
+                                                 NormalCellModel(icon: "", title: "评论消息")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,8 @@ class MessageController: BaseController {
 extension MessageController: UITableViewDelegate, UITableViewDataSource {
     
     private func setupTableView() {
-        tableView.rowHeight = 50
+        tableView.rowHeight = 60
+        tableView.tableFooterView = UIView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MessageCell")
     }
     
@@ -41,20 +43,17 @@ extension MessageController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath)
-        let dic = dataSource[indexPath.row]
-        
-        cell.imageView = UIImage(named: dic[""])
-        
+        cell.accessoryType = .disclosureIndicator
+        cell.textLabel?.textColor = AppColor.darkBlack
+        cell.textLabel?.font = AppFont.firstTextFont
+        cell.textLabel?.text = dataSource[indexPath.row].title
+        cell.imageView?.image = UIImage(named: dataSource[indexPath.row].icon)
         return cell
     }
     
     // MARK: - Table view delegate
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

@@ -25,6 +25,9 @@
 		B895167A215DFB8800F459CB /* GlobalFontConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8951679215DFB8800F459CB /* GlobalFontConfig.swift */; };
 		B895167C215DFBA600F459CB /* GlobalColorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895167B215DFBA600F459CB /* GlobalColorConfig.swift */; };
 		B895167F215E00E300F459CB /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895167E215E00E300F459CB /* FontExtensions.swift */; };
+		B8AC3347216B55580049A626 /* MineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AC3346216B55580049A626 /* MineHeaderView.swift */; };
+		B8AC3349216B55620049A626 /* MineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8AC3348216B55620049A626 /* MineHeaderView.xib */; };
+		B8AC334D216C41C30049A626 /* NormalCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AC334C216C41C30049A626 /* NormalCellModel.swift */; };
 		B8CA9A67215CE29E00906E35 /* ScreenConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A66215CE29E00906E35 /* ScreenConst.swift */; };
 		B8CA9A69215CE49D00906E35 /* UIViewFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A68215CE49D00906E35 /* UIViewFrame.swift */; };
 		B8CA9A6B215CE65900906E35 /* UIViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A6A215CE65900906E35 /* UIViewShadow.swift */; };
@@ -82,6 +85,9 @@
 		B8951679215DFB8800F459CB /* GlobalFontConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFontConfig.swift; sourceTree = "<group>"; };
 		B895167B215DFBA600F459CB /* GlobalColorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColorConfig.swift; sourceTree = "<group>"; };
 		B895167E215E00E300F459CB /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
+		B8AC3346216B55580049A626 /* MineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeaderView.swift; sourceTree = "<group>"; };
+		B8AC3348216B55620049A626 /* MineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHeaderView.xib; sourceTree = "<group>"; };
+		B8AC334C216C41C30049A626 /* NormalCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCellModel.swift; sourceTree = "<group>"; };
 		B8CA9A66215CE29E00906E35 /* ScreenConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenConst.swift; sourceTree = "<group>"; };
 		B8CA9A68215CE49D00906E35 /* UIViewFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFrame.swift; sourceTree = "<group>"; };
 		B8CA9A6A215CE65900906E35 /* UIViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewShadow.swift; sourceTree = "<group>"; };
@@ -230,6 +236,8 @@
 		B895166A215DC8B000F459CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B8AC3346216B55580049A626 /* MineHeaderView.swift */,
+				B8AC3348216B55620049A626 /* MineHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 		B8951671215DC8B000F459CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B8AC334C216C41C30049A626 /* NormalCellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -525,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8E5557B215F741400D695B0 /* HomeListController.xib in Resources */,
+				B8AC3349216B55620049A626 /* MineHeaderView.xib in Resources */,
 				B8155D4D21607FD500DB9987 /* HomeArticleCell.xib in Resources */,
 				B82FD7A3216063380082F518 /* MurMurController.xib in Resources */,
 				B8F55A7621673F5D00251559 /* HomeClassCell.xib in Resources */,
@@ -634,6 +644,7 @@
 				B8CA9A67215CE29E00906E35 /* ScreenConst.swift in Sources */,
 				B8CA9A6F215CF39D00906E35 /* UIViewParentController.swift in Sources */,
 				B8F55A7B2167D0B900251559 /* SearchResultController.swift in Sources */,
+				B8AC334D216C41C30049A626 /* NormalCellModel.swift in Sources */,
 				B8F55A71216739A300251559 /* HomeClassController.swift in Sources */,
 				B8D3ABA42160C47A00D059B7 /* ScrollPageView.swift in Sources */,
 				B8951674215DF9D500F459CB /* GlobalAppearance.swift in Sources */,
@@ -643,6 +654,7 @@
 				B8E5557D215F744F00D695B0 /* HomeArticleController.swift in Sources */,
 				B8951676215DF9F700F459CB /* GlobalService.swift in Sources */,
 				B895167F215E00E300F459CB /* FontExtensions.swift in Sources */,
+				B8AC3347216B55580049A626 /* MineHeaderView.swift in Sources */,
 				B8DB33F1213FC50400C78101 /* AppDelegate.swift in Sources */,
 				B8D3ABA02160C45700D059B7 /* SegmentView.swift in Sources */,
 				B82FD7A6216063C20082F518 /* MessageController.swift in Sources */,

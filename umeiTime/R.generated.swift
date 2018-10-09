@@ -31,32 +31,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 20 images.
+  /// This `R.image` struct is generated, and contains static references to 11 images.
   struct image {
-    /// Image `cardboard_1`.
-    static let cardboard_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "cardboard_1")
-    /// Image `cardboard_2`.
-    static let cardboard_2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "cardboard_2")
-    /// Image `cardboard`.
-    static let cardboard = Rswift.ImageResource(bundle: R.hostingBundle, name: "cardboard")
-    /// Image `home_1`.
-    static let home_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "home_1")
-    /// Image `home`.
-    static let home = Rswift.ImageResource(bundle: R.hostingBundle, name: "home")
     /// Image `icon_look`.
     static let icon_look = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_look")
-    /// Image `me_1`.
-    static let me_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "me_1")
-    /// Image `me`.
-    static let me = Rswift.ImageResource(bundle: R.hostingBundle, name: "me")
     /// Image `nav_icon_back`.
     static let nav_icon_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_back")
     /// Image `nav_icon_search`.
     static let nav_icon_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_search")
-    /// Image `shop_1`.
-    static let shop_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "shop_1")
-    /// Image `shop`.
-    static let shop = Rswift.ImageResource(bundle: R.hostingBundle, name: "shop")
     /// Image `tabbar_home_normal`.
     static let tabbar_home_normal = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_home_normal")
     /// Image `tabbar_home_selected`.
@@ -74,44 +56,9 @@ struct R: Rswift.Validatable {
     /// Image `tabbar_murmur_selected`.
     static let tabbar_murmur_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_murmur_selected")
     
-    /// `UIImage(named: "cardboard", bundle: ..., traitCollection: ...)`
-    static func cardboard(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.cardboard, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "cardboard_1", bundle: ..., traitCollection: ...)`
-    static func cardboard_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.cardboard_1, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "cardboard_2", bundle: ..., traitCollection: ...)`
-    static func cardboard_2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.cardboard_2, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "home", bundle: ..., traitCollection: ...)`
-    static func home(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.home, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "home_1", bundle: ..., traitCollection: ...)`
-    static func home_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.home_1, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "icon_look", bundle: ..., traitCollection: ...)`
     static func icon_look(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_look, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "me", bundle: ..., traitCollection: ...)`
-    static func me(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.me, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "me_1", bundle: ..., traitCollection: ...)`
-    static func me_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.me_1, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "nav_icon_back", bundle: ..., traitCollection: ...)`
@@ -122,16 +69,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "nav_icon_search", bundle: ..., traitCollection: ...)`
     static func nav_icon_search(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.nav_icon_search, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "shop", bundle: ..., traitCollection: ...)`
-    static func shop(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.shop, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "shop_1", bundle: ..., traitCollection: ...)`
-    static func shop_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.shop_1, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "tabbar_home_normal", bundle: ..., traitCollection: ...)`
@@ -177,7 +114,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 9 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 10 nibs.
   struct nib {
     /// Nib `HomeArticleCell`.
     static let homeArticleCell = _R.nib._HomeArticleCell()
@@ -193,6 +130,8 @@ struct R: Rswift.Validatable {
     static let messageController = _R.nib._MessageController()
     /// Nib `MineController`.
     static let mineController = _R.nib._MineController()
+    /// Nib `MineHeaderView`.
+    static let mineHeaderView = _R.nib._MineHeaderView()
     /// Nib `MurMurController`.
     static let murMurController = _R.nib._MurMurController()
     /// Nib `SearchResultController`.
@@ -231,6 +170,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "MineController", in: bundle)`
     static func mineController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mineController)
+    }
+    
+    /// `UINib(name: "MineHeaderView", in: bundle)`
+    static func mineHeaderView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.mineHeaderView)
     }
     
     /// `UINib(name: "MurMurController", in: bundle)`
@@ -385,6 +329,17 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _MineHeaderView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MineHeaderView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MineHeaderView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MineHeaderView
       }
       
       fileprivate init() {}
