@@ -25,7 +25,7 @@ public class ScrollContentView: UIView {
     public init(frame: CGRect, childControllers: [UIViewController], parentController: UIViewController) {
         self.childControllers = childControllers
         self.parentController = parentController
-        
+       
         super.init(frame: frame)
         setup()
     }
@@ -63,6 +63,11 @@ extension ScrollContentView: UIScrollViewDelegate {
     }
     
     private func setupContentView() {
+        if #available(iOS 11.0, *) {
+        } else {
+            self.parentController.automaticallyAdjustsScrollViewInsets = false
+        }
+        
         self.addSubview(scrollView)
         scrollView.frame = self.bounds
         scrollView.contentSize = CGSize(width: scrollView.width * CGFloat(childControllers.count), height: scrollView.height)

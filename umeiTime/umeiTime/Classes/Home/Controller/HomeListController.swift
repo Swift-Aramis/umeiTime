@@ -26,6 +26,7 @@ class HomeListController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        view.backgroundColor = UIColor.green
     }
     
 }

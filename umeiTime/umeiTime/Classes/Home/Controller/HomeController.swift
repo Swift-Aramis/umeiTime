@@ -17,16 +17,6 @@ class HomeController: BaseController {
         setupContentView()
     }
     
-    private func setupNavItem() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_icon_search"), style: .plain, handler: { [weak self] in
-//            self.navigationController?.pushViewController(HomeClassController(), animated: true)
-            
-//            self.navigationController?.pushViewController(HomeSearchController(), animated: true)
-            let searchNav = BaseNavController.init(rootViewController: HomeSearchController())
-            self?.present(searchNav, animated: false, completion: nil)
-        })
-    }
-    
     private func setupContentView() {
         let titles = ["文章", "图片"]
         let segmentView = SegmentView(frame: CGRect(x: 0, y: 0, width: 150, height: 44), segmentStyle: SegmentStyle(), titles: titles)
@@ -35,21 +25,30 @@ class HomeController: BaseController {
         let controllers = [HomeListController(type: .article),
                            HomeListController(type: .pic)]
         let scrollContentView = ScrollContentView(frame: CGRect(x: 0, y: NavBarHeight, width: view.width, height: view.height - NavBarHeight - TabBarHeight), childControllers: controllers, parentController: self)
+        scrollContentView.backgroundColor = UIColor.red
         view.addSubview(scrollContentView)
         
         segmentView.titleButtonOnClicked = { (text, index) in
-//            print("\(text) --- \(index)")
             scrollContentView.switchToContent(index: index)
         }
         
         scrollContentView.contentScrollEnded = { (index) in
-//            print("scrollContentView --- \(index)")
             segmentView.switchToTitle(index: index)
         }
     }
 
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.navigationController?.pushViewController(TestController(), animated: true)
+    private func setupNavItem() {
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_icon_search"), style: .plain, handler: { [weak self] in
+            
+            let searchNav = BaseNavController.init(rootViewController: HomeSearchController())
+            self?.present(searchNav, animated: false, completion: nil)
+        })
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_icon_class"), style: .plain, handler: { [weak self] in
+            
+            self?.navigationController?.pushViewController(HomeClassController(), animated: true)
+        })
     }
+
 }

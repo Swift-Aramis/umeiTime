@@ -8,18 +8,80 @@
 
 import UIKit
 
-class BaseTableViewController: BaseController {
+class BaseTableViewController: BaseController, UITableViewDelegate, UITableViewDataSource {
 
-    lazy var tableView: UITableView = {
-        let tableV = UITableView(frame: self.view.bounds, style: .plain)
-        return tableV
-    }()
+    //MARK: - SubclassingHooks
+    /// 布局 tableView
+    public func layoutTableView() {}
+    /// 设置 tableView
+    public func setupTableView() {}
+    
+    //MARK: - Private
+    public private(set) var tableView: UITableView!
+    public private(set) var style: UITableView.Style = .plain
+    
+    convenience init(style: UITableView.Style = .plain) {
+        self.init()
+        self.style = style
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initTableView()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.layoutTableView()
+    }
+    
+    private func initTableView() {
+        tableView = UITableView(frame: view.bounds, style: style)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.backgroundColor = UIColor.groupTableViewBackground
+        if tableView.style == .plain {
+            tableView.tableFooterView = UIView()
+        }
+        view.addSubview(tableView)
+        
+        setupTableView()
+    }
+
+    // MARK: - Table view data source
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return tableView.style == .plain ? 0 : CGFloat.leastNormalMagnitude
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return tableView.style == .plain ? 0 : CGFloat.leastNormalMagnitude
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionV = UIView()
+        sectionV.backgroundColor = UIColor.groupTableViewBackground
+        return sectionV
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerV = UIView()
+        footerV.backgroundColor = UIColor.groupTableViewBackground
+        return footerV
+    }
+    
+    //MARK: - DEBUG
     override var description: String {
 #if DEBUG
         if !self.isViewLoaded {
@@ -29,10 +91,10 @@ class BaseTableViewController: BaseController {
         var result = super.description + "\ntableView:\t\t\t\t" + self.tableView.description
         let sections = self.tableView.dataSource?.numberOfSections!(in: self.tableView) ?? 0
         if sections > 0 {
-            var sectionCountString = String(format: "\ndataCount(%@):\t\t\t\t(\n", Int(sections))
+            var sectionCountString = String(format: "\ndataCount(%d):\t\t\t\t(\n", Int(sections))
             for i in 0..<sections {
                 let rows = self.tableView.dataSource?.tableView(self.tableView, numberOfRowsInSection: i) ?? 0
-                sectionCountString += String(format: "\t\t\t\t\t\t\tsection%@ - rows%@%@\n", i, rows, i < sections - 1 ? "," : "")
+                sectionCountString += String(format: "\t\t\t\t\t\t\tsection%d - rows%d%@\n", i, rows, i < sections - 1 ? "," : "")
             }
             sectionCountString += "\t\t\t\t\t\t)"
             result += sectionCountString
@@ -43,5 +105,4 @@ class BaseTableViewController: BaseController {
 #endif
     }
     
-
 }

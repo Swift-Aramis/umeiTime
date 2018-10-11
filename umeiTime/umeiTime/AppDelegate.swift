@@ -17,8 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.white
         self.window?.makeKeyAndVisible()
         
-        GlobalAppearance.setupUIAppearance()
-        self.window?.rootViewController = RootTabBarController()
+        setupRoot()
         return true
     }
 
@@ -36,4 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     
+    private func setupRoot() {
+        GlobalAppearance.setupUIAppearance()
+        
+        self.window?.rootViewController = RootTabBarController()
+    }
 }

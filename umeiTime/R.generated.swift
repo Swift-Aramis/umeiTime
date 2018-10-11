@@ -31,7 +31,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 19 images.
+  /// This `R.image` struct is generated, and contains static references to 20 images.
   struct image {
     /// Image `icon_look`.
     static let icon_look = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_look")
@@ -51,6 +51,8 @@ struct R: Rswift.Validatable {
     static let msg_icon_sys = Rswift.ImageResource(bundle: R.hostingBundle, name: "msg_icon_sys")
     /// Image `nav_icon_back`.
     static let nav_icon_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_back")
+    /// Image `nav_icon_class`.
+    static let nav_icon_class = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_class")
     /// Image `nav_icon_friend`.
     static let nav_icon_friend = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_friend")
     /// Image `nav_icon_search`.
@@ -115,6 +117,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "nav_icon_back", bundle: ..., traitCollection: ...)`
     static func nav_icon_back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.nav_icon_back, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "nav_icon_class", bundle: ..., traitCollection: ...)`
+    static func nav_icon_class(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.nav_icon_class, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "nav_icon_friend", bundle: ..., traitCollection: ...)`

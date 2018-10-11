@@ -42,7 +42,6 @@
 		B8D3ABA02160C45700D059B7 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3AB9F2160C45700D059B7 /* SegmentView.swift */; };
 		B8D3ABA22160C46900D059B7 /* ScrollContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3ABA12160C46900D059B7 /* ScrollContentView.swift */; };
 		B8D3ABA42160C47A00D059B7 /* ScrollPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3ABA32160C47A00D059B7 /* ScrollPageView.swift */; };
-		B8D3ABA621652EF300D059B7 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3ABA521652EF300D059B7 /* TestController.swift */; };
 		B8D3ABA821653F0500D059B7 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3ABA721653F0500D059B7 /* BaseTabBarController.swift */; };
 		B8DB33F1213FC50400C78101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB33F0213FC50400C78101 /* AppDelegate.swift */; };
 		B8DB33F3213FC50400C78101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB33F2213FC50400C78101 /* ViewController.swift */; };
@@ -52,8 +51,6 @@
 		B8E55576215F73EB00D695B0 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E55574215F73EB00D695B0 /* HomeController.swift */; };
 		B8E5557A215F741400D695B0 /* HomeListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E55578215F741400D695B0 /* HomeListController.swift */; };
 		B8E5557B215F741400D695B0 /* HomeListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E55579215F741400D695B0 /* HomeListController.xib */; };
-		B8E5557D215F744F00D695B0 /* HomeArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E5557C215F744F00D695B0 /* HomeArticleController.swift */; };
-		B8E5557F215F747500D695B0 /* HomePicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E5557E215F747500D695B0 /* HomePicController.swift */; };
 		B8E55581215F845F00D695B0 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E55580215F845F00D695B0 /* RootTabBarController.swift */; };
 		B8F55A71216739A300251559 /* HomeClassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F55A6F216739A300251559 /* HomeClassController.swift */; };
 		B8F55A72216739A300251559 /* HomeClassController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F55A70216739A300251559 /* HomeClassController.xib */; };
@@ -102,7 +99,6 @@
 		B8D3AB9F2160C45700D059B7 /* SegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
 		B8D3ABA12160C46900D059B7 /* ScrollContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollContentView.swift; sourceTree = "<group>"; };
 		B8D3ABA32160C47A00D059B7 /* ScrollPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPageView.swift; sourceTree = "<group>"; };
-		B8D3ABA521652EF300D059B7 /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		B8D3ABA721653F0500D059B7 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		B8DB33ED213FC50400C78101 /* umeiTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = umeiTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8DB33F0213FC50400C78101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,8 +110,6 @@
 		B8E55574215F73EB00D695B0 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		B8E55578215F741400D695B0 /* HomeListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListController.swift; sourceTree = "<group>"; };
 		B8E55579215F741400D695B0 /* HomeListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListController.xib; sourceTree = "<group>"; };
-		B8E5557C215F744F00D695B0 /* HomeArticleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeArticleController.swift; sourceTree = "<group>"; };
-		B8E5557E215F747500D695B0 /* HomePicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePicController.swift; sourceTree = "<group>"; };
 		B8E55580215F845F00D695B0 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		B8F55A6F216739A300251559 /* HomeClassController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeClassController.swift; sourceTree = "<group>"; };
 		B8F55A70216739A300251559 /* HomeClassController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeClassController.xib; sourceTree = "<group>"; };
@@ -258,9 +252,6 @@
 				B8E55574215F73EB00D695B0 /* HomeController.swift */,
 				B8E55578215F741400D695B0 /* HomeListController.swift */,
 				B8E55579215F741400D695B0 /* HomeListController.xib */,
-				B8E5557C215F744F00D695B0 /* HomeArticleController.swift */,
-				B8E5557E215F747500D695B0 /* HomePicController.swift */,
-				B8D3ABA521652EF300D059B7 /* TestController.swift */,
 				B8F55A6F216739A300251559 /* HomeClassController.swift */,
 				B8F55A70216739A300251559 /* HomeClassController.xib */,
 				B8F55A772167D00E00251559 /* HomeSearchController.swift */,
@@ -651,7 +642,6 @@
 				B82204952160A62C00BFC8BA /* R.generated.swift in Sources */,
 				B8CA9A7B215D0E8200906E35 /* BaseNavController.swift in Sources */,
 				B8DB33F3213FC50400C78101 /* ViewController.swift in Sources */,
-				B8E5557D215F744F00D695B0 /* HomeArticleController.swift in Sources */,
 				B8951676215DF9F700F459CB /* GlobalService.swift in Sources */,
 				B895167F215E00E300F459CB /* FontExtensions.swift in Sources */,
 				B8AC3347216B55580049A626 /* MineHeaderView.swift in Sources */,
@@ -662,12 +652,10 @@
 				B8155D492160731700DB9987 /* UIImageExtensions.swift in Sources */,
 				B8CA9A6D215CF30A00906E35 /* UIViewBorderCorner.swift in Sources */,
 				B8D3ABA22160C46900D059B7 /* ScrollContentView.swift in Sources */,
-				B8E5557F215F747500D695B0 /* HomePicController.swift in Sources */,
 				B8E5557A215F741400D695B0 /* HomeListController.swift in Sources */,
 				B8F55A7521673F5D00251559 /* HomeClassCell.swift in Sources */,
 				B8CA9A7E215D103E00906E35 /* ColorExtensions.swift in Sources */,
 				B8155D5021607FE800DB9987 /* HomePicCell.swift in Sources */,
-				B8D3ABA621652EF300D059B7 /* TestController.swift in Sources */,
 				B82FD7AA216063D20082F518 /* MineController.swift in Sources */,
 				B82FD7A2216063380082F518 /* MurMurController.swift in Sources */,
 				B8E55576215F73EB00D695B0 /* HomeController.swift in Sources */,
