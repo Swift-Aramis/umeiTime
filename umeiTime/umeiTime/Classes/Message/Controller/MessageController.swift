@@ -62,5 +62,9 @@ extension MessageController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.1 //去除最后一行cell的分割线
+    }
+    
 }
 

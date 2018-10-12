@@ -12,7 +12,9 @@ class BaseTableViewController: BaseController, UITableViewDelegate, UITableViewD
 
     //MARK: - SubclassingHooks
     /// 布局 tableView
-    public func layoutTableView() {}
+    public func layoutTableView() {
+        tableView.frame = view.bounds
+    }
     /// 设置 tableView
     public func setupTableView() {}
     
@@ -36,9 +38,10 @@ class BaseTableViewController: BaseController, UITableViewDelegate, UITableViewD
     }
     
     private func initTableView() {
-        tableView = UITableView(frame: view.bounds, style: style)
+        tableView = UITableView(frame: CGRect.zero, style: style)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.showsVerticalScrollIndicator = false
         tableView.backgroundColor = UIColor.groupTableViewBackground
         if tableView.style == .plain {
             tableView.tableFooterView = UIView()
@@ -50,11 +53,11 @@ class BaseTableViewController: BaseController, UITableViewDelegate, UITableViewD
 
     // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,11 +65,11 @@ class BaseTableViewController: BaseController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableView.style == .plain ? 0 : CGFloat.leastNormalMagnitude
+        return 0.1
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return tableView.style == .plain ? 0 : CGFloat.leastNormalMagnitude
+        return 0.1
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -79,6 +82,10 @@ class BaseTableViewController: BaseController, UITableViewDelegate, UITableViewD
         let footerV = UIView()
         footerV.backgroundColor = UIColor.groupTableViewBackground
         return footerV
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     //MARK: - DEBUG

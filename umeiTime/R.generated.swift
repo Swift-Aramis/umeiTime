@@ -177,7 +177,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 10 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 11 nibs.
   struct nib {
     /// Nib `HomeArticleCell`.
     static let homeArticleCell = _R.nib._HomeArticleCell()
@@ -189,14 +189,16 @@ struct R: Rswift.Validatable {
     static let homeListController = _R.nib._HomeListController()
     /// Nib `HomePicCell`.
     static let homePicCell = _R.nib._HomePicCell()
+    /// Nib `MGroupCell`.
+    static let mGroupCell = _R.nib._MGroupCell()
     /// Nib `MessageController`.
     static let messageController = _R.nib._MessageController()
     /// Nib `MineController`.
     static let mineController = _R.nib._MineController()
     /// Nib `MineHeaderView`.
     static let mineHeaderView = _R.nib._MineHeaderView()
-    /// Nib `MurMurController`.
-    static let murMurController = _R.nib._MurMurController()
+    /// Nib `ProfileView`.
+    static let profileView = _R.nib._ProfileView()
     /// Nib `SearchResultController`.
     static let searchResultController = _R.nib._SearchResultController()
     
@@ -225,6 +227,11 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.homePicCell)
     }
     
+    /// `UINib(name: "MGroupCell", in: bundle)`
+    static func mGroupCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.mGroupCell)
+    }
+    
     /// `UINib(name: "MessageController", in: bundle)`
     static func messageController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.messageController)
@@ -240,9 +247,9 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.mineHeaderView)
     }
     
-    /// `UINib(name: "MurMurController", in: bundle)`
-    static func murMurController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.murMurController)
+    /// `UINib(name: "ProfileView", in: bundle)`
+    static func profileView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.profileView)
     }
     
     /// `UINib(name: "SearchResultController", in: bundle)`
@@ -375,6 +382,17 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    struct _MGroupCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MGroupCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MGroupCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MGroupCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _MessageController: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "MessageController"
@@ -408,12 +426,12 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct _MurMurController: Rswift.NibResourceType {
+    struct _ProfileView: Rswift.NibResourceType {
       let bundle = R.hostingBundle
-      let name = "MurMurController"
+      let name = "ProfileView"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ProfileView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProfileView
       }
       
       fileprivate init() {}

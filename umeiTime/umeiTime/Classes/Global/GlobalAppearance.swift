@@ -27,7 +27,9 @@ class GlobalAppearance: NSObject {
         
         /// NavigationBar backgroundcolor【背景色】
         UINavigationBar.appearance().barTintColor = UIColor.white
-        
+        /// NavigationBar【背景图】
+//        UINavigationBar.appearance().setBackgroundImage(UIImage(color: UIColor.white, size: CGSize(width: 1, height: 1)), for: .default)
+
         /// UIBarButtonItem【字体色、字体大小】
         let barButtonAttributes: [NSAttributedString.Key : Any] = [
             .font: AppFont.titleFont,

@@ -64,6 +64,7 @@ extension ScrollContentView: UIScrollViewDelegate {
     
     private func setupContentView() {
         if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never
         } else {
             self.parentController.automaticallyAdjustsScrollViewInsets = false
         }

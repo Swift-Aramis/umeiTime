@@ -16,8 +16,8 @@ class MineHeaderView: UIView {
     @IBOutlet weak var profileLabel: UILabel! {
         didSet {
             profileLabel.roundCorners([.topLeft, .bottomLeft], radius: profileLabel.height/2)
-            profileLabel.addTapGesture { _ in
-                
+            profileLabel.addTapGesture { [weak self] _ in
+                self?.parentViewController?.navigationController?.pushViewController(ProfileController(), animated: true)
             }
         }
     }

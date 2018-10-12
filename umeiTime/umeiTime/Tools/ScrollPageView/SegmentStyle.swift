@@ -21,7 +21,7 @@ public struct SegmentStyle {
     /// 底部分割线
     public var showsSeparatorLine = false
     public var separatorLineHeight: CGFloat = 0.5
-    public var separatorLineColor = Color(hexString: "#666666")!
+    public var separatorLineColor = Color(hexString: "#DDDDDD")!
     
     /// 指示线
     public var showsIndicatorLine = true

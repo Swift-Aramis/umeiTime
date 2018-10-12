@@ -16,7 +16,10 @@ class HomeController: BaseController {
         setupNavItem()
         setupContentView()
     }
-    
+
+}
+
+extension HomeController {
     private func setupContentView() {
         let titles = ["文章", "图片"]
         let segmentView = SegmentView(frame: CGRect(x: 0, y: 0, width: 150, height: 44), segmentStyle: SegmentStyle(), titles: titles)
@@ -25,7 +28,6 @@ class HomeController: BaseController {
         let controllers = [HomeListController(type: .article),
                            HomeListController(type: .pic)]
         let scrollContentView = ScrollContentView(frame: CGRect(x: 0, y: NavBarHeight, width: view.width, height: view.height - NavBarHeight - TabBarHeight), childControllers: controllers, parentController: self)
-        scrollContentView.backgroundColor = UIColor.red
         view.addSubview(scrollContentView)
         
         segmentView.titleButtonOnClicked = { (text, index) in
@@ -36,7 +38,7 @@ class HomeController: BaseController {
             segmentView.switchToTitle(index: index)
         }
     }
-
+    
     private func setupNavItem() {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_icon_search"), style: .plain, handler: { [weak self] in
@@ -50,5 +52,4 @@ class HomeController: BaseController {
             self?.navigationController?.pushViewController(HomeClassController(), animated: true)
         })
     }
-
 }

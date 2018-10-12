@@ -34,4 +34,44 @@ public extension UIImage {
         self.init(cgImage: aCgImage)
     }
     
+    public enum GradientDirection {
+        case vertical, horizontal
+    }
+    
+    public convenience init(startColor: UIColor,
+                            endColor: UIColor,
+                            size: CGSize,
+                            direction: GradientDirection = .vertical) {
+        UIGraphicsBeginImageContextWithOptions(size, false, 1)
+        
+        defer {
+            UIGraphicsEndImageContext()
+        }
+        
+        guard let ctx = UIGraphicsGetCurrentContext() else {
+            self.init()
+            return
+        }
+        
+        let colorsSpace = CGColorSpaceCreateDeviceRGB()
+        let cgColors = [startColor.cgColor, endColor.cgColor]
+        guard let gradient = CGGradient(colorsSpace: colorsSpace, colors: cgColors as CFArray, locations: nil) else {
+            self.init()
+            return
+        }
+        
+        if direction == .vertical {
+            ctx.drawLinearGradient(gradient, start: CGPoint(x: 0, y: 0), end: CGPoint(x: 0, y: size.height), options: CGGradientDrawingOptions(rawValue: 0))
+        } else {
+            ctx.drawLinearGradient(gradient, start: CGPoint(x: 0, y: 0), end: CGPoint(x: size.width, y: 0), options: CGGradientDrawingOptions(rawValue: 0))
+        }
+        
+        guard let aCgImage = UIGraphicsGetImageFromCurrentImageContext()?.cgImage else {
+            self.init()
+            return
+        }
+        
+        self.init(cgImage: aCgImage)
+    }
+    
 }
