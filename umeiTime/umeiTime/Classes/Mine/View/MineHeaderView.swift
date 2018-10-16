@@ -33,15 +33,17 @@ class MineHeaderView: UIView {
     }
     @IBOutlet weak var attentionView: UIView! {
         didSet {
-            attentionView.addTapGesture { _ in
-                
+            attentionView.addTapGesture { [weak self] _ in
+                let attentionListVC = UserListController(title: "关注")
+                self?.parentViewController?.navigationController?.pushViewController(attentionListVC, animated: true)
             }
         }
     }
     @IBOutlet weak var fansView: UIView! {
         didSet {
-            fansView.addTapGesture { _ in
-                
+            fansView.addTapGesture { [weak self] _ in
+                let attentionListVC = UserListController(title: "粉丝")
+                self?.parentViewController?.navigationController?.pushViewController(attentionListVC, animated: true)
             }
         }
     }

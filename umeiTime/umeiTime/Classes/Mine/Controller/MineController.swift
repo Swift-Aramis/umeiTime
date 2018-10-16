@@ -13,17 +13,17 @@ class MineController: BaseController {
     @IBOutlet weak var tableView: UITableView!
     private let mineHeaderView: MineHeaderView = MineHeaderView.loadViewFromNib() as! MineHeaderView
     
-    private lazy var dataSource: [[NormalCellModel]] = {
-        var section = [[NormalCellModel]]()
-        let sectionOne = [NormalCellModel(icon: "mine_icon_collect", title: "我的收藏"),
-                          NormalCellModel(icon: "mine_icon_atlas", title: "我的图集"),
-                          NormalCellModel(icon: "mine_icon_praise", title: "我赞过的")]
+    private lazy var dataSource: [[SystemCellModel]] = {
+        var section = [[SystemCellModel]]()
+        let sectionOne = [SystemCellModel(icon: "mine_icon_collect", title: "我的收藏"),
+                          SystemCellModel(icon: "mine_icon_atlas", title: "我的图集"),
+                          SystemCellModel(icon: "mine_icon_praise", title: "我赞过的")]
         section.append(sectionOne)
-        let sectionTwo = [NormalCellModel(icon: "", title: "开屏图集"),
-                          NormalCellModel(icon: "", title: "图文卡片")]
+        let sectionTwo = [SystemCellModel(icon: "", title: "开屏图集"),
+                          SystemCellModel(icon: "", title: "图文卡片")]
         section.append(sectionTwo)
-        let sectionThree = [NormalCellModel(icon: "mine_icon_setting", title: "设置"),
-                            NormalCellModel(icon: "", title: "关于优美")]
+        let sectionThree = [SystemCellModel(icon: "mine_icon_setting", title: "设置"),
+                            SystemCellModel(icon: "", title: "关于优美")]
         section.append(sectionThree)
         return section
     }()

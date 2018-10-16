@@ -12,9 +12,9 @@ class MessageController: BaseController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var dataSource: [NormalCellModel] = [NormalCellModel(icon: "msg_icon_sys", title: "系统消息"),
-                                                 NormalCellModel(icon: "msg_icon_like", title: "点赞消息"),
-                                                 NormalCellModel(icon: "msg_icon_comment", title: "评论消息")]
+    private var dataSource: [SystemCellModel] = [SystemCellModel(icon: "msg_icon_sys", title: "系统消息"),
+                                                 SystemCellModel(icon: "msg_icon_like", title: "点赞消息"),
+                                                 SystemCellModel(icon: "msg_icon_comment", title: "评论消息")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

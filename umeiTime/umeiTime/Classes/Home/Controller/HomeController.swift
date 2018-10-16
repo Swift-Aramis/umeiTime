@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PageMenu
 
 class HomeController: BaseController {
     

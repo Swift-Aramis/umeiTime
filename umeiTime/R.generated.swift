@@ -31,7 +31,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 20 images.
+  /// This `R.image` struct is generated, and contains static references to 21 images.
   struct image {
     /// Image `icon_look`.
     static let icon_look = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_look")
@@ -53,6 +53,8 @@ struct R: Rswift.Validatable {
     static let nav_icon_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_back")
     /// Image `nav_icon_class`.
     static let nav_icon_class = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_class")
+    /// Image `nav_icon_edit`.
+    static let nav_icon_edit = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_edit")
     /// Image `nav_icon_friend`.
     static let nav_icon_friend = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_friend")
     /// Image `nav_icon_search`.
@@ -124,6 +126,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.nav_icon_class, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "nav_icon_edit", bundle: ..., traitCollection: ...)`
+    static func nav_icon_edit(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.nav_icon_edit, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "nav_icon_friend", bundle: ..., traitCollection: ...)`
     static func nav_icon_friend(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.nav_icon_friend, compatibleWith: traitCollection)
@@ -177,7 +184,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 11 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 12 nibs.
   struct nib {
     /// Nib `HomeArticleCell`.
     static let homeArticleCell = _R.nib._HomeArticleCell()
@@ -201,6 +208,8 @@ struct R: Rswift.Validatable {
     static let profileView = _R.nib._ProfileView()
     /// Nib `SearchResultController`.
     static let searchResultController = _R.nib._SearchResultController()
+    /// Nib `UserListCell`.
+    static let userListCell = _R.nib._UserListCell()
     
     /// `UINib(name: "HomeArticleCell", in: bundle)`
     static func homeArticleCell(_: Void = ()) -> UIKit.UINib {
@@ -255,6 +264,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "SearchResultController", in: bundle)`
     static func searchResultController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.searchResultController)
+    }
+    
+    /// `UINib(name: "UserListCell", in: bundle)`
+    static func userListCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.userListCell)
     }
     
     fileprivate init() {}
@@ -443,6 +457,17 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _UserListCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "UserListCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UserListCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UserListCell
       }
       
       fileprivate init() {}

@@ -25,8 +25,12 @@ class ProfileView: UIView {
     @IBOutlet weak var fansBtn: UIButton!
     
     @IBAction func attentionBtnAction(_ sender: UIButton) {
+        let attentionListVC = UserListController(title: "关注")
+        self.parentViewController?.navigationController?.pushViewController(attentionListVC, animated: true)
     }
     
     @IBAction func fansBtnAction(_ sender: UIButton) {
+        let attentionListVC = UserListController(title: "粉丝")
+        self.parentViewController?.navigationController?.pushViewController(attentionListVC, animated: true)
     }
 }

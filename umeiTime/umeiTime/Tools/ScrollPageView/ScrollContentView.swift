@@ -30,7 +30,7 @@ public class ScrollContentView: UIView {
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -54,7 +54,7 @@ extension ScrollContentView: UIScrollViewDelegate {
                 fatalError("不要添加 UINavigationController 包装后的子控制器")
             }
             
-            parentController.addChild(childController)
+            parentController.addChildViewController(childController)
             scrollView.addSubview(childController.view)
             childController.view.size = scrollView.size
             childController.view.top = scrollView.top

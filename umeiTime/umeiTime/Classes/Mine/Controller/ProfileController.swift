@@ -35,19 +35,44 @@ class ProfileController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavItem()
         setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage() // 去掉shadowImage
+        changeNavBarSytle()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.tintColor = AppColor.darkBlack
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         self.navigationController?.navigationBar.shadowImage = nil // 恢复shadowImage
+    }
+    
+    private func changeNavBarSytle() {
+        if tableView.contentOffset.y >= remainOffSetY! {
+            self.navigationController?.navigationBar.tintColor = AppColor.darkBlack
+            self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+            self.navigationController?.navigationBar.shadowImage = nil // 恢复shadowImage
+        } else {
+            self.navigationController?.navigationBar.tintColor = UIColor.white
+            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            self.navigationController?.navigationBar.shadowImage = UIImage() // 去掉shadowImage
+        }
+    }
+    
+    private func setupNavItem() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_icon_back"), style: .plain, handler: { [weak self] in
+            
+            self?.navigationController?.popViewController(animated: true)
+        })
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_icon_edit"), style: .plain, handler: { [weak self] in
+            
+            self?.navigationController?.pushViewController(EditProfileController(), animated: true)
+        })
     }
     
 }
@@ -147,14 +172,13 @@ extension ProfileController: PageViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //生成navBar
-        if scrollView.contentOffset.y >= remainOffSetY! {
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(color: UIColor.white, size: CGSize(width: 1, height: 1)), for: .default)
-            self.navigationController?.navigationBar.shadowImage = nil // 恢复shadowImage
-        } else {
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-            self.navigationController?.navigationBar.shadowImage = UIImage() // 去掉shadowImage
-        }
+        //改变navBar
+        changeNavBarSytle()
+//        if scrollView.contentOffset.y >= remainOffSetY! {
+//            self.viewWillDisappear(false)
+//        } else {
+//            self.viewWillAppear(false)
+//        }
         
         //图片下拉放大
         let yOffset = scrollView.contentOffset.y
@@ -163,6 +187,7 @@ extension ProfileController: PageViewDelegate {
             profileView.height = -yOffset
         }
         
+        //设置悬停位置
         guard let pageScrollV = pageScrollView else { return }
         if pageScrollV.contentOffset.y > CGFloat(0) {
             tableView.contentOffset.y = remainOffSetY!

@@ -7,13 +7,13 @@ target 'umeiTime' do
   use_frameworks!
   # Pods for umeiTime
 
-  pod 'ESPullToRefresh'
   pod 'Moya'
-  pod 'HandyJSON'
-  pod 'Kingfisher'
   pod 'R.swift'
-  pod 'PageMenu'
-  pod 'ESTabBarController-swift'
-  pod 'Closures'
+  pod 'ESPullToRefresh'
+# version for Swift 4.1
+  pod 'HandyJSON', '4.1.3'
+  pod 'Kingfisher', '4.9.0'
+  pod 'ESTabBarController-swift', '2.6.2'
+  pod 'Closures', '0.4'
   
 end

@@ -31,7 +31,7 @@ class GlobalAppearance: NSObject {
 //        UINavigationBar.appearance().setBackgroundImage(UIImage(color: UIColor.white, size: CGSize(width: 1, height: 1)), for: .default)
 
         /// UIBarButtonItem【字体色、字体大小】
-        let barButtonAttributes: [NSAttributedString.Key : Any] = [
+        let barButtonAttributes: [NSAttributedStringKey : Any] = [
             .font: AppFont.titleFont,
             .foregroundColor:  AppColor.darkBlack
         ]

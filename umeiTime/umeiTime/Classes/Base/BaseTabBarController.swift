@@ -42,7 +42,7 @@ class BaseTabBarController: UITabBarController {
         
         nav.tabBarItem = tabItem
         
-        self.addChild(nav)
+        self.addChildViewController(nav)
     }
 
 }
