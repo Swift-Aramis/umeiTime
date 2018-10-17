@@ -12,9 +12,7 @@ class BaseTableViewController: BaseController, UITableViewDelegate, UITableViewD
 
     //MARK: - SubclassingHooks
     /// 布局 tableView
-    public func layoutTableView() {
-        tableView.frame = view.bounds
-    }
+    public func layoutTableView() {}
     /// 设置 tableView
     public func setupTableView() {}
     
@@ -38,7 +36,7 @@ class BaseTableViewController: BaseController, UITableViewDelegate, UITableViewD
     }
     
     private func initTableView() {
-        tableView = UITableView(frame: CGRect.zero, style: style)
+        tableView = UITableView(frame: view.bounds, style: style)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false

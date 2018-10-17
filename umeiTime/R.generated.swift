@@ -21,8 +21,17 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 0 files.
+  /// This `R.file` struct is generated, and contains static references to 1 files.
   struct file {
+    /// Resource file `test.png`.
+    static let testPng = Rswift.FileResource(bundle: R.hostingBundle, name: "test", pathExtension: "png")
+    
+    /// `bundle.url(forResource: "test", withExtension: "png")`
+    static func testPng(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.testPng
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
     fileprivate init() {}
   }
   
@@ -31,7 +40,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 21 images.
+  /// This `R.image` struct is generated, and contains static references to 22 images.
   struct image {
     /// Image `icon_look`.
     static let icon_look = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_look")
@@ -75,6 +84,8 @@ struct R: Rswift.Validatable {
     static let tabbar_murmur_normal = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_murmur_normal")
     /// Image `tabbar_murmur_selected`.
     static let tabbar_murmur_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_murmur_selected")
+    /// Image `test`.
+    static let test = Rswift.ImageResource(bundle: R.hostingBundle, name: "test")
     
     /// `UIImage(named: "icon_look", bundle: ..., traitCollection: ...)`
     static func icon_look(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -181,10 +192,15 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.tabbar_murmur_selected, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "test", bundle: ..., traitCollection: ...)`
+    static func test(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.test, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 12 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 15 nibs.
   struct nib {
     /// Nib `HomeArticleCell`.
     static let homeArticleCell = _R.nib._HomeArticleCell()
@@ -198,12 +214,18 @@ struct R: Rswift.Validatable {
     static let homePicCell = _R.nib._HomePicCell()
     /// Nib `MGroupCell`.
     static let mGroupCell = _R.nib._MGroupCell()
+    /// Nib `MGroupCollectionCell`.
+    static let mGroupCollectionCell = _R.nib._MGroupCollectionCell()
+    /// Nib `MGroupInfoHeaderView`.
+    static let mGroupInfoHeaderView = _R.nib._MGroupInfoHeaderView()
     /// Nib `MessageController`.
     static let messageController = _R.nib._MessageController()
     /// Nib `MineController`.
     static let mineController = _R.nib._MineController()
     /// Nib `MineHeaderView`.
     static let mineHeaderView = _R.nib._MineHeaderView()
+    /// Nib `MurmurCell`.
+    static let murmurCell = _R.nib._MurmurCell()
     /// Nib `ProfileView`.
     static let profileView = _R.nib._ProfileView()
     /// Nib `SearchResultController`.
@@ -241,6 +263,16 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.mGroupCell)
     }
     
+    /// `UINib(name: "MGroupCollectionCell", in: bundle)`
+    static func mGroupCollectionCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.mGroupCollectionCell)
+    }
+    
+    /// `UINib(name: "MGroupInfoHeaderView", in: bundle)`
+    static func mGroupInfoHeaderView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.mGroupInfoHeaderView)
+    }
+    
     /// `UINib(name: "MessageController", in: bundle)`
     static func messageController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.messageController)
@@ -254,6 +286,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "MineHeaderView", in: bundle)`
     static func mineHeaderView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mineHeaderView)
+    }
+    
+    /// `UINib(name: "MurmurCell", in: bundle)`
+    static func murmurCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.murmurCell)
     }
     
     /// `UINib(name: "ProfileView", in: bundle)`
@@ -330,7 +367,9 @@ struct _R: Rswift.Validatable {
   struct nib: Rswift.Validatable {
     static func validate() throws {
       try _HomePicCell.validate()
+      try _ProfileView.validate()
       try _HomeArticleCell.validate()
+      try _MGroupInfoHeaderView.validate()
     }
     
     struct _HomeArticleCell: Rswift.NibResourceType, Rswift.Validatable {
@@ -407,6 +446,32 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    struct _MGroupCollectionCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MGroupCollectionCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MGroupCollectionCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MGroupCollectionCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _MGroupInfoHeaderView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "MGroupInfoHeaderView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MGroupInfoHeaderView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MGroupInfoHeaderView
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "test.png", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'test.png' is used in nib 'MGroupInfoHeaderView', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _MessageController: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "MessageController"
@@ -440,12 +505,27 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct _ProfileView: Rswift.NibResourceType {
+    struct _MurmurCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MurmurCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MurmurCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MurmurCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _ProfileView: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "ProfileView"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ProfileView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProfileView
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "test.png", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'test.png' is used in nib 'ProfileView', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

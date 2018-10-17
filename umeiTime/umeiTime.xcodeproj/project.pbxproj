@@ -22,6 +22,15 @@
 		B82FD7A7216063C20082F518 /* MessageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82FD7A5216063C20082F518 /* MessageController.xib */; };
 		B82FD7AA216063D20082F518 /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FD7A8216063D20082F518 /* MineController.swift */; };
 		B82FD7AB216063D20082F518 /* MineController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82FD7A9216063D20082F518 /* MineController.xib */; };
+		B83A272D2175CCD500D25391 /* MGroupCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A272C2175CCD500D25391 /* MGroupCollectionController.swift */; };
+		B83A27302175D29300D25391 /* MGroupCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A272E2175D29300D25391 /* MGroupCollectionCell.swift */; };
+		B83A27312175D29300D25391 /* MGroupCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83A272F2175D29300D25391 /* MGroupCollectionCell.xib */; };
+		B83A27332175DCAD00D25391 /* MGroupInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A27322175DCAD00D25391 /* MGroupInfoController.swift */; };
+		B83A27352175DD1D00D25391 /* MGroupInfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A27342175DD1D00D25391 /* MGroupInfoHeaderView.swift */; };
+		B83A27372175DD2F00D25391 /* MGroupInfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83A27362175DD2F00D25391 /* MGroupInfoHeaderView.xib */; };
+		B83A273A2175E30900D25391 /* MurmurCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A27382175E30900D25391 /* MurmurCell.swift */; };
+		B83A273B2175E30900D25391 /* MurmurCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83A27392175E30900D25391 /* MurmurCell.xib */; };
+		B83A273D2176D30E00D25391 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = B83A273C2176D30D00D25391 /* test.png */; };
 		B885D2562174671E00DFB681 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B885D2552174671E00DFB681 /* EditProfileController.swift */; };
 		B8951674215DF9D500F459CB /* GlobalAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8951673215DF9D500F459CB /* GlobalAppearance.swift */; };
 		B8951676215DF9F700F459CB /* GlobalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8951675215DF9F700F459CB /* GlobalService.swift */; };
@@ -90,6 +99,15 @@
 		B82FD7A5216063C20082F518 /* MessageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageController.xib; sourceTree = "<group>"; };
 		B82FD7A8216063D20082F518 /* MineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
 		B82FD7A9216063D20082F518 /* MineController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineController.xib; sourceTree = "<group>"; };
+		B83A272C2175CCD500D25391 /* MGroupCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGroupCollectionController.swift; sourceTree = "<group>"; };
+		B83A272E2175D29300D25391 /* MGroupCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGroupCollectionCell.swift; sourceTree = "<group>"; };
+		B83A272F2175D29300D25391 /* MGroupCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MGroupCollectionCell.xib; sourceTree = "<group>"; };
+		B83A27322175DCAD00D25391 /* MGroupInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGroupInfoController.swift; sourceTree = "<group>"; };
+		B83A27342175DD1D00D25391 /* MGroupInfoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGroupInfoHeaderView.swift; sourceTree = "<group>"; };
+		B83A27362175DD2F00D25391 /* MGroupInfoHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MGroupInfoHeaderView.xib; sourceTree = "<group>"; };
+		B83A27382175E30900D25391 /* MurmurCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurmurCell.swift; sourceTree = "<group>"; };
+		B83A27392175E30900D25391 /* MurmurCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MurmurCell.xib; sourceTree = "<group>"; };
+		B83A273C2176D30D00D25391 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		B885D2552174671E00DFB681 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		B8951673215DF9D500F459CB /* GlobalAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAppearance.swift; sourceTree = "<group>"; };
 		B8951675215DF9F700F459CB /* GlobalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalService.swift; sourceTree = "<group>"; };
@@ -225,6 +243,7 @@
 				B82FD7A0216063380082F518 /* MurMurController.swift */,
 				B8C74FE3216F1FC6001C27F0 /* MListController.swift */,
 				B8C74FDF216F1E8A001C27F0 /* MGroupController.swift */,
+				B83A27322175DCAD00D25391 /* MGroupInfoController.swift */,
 				B8C74FE1216F1EA9001C27F0 /* MEditController.swift */,
 			);
 			path = Controller;
@@ -240,8 +259,13 @@
 		B8951666215DC8B000F459CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B83A27382175E30900D25391 /* MurmurCell.swift */,
+				B83A27392175E30900D25391 /* MurmurCell.xib */,
 				B8C74FE5216F2463001C27F0 /* MGroupCell.swift */,
 				B8C74FE6216F2463001C27F0 /* MGroupCell.xib */,
+				B83A27342175DD1D00D25391 /* MGroupInfoHeaderView.swift */,
+				B83A27362175DD2F00D25391 /* MGroupInfoHeaderView.xib */,
+				B83A273C2176D30D00D25391 /* test.png */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,6 +288,7 @@
 				B81C137B217491C700C6C2E9 /* UserListController.swift */,
 				B8C74FE9216F3609001C27F0 /* ProfileController.swift */,
 				B885D2552174671E00DFB681 /* EditProfileController.swift */,
+				B83A272C2175CCD500D25391 /* MGroupCollectionController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,6 +309,8 @@
 				B8C74FED216F42DB001C27F0 /* ProfileView.xib */,
 				B81C137D2174920700C6C2E9 /* UserListCell.swift */,
 				B81C137E2174920700C6C2E9 /* UserListCell.xib */,
+				B83A272E2175D29300D25391 /* MGroupCollectionCell.swift */,
+				B83A272F2175D29300D25391 /* MGroupCollectionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -439,8 +466,8 @@
 		B8CA9A76215D0DFB00906E35 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				B81C137A217479A500C6C2E9 /* Model */,
 				B81C13792174799800C6C2E9 /* Config */,
+				B81C137A217479A500C6C2E9 /* Model */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -581,13 +608,17 @@
 				B8F55A7C2167D0B900251559 /* SearchResultController.xib in Resources */,
 				B8DB33FB213FC50600C78101 /* LaunchScreen.storyboard in Resources */,
 				B82FD7AB216063D20082F518 /* MineController.xib in Resources */,
+				B83A27372175DD2F00D25391 /* MGroupInfoHeaderView.xib in Resources */,
 				B8155D5121607FE800DB9987 /* HomePicCell.xib in Resources */,
 				B82FD7A7216063C20082F518 /* MessageController.xib in Resources */,
 				B8F55A72216739A300251559 /* HomeClassController.xib in Resources */,
+				B83A273D2176D30E00D25391 /* test.png in Resources */,
 				B8DB33F8213FC50600C78101 /* Assets.xcassets in Resources */,
 				B81C13802174920700C6C2E9 /* UserListCell.xib in Resources */,
 				B8DB33F6213FC50400C78101 /* Main.storyboard in Resources */,
+				B83A273B2175E30900D25391 /* MurmurCell.xib in Resources */,
 				B8C74FE8216F2463001C27F0 /* MGroupCell.xib in Resources */,
+				B83A27312175D29300D25391 /* MGroupCollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +704,8 @@
 				B8F7527E2169F2CF00AB96A6 /* BaseTableViewController.swift in Sources */,
 				B8CA9A71215CFC9B00906E35 /* UIViewAnimations.swift in Sources */,
 				B8CA9A79215D0E5600906E35 /* BaseController.swift in Sources */,
+				B83A27352175DD1D00D25391 /* MGroupInfoHeaderView.swift in Sources */,
+				B83A27302175D29300D25391 /* MGroupCollectionCell.swift in Sources */,
 				B8CA9A73215CFCD500906E35 /* UIViewLoads.swift in Sources */,
 				B8C74FEA216F3609001C27F0 /* ProfileController.swift in Sources */,
 				B8155D4C21607FD500DB9987 /* HomeArticleCell.swift in Sources */,
@@ -689,11 +722,13 @@
 				B8951674215DF9D500F459CB /* GlobalAppearance.swift in Sources */,
 				B82204952160A62C00BFC8BA /* R.generated.swift in Sources */,
 				B8CA9A7B215D0E8200906E35 /* BaseNavController.swift in Sources */,
+				B83A272D2175CCD500D25391 /* MGroupCollectionController.swift in Sources */,
 				B8DB33F3213FC50400C78101 /* ViewController.swift in Sources */,
 				B81C137F2174920700C6C2E9 /* UserListCell.swift in Sources */,
 				B8951676215DF9F700F459CB /* GlobalService.swift in Sources */,
 				B895167F215E00E300F459CB /* FontExtensions.swift in Sources */,
 				B8C74FE0216F1E8A001C27F0 /* MGroupController.swift in Sources */,
+				B83A27332175DCAD00D25391 /* MGroupInfoController.swift in Sources */,
 				B8AC3347216B55580049A626 /* MineHeaderView.swift in Sources */,
 				B8DB33F1213FC50400C78101 /* AppDelegate.swift in Sources */,
 				B8D3ABA02160C45700D059B7 /* SegmentView.swift in Sources */,
@@ -710,6 +745,7 @@
 				B8155D5021607FE800DB9987 /* HomePicCell.swift in Sources */,
 				B82FD7AA216063D20082F518 /* MineController.swift in Sources */,
 				B82FD7A2216063380082F518 /* MurMurController.swift in Sources */,
+				B83A273A2175E30900D25391 /* MurmurCell.swift in Sources */,
 				B8E55576215F73EB00D695B0 /* HomeController.swift in Sources */,
 				B8C74FE2216F1EA9001C27F0 /* MEditController.swift in Sources */,
 				B895167A215DFB8800F459CB /* GlobalFontConfig.swift in Sources */,

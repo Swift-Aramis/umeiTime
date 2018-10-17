@@ -27,6 +27,7 @@ extension HomeController {
         let controllers = [HomeListController(type: .article),
                            HomeListController(type: .pic)]
         let scrollContentView = ScrollContentView(frame: CGRect(x: 0, y: NavBarHeight, width: view.width, height: view.height - NavBarHeight - TabBarHeight), childControllers: controllers, parentController: self)
+
         view.addSubview(scrollContentView)
         
         segmentView.titleButtonOnClicked = { (text, index) in

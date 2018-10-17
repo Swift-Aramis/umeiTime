@@ -48,6 +48,9 @@ class MineHeaderView: UIView {
         }
     }
     
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.width = ScreenWidth
+    }
     
 }

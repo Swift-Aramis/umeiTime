@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MGroupCollectionCell" customModule="umeiTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="110" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="110" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rsb-ID-e1B">
+                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Rsb-ID-e1B" secondAttribute="height" multiplier="1:1" id="veS-FZ-dpj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最文艺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvB-kO-Zzd">
+                        <rect key="frame" x="5" y="116" width="100" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999条记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwX-HX-AUj">
+                        <rect key="frame" x="5" y="137" width="100" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gwX-HX-AUj" secondAttribute="trailing" constant="5" id="0np-Et-O7s"/>
+                <constraint firstItem="Rsb-ID-e1B" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6D3-Nb-Jxl"/>
+                <constraint firstAttribute="trailing" secondItem="Rsb-ID-e1B" secondAttribute="trailing" id="PAJ-uU-Eu3"/>
+                <constraint firstItem="gwX-HX-AUj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="VEs-Ob-iHJ"/>
+                <constraint firstItem="Rsb-ID-e1B" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cCI-G1-EQA"/>
+                <constraint firstAttribute="trailing" secondItem="HvB-kO-Zzd" secondAttribute="trailing" constant="5" id="feb-XS-Hg5"/>
+                <constraint firstItem="HvB-kO-Zzd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="uFS-p7-2ji"/>
+                <constraint firstItem="gwX-HX-AUj" firstAttribute="top" secondItem="HvB-kO-Zzd" secondAttribute="bottom" constant="5" id="v4l-VD-Q0c"/>
+                <constraint firstItem="HvB-kO-Zzd" firstAttribute="top" secondItem="Rsb-ID-e1B" secondAttribute="bottom" constant="6" id="wwv-Wb-1Xu"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+        </collectionViewCell>
+    </objects>
+</document>

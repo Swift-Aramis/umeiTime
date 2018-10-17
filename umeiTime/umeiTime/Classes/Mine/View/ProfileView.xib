@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,9 +16,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-4e-uAQ">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
-                    <color key="backgroundColor" red="0.43921568630000002" green="0.74509803919999995" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test.png" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-4e-uAQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
+                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDI-a5-3KA">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
@@ -123,7 +123,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="MTY-4e-uAQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1OA-kg-fLN"/>
-                <constraint firstAttribute="bottom" secondItem="MTY-4e-uAQ" secondAttribute="bottom" id="9Ek-iT-DW5"/>
+                <constraint firstAttribute="bottom" secondItem="MTY-4e-uAQ" secondAttribute="bottom" constant="44" id="9Ek-iT-DW5"/>
                 <constraint firstItem="LDI-a5-3KA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CoM-hC-uMf"/>
                 <constraint firstItem="MTY-4e-uAQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RG6-c4-IpG"/>
                 <constraint firstAttribute="bottom" secondItem="LDI-a5-3KA" secondAttribute="bottom" id="XY6-p0-zCL"/>
@@ -146,4 +146,7 @@
             <point key="canvasLocation" x="124" y="46.776611694152926"/>
         </view>
     </objects>
+    <resources>
+        <image name="test.png" width="1072" height="728"/>
+    </resources>
 </document>

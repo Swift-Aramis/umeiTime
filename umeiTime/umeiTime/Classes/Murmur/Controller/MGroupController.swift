@@ -35,6 +35,11 @@ class MGroupController: BaseTableViewController {
         return 20
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        super.tableView(tableView, didSelectRowAt: indexPath)
+        self.navigationController?.pushViewController(MGroupInfoController(style: .grouped), animated: true)
+    }
+    
     //MARK: - 实现滚动代理
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         delegate?.pageViewDidScroll(scrollView: scrollView)

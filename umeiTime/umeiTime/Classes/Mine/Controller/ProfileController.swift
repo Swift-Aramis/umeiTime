@@ -23,7 +23,6 @@ class ProfileController: UIViewController {
     
     private lazy var profileView: ProfileView = {
         let profileV = ProfileView.loadViewFromNib() as! ProfileView
-        profileV.height += NavBarHeight
         return profileV
     }()
     private var titles = ["微语(0)", "小组(0)"]
@@ -32,7 +31,8 @@ class ProfileController: UIViewController {
     private var tableView: MultiplePanGestureTableView!
     private var pageScrollView: UIScrollView?
     private var remainOffSetY: CGFloat? //滚动后tableView的预留的偏移量
-    
+    private var profileViewOriginHeight: CGFloat?//headerView初始高度
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavItem()
@@ -49,18 +49,6 @@ class ProfileController: UIViewController {
         self.navigationController?.navigationBar.tintColor = AppColor.darkBlack
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         self.navigationController?.navigationBar.shadowImage = nil // 恢复shadowImage
-    }
-    
-    private func changeNavBarSytle() {
-        if tableView.contentOffset.y >= remainOffSetY! {
-            self.navigationController?.navigationBar.tintColor = AppColor.darkBlack
-            self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-            self.navigationController?.navigationBar.shadowImage = nil // 恢复shadowImage
-        } else {
-            self.navigationController?.navigationBar.tintColor = UIColor.white
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-            self.navigationController?.navigationBar.shadowImage = UIImage() // 去掉shadowImage
-        }
     }
     
     private func setupNavItem() {
@@ -97,7 +85,8 @@ extension ProfileController: UITableViewDelegate, UITableViewDataSource {
         }
         
         remainOffSetY = 0 - NavBarHeight - segmentView.height
-
+        profileViewOriginHeight = profileView.height
+        
         profileView.sectionView.addSubview(segmentView)
         profileView.y = -profileView.height
         //初始tableView偏移量为 -profileView.height
@@ -114,7 +103,7 @@ extension ProfileController: UITableViewDelegate, UITableViewDataSource {
         
         let contentHeight = view.height - segmentView.height - NavBarHeight
         let controllers = [MGroupController(pageDelegate: self),
-                           MGroupController(pageDelegate: self)]
+                           MGroupCollectionController(pageDelegate: self)]
         scrollContentView = ScrollContentView(frame: CGRect(x: 0, y: 0, width: view.width, height: contentHeight), childControllers: controllers, parentController: self)
         
         segmentView.titleButtonOnClicked = { [weak self] (text, index) in
@@ -159,6 +148,18 @@ extension ProfileController: UITableViewDelegate, UITableViewDataSource {
 
 extension ProfileController: PageViewDelegate {
     
+    private func changeNavBarSytle() {
+        if tableView.contentOffset.y >= remainOffSetY! {
+            self.navigationController?.navigationBar.tintColor = AppColor.darkBlack
+            self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+            self.navigationController?.navigationBar.shadowImage = nil // 恢复shadowImage
+        } else {
+            self.navigationController?.navigationBar.tintColor = UIColor.white
+            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            self.navigationController?.navigationBar.shadowImage = UIImage() // 去掉shadowImage
+        }
+    }
+    
     func pageViewDidScroll(scrollView: UIScrollView) {
         pageScrollView = scrollView
 
@@ -174,17 +175,15 @@ extension ProfileController: PageViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         //改变navBar
         changeNavBarSytle()
-//        if scrollView.contentOffset.y >= remainOffSetY! {
-//            self.viewWillDisappear(false)
-//        } else {
-//            self.viewWillAppear(false)
-//        }
         
         //图片下拉放大
         let yOffset = scrollView.contentOffset.y
-        if yOffset < -profileView.height {
+        if yOffset < -profileViewOriginHeight! {
             profileView.y = yOffset
             profileView.height = -yOffset
+        } else {
+            profileView.y = -profileViewOriginHeight!
+            profileView.height = profileViewOriginHeight!
         }
         
         //设置悬停位置

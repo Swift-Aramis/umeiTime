@@ -16,5 +16,6 @@ struct AppFont {
     //MARK: - Text
     static let firstTextFont = Font.systemFont(ofSize: 16).fit
     static let secendTextFont = Font.systemFont(ofSize: 14).fit
+    static let normalTextFont = Font.systemFont(ofSize: 15).fit
 }
 
