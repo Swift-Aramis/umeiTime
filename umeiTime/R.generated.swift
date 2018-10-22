@@ -21,14 +21,54 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 6 files.
   struct file {
     /// Resource file `test.png`.
     static let testPng = Rswift.FileResource(bundle: R.hostingBundle, name: "test", pathExtension: "png")
+    /// Resource file `宽细图片.jpg`.
+    static let 宽细图片Jpg = Rswift.FileResource(bundle: R.hostingBundle, name: "宽细图片", pathExtension: "jpg")
+    /// Resource file `横向图片.png`.
+    static let 横向图片Png = Rswift.FileResource(bundle: R.hostingBundle, name: "横向图片", pathExtension: "png")
+    /// Resource file `电脑横屏图片.png`.
+    static let 电脑横屏图片Png = Rswift.FileResource(bundle: R.hostingBundle, name: "电脑横屏图片", pathExtension: "png")
+    /// Resource file `窄长图片.jpg`.
+    static let 窄长图片Jpg = Rswift.FileResource(bundle: R.hostingBundle, name: "窄长图片", pathExtension: "jpg")
+    /// Resource file `竖屏图片.png`.
+    static let 竖屏图片Png = Rswift.FileResource(bundle: R.hostingBundle, name: "竖屏图片", pathExtension: "png")
     
     /// `bundle.url(forResource: "test", withExtension: "png")`
     static func testPng(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.testPng
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "宽细图片", withExtension: "jpg")`
+    static func 宽细图片Jpg(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.宽细图片Jpg
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "横向图片", withExtension: "png")`
+    static func 横向图片Png(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.横向图片Png
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "电脑横屏图片", withExtension: "png")`
+    static func 电脑横屏图片Png(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.电脑横屏图片Png
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "窄长图片", withExtension: "jpg")`
+    static func 窄长图片Jpg(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.窄长图片Jpg
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "竖屏图片", withExtension: "png")`
+    static func 竖屏图片Png(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.竖屏图片Png
       return fileResource.bundle.url(forResource: fileResource)
     }
     
@@ -40,10 +80,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 22 images.
+  /// This `R.image` struct is generated, and contains static references to 41 images.
   struct image {
-    /// Image `icon_look`.
-    static let icon_look = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_look")
+    /// Image `comment_placeholder`.
+    static let comment_placeholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "comment_placeholder")
     /// Image `mine_icon_atlas`.
     static let mine_icon_atlas = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_icon_atlas")
     /// Image `mine_icon_collect`.
@@ -58,6 +98,30 @@ struct R: Rswift.Validatable {
     static let msg_icon_like = Rswift.ImageResource(bundle: R.hostingBundle, name: "msg_icon_like")
     /// Image `msg_icon_sys`.
     static let msg_icon_sys = Rswift.ImageResource(bundle: R.hostingBundle, name: "msg_icon_sys")
+    /// Image `mur_arrow_down`.
+    static let mur_arrow_down = Rswift.ImageResource(bundle: R.hostingBundle, name: "mur_arrow_down")
+    /// Image `mur_arrow_right`.
+    static let mur_arrow_right = Rswift.ImageResource(bundle: R.hostingBundle, name: "mur_arrow_right")
+    /// Image `mur_icon_add`.
+    static let mur_icon_add = Rswift.ImageResource(bundle: R.hostingBundle, name: "mur_icon_add")
+    /// Image `mur_icon_book`.
+    static let mur_icon_book = Rswift.ImageResource(bundle: R.hostingBundle, name: "mur_icon_book")
+    /// Image `mur_icon_comment`.
+    static let mur_icon_comment = Rswift.ImageResource(bundle: R.hostingBundle, name: "mur_icon_comment")
+    /// Image `mur_icon_del`.
+    static let mur_icon_del = Rswift.ImageResource(bundle: R.hostingBundle, name: "mur_icon_del")
+    /// Image `mur_icon_like`.
+    static let mur_icon_like = Rswift.ImageResource(bundle: R.hostingBundle, name: "mur_icon_like")
+    /// Image `mur_icon_link`.
+    static let mur_icon_link = Rswift.ImageResource(bundle: R.hostingBundle, name: "mur_icon_link")
+    /// Image `mur_icon_look`.
+    static let mur_icon_look = Rswift.ImageResource(bundle: R.hostingBundle, name: "mur_icon_look")
+    /// Image `mur_icon_music`.
+    static let mur_icon_music = Rswift.ImageResource(bundle: R.hostingBundle, name: "mur_icon_music")
+    /// Image `mur_icon_pause`.
+    static let mur_icon_pause = Rswift.ImageResource(bundle: R.hostingBundle, name: "mur_icon_pause")
+    /// Image `mur_icon_pic`.
+    static let mur_icon_pic = Rswift.ImageResource(bundle: R.hostingBundle, name: "mur_icon_pic")
     /// Image `nav_icon_back`.
     static let nav_icon_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_back")
     /// Image `nav_icon_class`.
@@ -66,6 +130,10 @@ struct R: Rswift.Validatable {
     static let nav_icon_edit = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_edit")
     /// Image `nav_icon_friend`.
     static let nav_icon_friend = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_friend")
+    /// Image `nav_icon_issue_green`.
+    static let nav_icon_issue_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_issue_green")
+    /// Image `nav_icon_issue_white`.
+    static let nav_icon_issue_white = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_issue_white")
     /// Image `nav_icon_search`.
     static let nav_icon_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_icon_search")
     /// Image `tabbar_home_normal`.
@@ -86,10 +154,20 @@ struct R: Rswift.Validatable {
     static let tabbar_murmur_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_murmur_selected")
     /// Image `test`.
     static let test = Rswift.ImageResource(bundle: R.hostingBundle, name: "test")
+    /// Image `宽细图片.jpg`.
+    static let 宽细图片Jpg = Rswift.ImageResource(bundle: R.hostingBundle, name: "宽细图片.jpg")
+    /// Image `横向图片`.
+    static let 横向图片 = Rswift.ImageResource(bundle: R.hostingBundle, name: "横向图片")
+    /// Image `电脑横屏图片`.
+    static let 电脑横屏图片 = Rswift.ImageResource(bundle: R.hostingBundle, name: "电脑横屏图片")
+    /// Image `窄长图片.jpg`.
+    static let 窄长图片Jpg = Rswift.ImageResource(bundle: R.hostingBundle, name: "窄长图片.jpg")
+    /// Image `竖屏图片`.
+    static let 竖屏图片 = Rswift.ImageResource(bundle: R.hostingBundle, name: "竖屏图片")
     
-    /// `UIImage(named: "icon_look", bundle: ..., traitCollection: ...)`
-    static func icon_look(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_look, compatibleWith: traitCollection)
+    /// `UIImage(named: "comment_placeholder", bundle: ..., traitCollection: ...)`
+    static func comment_placeholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.comment_placeholder, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "mine_icon_atlas", bundle: ..., traitCollection: ...)`
@@ -127,6 +205,66 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.msg_icon_sys, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "mur_arrow_down", bundle: ..., traitCollection: ...)`
+    static func mur_arrow_down(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mur_arrow_down, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mur_arrow_right", bundle: ..., traitCollection: ...)`
+    static func mur_arrow_right(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mur_arrow_right, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mur_icon_add", bundle: ..., traitCollection: ...)`
+    static func mur_icon_add(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mur_icon_add, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mur_icon_book", bundle: ..., traitCollection: ...)`
+    static func mur_icon_book(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mur_icon_book, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mur_icon_comment", bundle: ..., traitCollection: ...)`
+    static func mur_icon_comment(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mur_icon_comment, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mur_icon_del", bundle: ..., traitCollection: ...)`
+    static func mur_icon_del(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mur_icon_del, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mur_icon_like", bundle: ..., traitCollection: ...)`
+    static func mur_icon_like(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mur_icon_like, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mur_icon_link", bundle: ..., traitCollection: ...)`
+    static func mur_icon_link(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mur_icon_link, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mur_icon_look", bundle: ..., traitCollection: ...)`
+    static func mur_icon_look(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mur_icon_look, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mur_icon_music", bundle: ..., traitCollection: ...)`
+    static func mur_icon_music(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mur_icon_music, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mur_icon_pause", bundle: ..., traitCollection: ...)`
+    static func mur_icon_pause(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mur_icon_pause, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mur_icon_pic", bundle: ..., traitCollection: ...)`
+    static func mur_icon_pic(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mur_icon_pic, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "nav_icon_back", bundle: ..., traitCollection: ...)`
     static func nav_icon_back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.nav_icon_back, compatibleWith: traitCollection)
@@ -145,6 +283,16 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "nav_icon_friend", bundle: ..., traitCollection: ...)`
     static func nav_icon_friend(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.nav_icon_friend, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "nav_icon_issue_green", bundle: ..., traitCollection: ...)`
+    static func nav_icon_issue_green(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.nav_icon_issue_green, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "nav_icon_issue_white", bundle: ..., traitCollection: ...)`
+    static func nav_icon_issue_white(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.nav_icon_issue_white, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "nav_icon_search", bundle: ..., traitCollection: ...)`
@@ -197,10 +345,35 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.test, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "宽细图片.jpg", bundle: ..., traitCollection: ...)`
+    static func 宽细图片Jpg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.宽细图片Jpg, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "横向图片", bundle: ..., traitCollection: ...)`
+    static func 横向图片(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.横向图片, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "电脑横屏图片", bundle: ..., traitCollection: ...)`
+    static func 电脑横屏图片(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.电脑横屏图片, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "窄长图片.jpg", bundle: ..., traitCollection: ...)`
+    static func 窄长图片Jpg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.窄长图片Jpg, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "竖屏图片", bundle: ..., traitCollection: ...)`
+    static func 竖屏图片(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.竖屏图片, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 15 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 16 nibs.
   struct nib {
     /// Nib `HomeArticleCell`.
     static let homeArticleCell = _R.nib._HomeArticleCell()
@@ -226,6 +399,8 @@ struct R: Rswift.Validatable {
     static let mineHeaderView = _R.nib._MineHeaderView()
     /// Nib `MurmurCell`.
     static let murmurCell = _R.nib._MurmurCell()
+    /// Nib `MusicContentView`.
+    static let musicContentView = _R.nib._MusicContentView()
     /// Nib `ProfileView`.
     static let profileView = _R.nib._ProfileView()
     /// Nib `SearchResultController`.
@@ -291,6 +466,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "MurmurCell", in: bundle)`
     static func murmurCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.murmurCell)
+    }
+    
+    /// `UINib(name: "MusicContentView", in: bundle)`
+    static func musicContentView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.musicContentView)
     }
     
     /// `UINib(name: "ProfileView", in: bundle)`
@@ -370,6 +550,8 @@ struct _R: Rswift.Validatable {
       try _ProfileView.validate()
       try _HomeArticleCell.validate()
       try _MGroupInfoHeaderView.validate()
+      try _MurmurCell.validate()
+      try _MusicContentView.validate()
     }
     
     struct _HomeArticleCell: Rswift.NibResourceType, Rswift.Validatable {
@@ -381,7 +563,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "icon_look", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_look' is used in nib 'HomeArticleCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "mur_icon_look", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_look' is used in nib 'HomeArticleCell', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
@@ -505,12 +687,35 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct _MurmurCell: Rswift.NibResourceType {
+    struct _MurmurCell: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "MurmurCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MurmurCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MurmurCell
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "mur_icon_like", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_like' is used in nib 'MurmurCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "mur_arrow_right", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_arrow_right' is used in nib 'MurmurCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "mur_arrow_down", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_arrow_down' is used in nib 'MurmurCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "mur_icon_look", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_look' is used in nib 'MurmurCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "mur_icon_comment", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_comment' is used in nib 'MurmurCell', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _MusicContentView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "MusicContentView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MusicContentView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MusicContentView
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "mur_icon_pause", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_pause' is used in nib 'MusicContentView', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

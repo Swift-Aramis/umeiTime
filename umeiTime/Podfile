@@ -10,6 +10,8 @@ target 'umeiTime' do
   pod 'Moya'
   pod 'R.swift'
   pod 'ESPullToRefresh'
+  pod 'SnapKit'
+  
 # version for Swift 4.1
   pod 'HandyJSON', '4.1.3'
   pod 'Kingfisher', '4.9.0'

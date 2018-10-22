@@ -17,6 +17,9 @@ struct AppColor {
     static let darkBlack = Color(hexString: "#333333")!
     static let normalBlack = Color(hexString: "#666666")!
     
+    //MARK: - Blue
+    static let linkBlue = Color(hexString: "#5296E8")!
+    
     //MARK: - TabbarTextColor
     static let tabbarSelectedColor = Color(hexString: "#1E1E1E")!
     static let tabbarNormalColor = Color(hexString: "#979797")!

@@ -100,7 +100,7 @@ extension ScrollContentView: UIScrollViewDelegate {
 //MARK: - Public Helper
 extension ScrollContentView {
     // 切换到第几个页内容
-    public func switchToContent(index: Int) {
-        scrollView.setContentOffset(CGPoint(x: scrollView.width * CGFloat(index), y: 0), animated: true)
+    public func switchToContent(index: Int, animated: Bool) {
+        scrollView.setContentOffset(CGPoint(x: scrollView.width * CGFloat(index), y: 0), animated: animated)
     }
 }

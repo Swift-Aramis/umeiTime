@@ -48,17 +48,23 @@ class ScrollPageView: UIView {
 extension ScrollPageView {
     
     private func setup() {
-        segmentView = SegmentView(frame: CGRect(x: 0, y: 0, width: self.width, height: segmentStyle.segmentHeight), segmentStyle: segmentStyle, titles: segmentTitles)
+        let scrollContentViewFrame = CGRect(x: 0, y: segmentStyle.segmentHeight, width: self.width, height: self.height - segmentStyle.segmentHeight)
+        scrollContentView = ScrollContentView(frame: scrollContentViewFrame,
+                                              childControllers: childControllers,
+                                              parentController: parentController)
         
-        scrollContentView = ScrollContentView(frame: CGRect(x: 0, y: segmentView.bottom, width: self.width, height: self.height - segmentView.height), childControllers: childControllers, parentController: parentController)
+        let segmentViewFrame = CGRect(x: 0, y: 0, width: self.width, height: segmentStyle.segmentHeight)
+        segmentView = SegmentView(frame: segmentViewFrame,
+                                  segmentStyle: segmentStyle,
+                                  titles: segmentTitles,
+                                  scrollContentView: scrollContentView)
         
         self.addSubview(segmentView)
         self.addSubview(scrollContentView)
-        
-        segmentView.titleButtonOnClicked = { [weak self] (text, index) in
-            print("segmentView --- \(text) --- \(index)")
-            self?.scrollContentView.switchToContent(index: index)
-        }
+//        segmentView.titleButtonOnClicked = { [weak self] (text, index) in
+//            print("segmentView --- \(text) --- \(index)")
+//            self?.scrollContentView.switchToContent(index: index)
+//        }
         
         scrollContentView.contentScrollEnded = { [weak self] (index) in
             print("scrollContentView --- \(index)")

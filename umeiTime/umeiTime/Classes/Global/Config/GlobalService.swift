@@ -10,6 +10,7 @@ import UIKit
 //MARK: - 全局使用的头文件 @_exported import
 @_exported import Closures
 @_exported import HandyJSON
+@_exported import SnapKit
 
 class GlobalService: NSObject {
 

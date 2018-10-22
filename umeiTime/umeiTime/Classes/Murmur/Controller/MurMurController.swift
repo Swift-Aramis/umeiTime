@@ -21,19 +21,23 @@ class MurMurController: BaseController {
 extension MurMurController {
     
     private func setupContentView() {
-        let titles = ["推荐", "小组", "关注"]
-        let segmentView = SegmentView(frame: CGRect(x: 0, y: 0, width: 150, height: 44), segmentStyle: SegmentStyle(), titles: titles)
+        let controllers = [MGroupController(),
+                           MListController(style: .grouped),
+                           MListController(style: .grouped)]
+        let scrollContentViewFrame = CGRect(x: 0, y: NavBarHeight, width: view.width, height: view.height - NavBarHeight - TabBarHeight)
+        let scrollContentView = ScrollContentView(frame: scrollContentViewFrame,
+                                                  childControllers: controllers,
+                                                  parentController: self)
+        
+        let titles = ["小组", "推荐", "关注"]
+        var segmentStyle = SegmentStyle()
+        segmentStyle.selectedIndex = 1
+        
+        let segmentViewFrame =  CGRect(x: 0, y: 0, width: 150, height: 44)
+        let segmentView = SegmentView(frame: segmentViewFrame, segmentStyle: segmentStyle, titles: titles, scrollContentView: scrollContentView)
         self.navigationItem.titleView = segmentView
         
-        let controllers = [MListController(),
-                           MGroupController(),
-                           MListController()]
-        let scrollContentView = ScrollContentView(frame: CGRect(x: 0, y: NavBarHeight, width: view.width, height: view.height - NavBarHeight - TabBarHeight), childControllers: controllers, parentController: self)
         view.addSubview(scrollContentView)
-        
-        segmentView.titleButtonOnClicked = { (text, index) in
-            scrollContentView.switchToContent(index: index)
-        }
         
         scrollContentView.contentScrollEnded = { (index) in
             segmentView.switchToTitle(index: index)
@@ -42,7 +46,7 @@ extension MurMurController {
     
     private func setupNavItem() {
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_icon_class"), style: .plain, handler: { [weak self] in
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_icon_issue_green")?.withRenderingMode(.alwaysOriginal), style: .plain, handler: { [weak self] in
             
             let murmurEditVC = MEditController(style: .grouped)
             self?.navigationController?.pushViewController(murmurEditVC, animated: true)

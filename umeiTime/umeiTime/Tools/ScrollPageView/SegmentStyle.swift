@@ -33,5 +33,12 @@ public struct SegmentStyle {
     /// 是否可滚动
     public var isScrollEnabled = false
     
+    /// 默认选中
+    public var selectedIndex: Int = 0
+    
+    /// segment高度
     public var segmentHeight: CGFloat = 44.0
+    
 }
+
+

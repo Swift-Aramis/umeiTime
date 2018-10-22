@@ -20,19 +20,19 @@ class HomeController: BaseController {
 
 extension HomeController {
     private func setupContentView() {
-        let titles = ["文章", "图片"]
-        let segmentView = SegmentView(frame: CGRect(x: 0, y: 0, width: 150, height: 44), segmentStyle: SegmentStyle(), titles: titles)
-        self.navigationItem.titleView = segmentView
-        
         let controllers = [HomeListController(type: .article),
                            HomeListController(type: .pic)]
-        let scrollContentView = ScrollContentView(frame: CGRect(x: 0, y: NavBarHeight, width: view.width, height: view.height - NavBarHeight - TabBarHeight), childControllers: controllers, parentController: self)
-
+        let scrollContentViewFrame = CGRect(x: 0, y: NavBarHeight, width: view.width, height: view.height - NavBarHeight - TabBarHeight)
+        let scrollContentView = ScrollContentView(frame: scrollContentViewFrame, childControllers: controllers, parentController: self)
         view.addSubview(scrollContentView)
         
-        segmentView.titleButtonOnClicked = { (text, index) in
-            scrollContentView.switchToContent(index: index)
-        }
+        let titles = ["文章", "图片"]
+        let segmentView = SegmentView(frame: CGRect(x: 0, y: 0, width: 150, height: 44), segmentStyle: SegmentStyle(), titles: titles, scrollContentView: scrollContentView)
+        self.navigationItem.titleView = segmentView
+        
+//        segmentView.titleButtonOnClicked = { (text, index) in
+//            scrollContentView.switchToContent(index: index)
+//        }
         
         scrollContentView.contentScrollEnded = { (index) in
             segmentView.switchToTitle(index: index)

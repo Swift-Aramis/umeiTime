@@ -17,9 +17,21 @@ class MGroupInfoController: BaseTableViewController {
     
     private var remainOffSetY: CGFloat? //滚动后tableView的预留的偏移量
     private var groupInfoHeaderOriginHeight: CGFloat?//headerView初始高度
+    private let whitePublishImg = UIImage(named: "nav_icon_issue_white")?.withRenderingMode(.alwaysOriginal)
+    private let greenPublishImg = UIImage(named: "nav_icon_issue_green")?.withRenderingMode(.alwaysOriginal)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavItem()
+    }
+    
+    private func setupNavItem() {
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: whitePublishImg, style: .plain, handler: { [weak self] in
+            
+            let murmurEditVC = MEditController(style: .grouped)
+            self?.navigationController?.pushViewController(murmurEditVC, animated: true)
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,10 +96,12 @@ extension MGroupInfoController {
             self.navigationController?.navigationBar.tintColor = AppColor.darkBlack
             self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
             self.navigationController?.navigationBar.shadowImage = nil // 恢复shadowImage
+            self.navigationItem.rightBarButtonItem?.image = greenPublishImg
         } else {
             self.navigationController?.navigationBar.tintColor = UIColor.white
             self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
             self.navigationController?.navigationBar.shadowImage = UIImage() // 去掉shadowImage
+            self.navigationItem.rightBarButtonItem?.image = whitePublishImg
         }
     }
     

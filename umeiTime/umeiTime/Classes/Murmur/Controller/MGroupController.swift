@@ -9,13 +9,6 @@
 import UIKit
 
 class MGroupController: BaseTableViewController {
-
-    weak var delegate: PageViewDelegate?
-    
-    convenience init(pageDelegate: PageViewDelegate) {
-        self.init()
-        self.delegate = pageDelegate
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +33,4 @@ class MGroupController: BaseTableViewController {
         self.navigationController?.pushViewController(MGroupInfoController(style: .grouped), animated: true)
     }
     
-    //MARK: - 实现滚动代理
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        delegate?.pageViewDidScroll(scrollView: scrollView)
-    }
 }

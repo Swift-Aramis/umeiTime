@@ -31,6 +31,14 @@
 		B83A273A2175E30900D25391 /* MurmurCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A27382175E30900D25391 /* MurmurCell.swift */; };
 		B83A273B2175E30900D25391 /* MurmurCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83A27392175E30900D25391 /* MurmurCell.xib */; };
 		B83A273D2176D30E00D25391 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = B83A273C2176D30D00D25391 /* test.png */; };
+		B83EC6012179A79B001DA128 /* PicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83EC6002179A79B001DA128 /* PicContentView.swift */; };
+		B83EC6032179A7B6001DA128 /* MusicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83EC6022179A7B6001DA128 /* MusicContentView.swift */; };
+		B83EC6072179A85C001DA128 /* MusicContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83EC6062179A85C001DA128 /* MusicContentView.xib */; };
+		B83EC60D217A3E2E001DA128 /* 竖屏图片.png in Resources */ = {isa = PBXBuildFile; fileRef = B83EC608217A3E2D001DA128 /* 竖屏图片.png */; };
+		B83EC60F217A3E2E001DA128 /* 电脑横屏图片.png in Resources */ = {isa = PBXBuildFile; fileRef = B83EC60A217A3E2E001DA128 /* 电脑横屏图片.png */; };
+		B83EC611217A3E2E001DA128 /* 横向图片.png in Resources */ = {isa = PBXBuildFile; fileRef = B83EC60C217A3E2E001DA128 /* 横向图片.png */; };
+		B83EC613217A3FDC001DA128 /* 窄长图片.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B83EC612217A3FDB001DA128 /* 窄长图片.jpg */; };
+		B83EC615217D9D74001DA128 /* 宽细图片.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B83EC614217D9D74001DA128 /* 宽细图片.jpg */; };
 		B885D2562174671E00DFB681 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B885D2552174671E00DFB681 /* EditProfileController.swift */; };
 		B8951674215DF9D500F459CB /* GlobalAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8951673215DF9D500F459CB /* GlobalAppearance.swift */; };
 		B8951676215DF9F700F459CB /* GlobalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8951675215DF9F700F459CB /* GlobalService.swift */; };
@@ -108,6 +116,14 @@
 		B83A27382175E30900D25391 /* MurmurCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurmurCell.swift; sourceTree = "<group>"; };
 		B83A27392175E30900D25391 /* MurmurCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MurmurCell.xib; sourceTree = "<group>"; };
 		B83A273C2176D30D00D25391 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		B83EC6002179A79B001DA128 /* PicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicContentView.swift; sourceTree = "<group>"; };
+		B83EC6022179A7B6001DA128 /* MusicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicContentView.swift; sourceTree = "<group>"; };
+		B83EC6062179A85C001DA128 /* MusicContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicContentView.xib; sourceTree = "<group>"; };
+		B83EC608217A3E2D001DA128 /* 竖屏图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "竖屏图片.png"; sourceTree = "<group>"; };
+		B83EC60A217A3E2E001DA128 /* 电脑横屏图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "电脑横屏图片.png"; sourceTree = "<group>"; };
+		B83EC60C217A3E2E001DA128 /* 横向图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "横向图片.png"; sourceTree = "<group>"; };
+		B83EC612217A3FDB001DA128 /* 窄长图片.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "窄长图片.jpg"; sourceTree = "<group>"; };
+		B83EC614217D9D74001DA128 /* 宽细图片.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "宽细图片.jpg"; sourceTree = "<group>"; };
 		B885D2552174671E00DFB681 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		B8951673215DF9D500F459CB /* GlobalAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAppearance.swift; sourceTree = "<group>"; };
 		B8951675215DF9F700F459CB /* GlobalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalService.swift; sourceTree = "<group>"; };
@@ -202,8 +218,8 @@
 		B81C13792174799800C6C2E9 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				B8951673215DF9D500F459CB /* GlobalAppearance.swift */,
 				B8951675215DF9F700F459CB /* GlobalService.swift */,
+				B8951673215DF9D500F459CB /* GlobalAppearance.swift */,
 				B8951679215DFB8800F459CB /* GlobalFontConfig.swift */,
 				B895167B215DFBA600F459CB /* GlobalColorConfig.swift */,
 			);
@@ -241,9 +257,9 @@
 			isa = PBXGroup;
 			children = (
 				B82FD7A0216063380082F518 /* MurMurController.swift */,
-				B8C74FE3216F1FC6001C27F0 /* MListController.swift */,
 				B8C74FDF216F1E8A001C27F0 /* MGroupController.swift */,
 				B83A27322175DCAD00D25391 /* MGroupInfoController.swift */,
+				B8C74FE3216F1FC6001C27F0 /* MListController.swift */,
 				B8C74FE1216F1EA9001C27F0 /* MEditController.swift */,
 			);
 			path = Controller;
@@ -261,10 +277,18 @@
 			children = (
 				B83A27382175E30900D25391 /* MurmurCell.swift */,
 				B83A27392175E30900D25391 /* MurmurCell.xib */,
+				B83EC6022179A7B6001DA128 /* MusicContentView.swift */,
+				B83EC6062179A85C001DA128 /* MusicContentView.xib */,
+				B83EC6002179A79B001DA128 /* PicContentView.swift */,
 				B8C74FE5216F2463001C27F0 /* MGroupCell.swift */,
 				B8C74FE6216F2463001C27F0 /* MGroupCell.xib */,
 				B83A27342175DD1D00D25391 /* MGroupInfoHeaderView.swift */,
 				B83A27362175DD2F00D25391 /* MGroupInfoHeaderView.xib */,
+				B83EC60A217A3E2E001DA128 /* 电脑横屏图片.png */,
+				B83EC60C217A3E2E001DA128 /* 横向图片.png */,
+				B83EC608217A3E2D001DA128 /* 竖屏图片.png */,
+				B83EC614217D9D74001DA128 /* 宽细图片.jpg */,
+				B83EC612217A3FDB001DA128 /* 窄长图片.jpg */,
 				B83A273C2176D30D00D25391 /* test.png */,
 			);
 			path = View;
@@ -420,7 +444,6 @@
 		B8CA9A64215CE26300906E35 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B82204932160A60300BFC8BA /* Libs */,
 				B8CA9A76215D0DFB00906E35 /* Global */,
 				B8CA9A77215D0E0300906E35 /* Base */,
 				B895166B215DC8B000F459CB /* Home */,
@@ -527,6 +550,7 @@
 				B8CA9A64215CE26300906E35 /* Classes */,
 				B8CA9A65215CE26300906E35 /* Extensions */,
 				B8CA9A61215CE26300906E35 /* Tools */,
+				B82204932160A60300BFC8BA /* Libs */,
 				B8CA9A63215CE26300906E35 /* Resources */,
 				B8DB33F0213FC50400C78101 /* AppDelegate.swift */,
 				B8DB33F2213FC50400C78101 /* ViewController.swift */,
@@ -602,15 +626,21 @@
 			files = (
 				B8E5557B215F741400D695B0 /* HomeListController.xib in Resources */,
 				B8AC3349216B55620049A626 /* MineHeaderView.xib in Resources */,
+				B83EC615217D9D74001DA128 /* 宽细图片.jpg in Resources */,
 				B8C74FEE216F42DB001C27F0 /* ProfileView.xib in Resources */,
 				B8155D4D21607FD500DB9987 /* HomeArticleCell.xib in Resources */,
+				B83EC6072179A85C001DA128 /* MusicContentView.xib in Resources */,
 				B8F55A7621673F5D00251559 /* HomeClassCell.xib in Resources */,
 				B8F55A7C2167D0B900251559 /* SearchResultController.xib in Resources */,
+				B83EC60F217A3E2E001DA128 /* 电脑横屏图片.png in Resources */,
+				B83EC611217A3E2E001DA128 /* 横向图片.png in Resources */,
 				B8DB33FB213FC50600C78101 /* LaunchScreen.storyboard in Resources */,
 				B82FD7AB216063D20082F518 /* MineController.xib in Resources */,
 				B83A27372175DD2F00D25391 /* MGroupInfoHeaderView.xib in Resources */,
+				B83EC60D217A3E2E001DA128 /* 竖屏图片.png in Resources */,
 				B8155D5121607FE800DB9987 /* HomePicCell.xib in Resources */,
 				B82FD7A7216063C20082F518 /* MessageController.xib in Resources */,
+				B83EC613217A3FDC001DA128 /* 窄长图片.jpg in Resources */,
 				B8F55A72216739A300251559 /* HomeClassController.xib in Resources */,
 				B83A273D2176D30E00D25391 /* test.png in Resources */,
 				B8DB33F8213FC50600C78101 /* Assets.xcassets in Resources */,
@@ -672,6 +702,7 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -684,6 +715,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -708,6 +740,7 @@
 				B83A27302175D29300D25391 /* MGroupCollectionCell.swift in Sources */,
 				B8CA9A73215CFCD500906E35 /* UIViewLoads.swift in Sources */,
 				B8C74FEA216F3609001C27F0 /* ProfileController.swift in Sources */,
+				B83EC6012179A79B001DA128 /* PicContentView.swift in Sources */,
 				B8155D4C21607FD500DB9987 /* HomeArticleCell.swift in Sources */,
 				B8F55A782167D00E00251559 /* HomeSearchController.swift in Sources */,
 				B895167C215DFBA600F459CB /* GlobalColorConfig.swift in Sources */,
@@ -735,6 +768,7 @@
 				B82FD7A6216063C20082F518 /* MessageController.swift in Sources */,
 				B8D3AB9E2160C44200D059B7 /* SegmentStyle.swift in Sources */,
 				B8155D492160731700DB9987 /* UIImageExtensions.swift in Sources */,
+				B83EC6032179A7B6001DA128 /* MusicContentView.swift in Sources */,
 				B8CA9A6D215CF30A00906E35 /* UIViewBorderCorner.swift in Sources */,
 				B885D2562174671E00DFB681 /* EditProfileController.swift in Sources */,
 				B8D3ABA22160C46900D059B7 /* ScrollContentView.swift in Sources */,

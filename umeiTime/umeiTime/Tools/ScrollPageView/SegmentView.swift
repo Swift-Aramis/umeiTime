@@ -14,7 +14,8 @@ public class SegmentView: UIView {
 
     public var segmentStyle: SegmentStyle!
     public var segmentTitles: [String]!
-
+    public var scrollContentView: ScrollContentView!
+    
     public var titleButtonOnClicked: TitleButtonOnClicked?
     private var titleButtons: [UIButton] = []
     private lazy var indicatorLine = UIView()
@@ -26,12 +27,19 @@ public class SegmentView: UIView {
         return scrollV
     }()
     
-    public init(frame: CGRect, segmentStyle: SegmentStyle, titles: [String]) {
+    public init(frame: CGRect,
+                segmentStyle: SegmentStyle,
+                titles: [String],
+                scrollContentView: ScrollContentView) {
         self.segmentStyle = segmentStyle
         self.segmentTitles = titles
+        self.scrollContentView = scrollContentView
         
         super.init(frame: frame)
-        setup()
+        
+        addSubview(scrollView)
+        scrollView.frame = self.bounds
+        setupUI()
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -42,9 +50,7 @@ public class SegmentView: UIView {
 
 extension SegmentView {
     
-    private func setup() {
-        addSubview(scrollView)
-        scrollView.frame = self.bounds
+    private func setupUI() {
         
         setupTitleButtons()
         
@@ -67,6 +73,8 @@ extension SegmentView {
         
         switchSelected(button)
         
+        self.scrollContentView.switchToContent(index: button.tag, animated: true)
+
         titleButtonOnClicked?((button.titleLabel?.text)!, button.tag)
     }
     
@@ -81,7 +89,7 @@ extension SegmentView {
             button.setTitleColor(segmentStyle.selectedTextColor, for: .selected)
             button.titleLabel?.font = segmentStyle.normalTextFont
             button.addTarget(self, action: #selector(itemClicked(_:)), for: .touchUpInside)
-            scrollView.addSubview(button)
+            scrollView.insertSubview(button, at: 0)
             titleButtons.append(button)
             
             if (segmentStyle.isScrollEnabled) {//适应大小
@@ -99,10 +107,11 @@ extension SegmentView {
                 button.y = 0
             }
             
-            if index == 0 {
+            if index == segmentStyle.selectedIndex {
                 button.isSelected = true
                 selectedButton = button
                 //滚动到相应的contentView
+                self.scrollContentView.switchToContent(index: index, animated: false)
             }
             
         }
@@ -157,5 +166,15 @@ extension SegmentView {
         }
         
         switchSelected(button)
+    }
+    
+    // 刷新标题内容
+    public func reloadSegment(titles: [String]) {
+        scrollView.subviews.forEach { (subView) in
+            subView.removeFromSuperview()
+        }
+        
+        self.segmentTitles = titles
+        setupUI()
     }
 }

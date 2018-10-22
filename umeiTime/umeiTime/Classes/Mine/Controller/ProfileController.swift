@@ -98,17 +98,15 @@ extension ProfileController: UITableViewDelegate, UITableViewDataSource {
     private func setupContentView() {
         var segmentStyle = SegmentStyle()
         segmentStyle.showsSeparatorLine = true
-        segmentView = SegmentView(frame: CGRect(x: 0, y: 0, width: view.width, height: 44), segmentStyle: segmentStyle, titles: titles)
-        segmentView.backgroundColor = UIColor.white
-        
-        let contentHeight = view.height - segmentView.height - NavBarHeight
-        let controllers = [MGroupController(pageDelegate: self),
+
+        let contentHeight = view.height - segmentStyle.segmentHeight - NavBarHeight
+        let controllers = [MListController(pageDelegate: self),
                            MGroupCollectionController(pageDelegate: self)]
         scrollContentView = ScrollContentView(frame: CGRect(x: 0, y: 0, width: view.width, height: contentHeight), childControllers: controllers, parentController: self)
         
-        segmentView.titleButtonOnClicked = { [weak self] (text, index) in
-            self?.scrollContentView.switchToContent(index: index)
-        }
+        segmentView = SegmentView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 44), segmentStyle: segmentStyle, titles: titles, scrollContentView: scrollContentView)
+        segmentView.backgroundColor = UIColor.white
+       
         scrollContentView.contentScrollEnded = { [weak self] (index) in
             self?.segmentView.switchToTitle(index: index)
         }
