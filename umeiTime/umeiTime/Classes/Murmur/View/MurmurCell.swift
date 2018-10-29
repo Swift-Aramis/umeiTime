@@ -54,21 +54,25 @@ extension MurmurCell {
     }
     
     private func constraintCenterContentView() {
-        picView.backgroundColor = UIColor.blue
         //特殊单张图片测试
 //        picView.picPathStringsArray = ["电脑横屏图片.png"]
         
         //FIXME: - 需要调整，判断是否超过全屏，如果过长，横向最大限制为全屏
 //        picView.picPathStringsArray = ["横向图片.png"]
 //        picView.picPathStringsArray = ["宽细图片.jpg"]
-
-        //FIXME: - 单张图片的宽度可以加大 可以调整成全屏宽度
-//        picView.picPathStringsArray = ["竖屏图片.png"]
         
+//        picView.picPathStringsArray = ["竖屏图片.png"]
 //        picView.picPathStringsArray = ["窄长图片.jpg"]
 
         //多张图片测试
-        picView.picPathStringsArray = ["test.png","test.png","test.png","test.png","test.png","test.png","test.png","test.png","test.png"]
+        picView.picPathStringsArray = ["电脑横屏图片.png","test.png","test.png","test.png","test.png","test.png","test.png","test.png","test.png"]
+        
+        //测试网络图片
+//        picView.picPathStringsArray = ["http://pic.58pic.com/58pic/14/62/50/62558PICxm8_1024.jpg",
+//                                       "http://pic19.nipic.com/20120308/4970979_102637717125_2.jpg"]
+        
+//        picView.picPathStringsArray = ["https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540466566825&di=39905442de5a11dcc55a204147a28e61&imgtype=0&src=http%3A%2F%2Fpic1.cxtuku.com%2F00%2F10%2F26%2Fb112bf6ff351.jpg"]
+        
         constraintInfoLabel()
         
         constraintPicView()

@@ -36,6 +36,7 @@ extension MessageController: UITableViewDelegate, UITableViewDataSource {
         tableView.rowHeight = 60
         tableView.tableFooterView = UIView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MessageCell")
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 17, bottom: 0, right: 0)
     }
     
     // MARK: - Table view data source
@@ -60,6 +61,18 @@ extension MessageController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - Table view delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                let umeiProfileVC = ProfileController()
+                self.navigationController?.pushViewController(umeiProfileVC, animated: true)
+                
+            } else {
+                let msgListVC = MsgListController()
+                msgListVC.title = dataSource[indexPath.row].title
+                self.navigationController?.pushViewController(msgListVC, animated: true)
+            }
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

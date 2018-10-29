@@ -55,9 +55,9 @@ class MGroupInfoController: BaseTableViewController {
         
         setupHeaderView()
 
-        tableView.separatorStyle = .none
         tableView.tableHeaderView = MGroupSignView(text: "记录生活的点滴，留住最美好的回忆。")
-        tableView.rowHeight = 80
+        tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 180
         tableView.register(R.nib.murmurCell(), forCellReuseIdentifier: R.nib.murmurCell.name)
     }
     
@@ -72,7 +72,6 @@ class MGroupInfoController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MurmurCell = tableView.dequeueReusableCell(withIdentifier: R.nib.murmurCell.name, for: indexPath) as! MurmurCell
-        cell.backgroundColor = UIColor.green
         return cell
     }
     

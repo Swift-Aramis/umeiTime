@@ -66,7 +66,6 @@
                                 <state key="normal" image="mur_arrow_down"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.97254901959999995" green="0.41960784309999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="y9X-hD-XCa" firstAttribute="leading" secondItem="25N-s9-Jsz" secondAttribute="leading" constant="13" id="4bA-7y-04N"/>
                             <constraint firstAttribute="trailing" secondItem="tL8-S2-dVW" secondAttribute="trailing" constant="13" id="GYK-mJ-Rg3"/>
@@ -124,7 +123,6 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.43921568630000002" green="0.74509803919999995" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1l7-pF-yyf" firstAttribute="width" secondItem="aoI-hV-3LU" secondAttribute="width" id="21n-Cg-Y6T"/>
                             <constraint firstAttribute="bottom" secondItem="l2f-Aa-JnW" secondAttribute="bottom" id="97b-0H-JM9"/>
@@ -140,7 +138,6 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSK-Pz-xjX">
                         <rect key="frame" x="13" y="74" width="349" height="65.5"/>
-                        <color key="backgroundColor" red="0.90980392160000001" green="0.1843137255" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </subviews>
                 <constraints>

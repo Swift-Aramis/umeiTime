@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0B6FC5C65C7D04867E935390 /* Pods_umeiTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C17737A4852187EEF4D106 /* Pods_umeiTime.framework */; };
+		B806DE5B217EC7AC00B298D2 /* UIImageViewSetUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806DE5A217EC7AC00B298D2 /* UIImageViewSetUrl.swift */; };
+		B806DE5D217EF0E700B298D2 /* PhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806DE5C217EF0E700B298D2 /* PhotoBrowser.swift */; };
+		B806DE5F217EF0FE00B298D2 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806DE5E217EF0FE00B298D2 /* PhotoItem.swift */; };
 		B8155D492160731700DB9987 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8155D482160731700DB9987 /* UIImageExtensions.swift */; };
 		B8155D4C21607FD500DB9987 /* HomeArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8155D4A21607FD500DB9987 /* HomeArticleCell.swift */; };
 		B8155D4D21607FD500DB9987 /* HomeArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8155D4B21607FD500DB9987 /* HomeArticleCell.xib */; };
@@ -36,7 +39,6 @@
 		B83EC6072179A85C001DA128 /* MusicContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83EC6062179A85C001DA128 /* MusicContentView.xib */; };
 		B83EC60D217A3E2E001DA128 /* 竖屏图片.png in Resources */ = {isa = PBXBuildFile; fileRef = B83EC608217A3E2D001DA128 /* 竖屏图片.png */; };
 		B83EC60F217A3E2E001DA128 /* 电脑横屏图片.png in Resources */ = {isa = PBXBuildFile; fileRef = B83EC60A217A3E2E001DA128 /* 电脑横屏图片.png */; };
-		B83EC611217A3E2E001DA128 /* 横向图片.png in Resources */ = {isa = PBXBuildFile; fileRef = B83EC60C217A3E2E001DA128 /* 横向图片.png */; };
 		B83EC613217A3FDC001DA128 /* 窄长图片.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B83EC612217A3FDB001DA128 /* 窄长图片.jpg */; };
 		B83EC615217D9D74001DA128 /* 宽细图片.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B83EC614217D9D74001DA128 /* 宽细图片.jpg */; };
 		B885D2562174671E00DFB681 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B885D2552174671E00DFB681 /* EditProfileController.swift */; };
@@ -66,6 +68,11 @@
 		B8CA9A79215D0E5600906E35 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A78215D0E5600906E35 /* BaseController.swift */; };
 		B8CA9A7B215D0E8200906E35 /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A7A215D0E8200906E35 /* BaseNavController.swift */; };
 		B8CA9A7E215D103E00906E35 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A7D215D103E00906E35 /* ColorExtensions.swift */; };
+		B8CE8CDA2186B8660089ECA8 /* MsgListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE8CD92186B8660089ECA8 /* MsgListController.swift */; };
+		B8CE8CDD2186B96C0089ECA8 /* MsgListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE8CDB2186B96C0089ECA8 /* MsgListCell.swift */; };
+		B8CE8CDE2186B96C0089ECA8 /* MsgListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CE8CDC2186B96C0089ECA8 /* MsgListCell.xib */; };
+		B8D20271217DC6D10042BA85 /* PhotoBrowserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D20270217DC6D10042BA85 /* PhotoBrowserConfig.swift */; };
+		B8D20273217DC8670042BA85 /* BrowserLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D20272217DC8670042BA85 /* BrowserLoadingView.swift */; };
 		B8D3AB9E2160C44200D059B7 /* SegmentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3AB9D2160C44200D059B7 /* SegmentStyle.swift */; };
 		B8D3ABA02160C45700D059B7 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3AB9F2160C45700D059B7 /* SegmentView.swift */; };
 		B8D3ABA22160C46900D059B7 /* ScrollContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3ABA12160C46900D059B7 /* ScrollContentView.swift */; };
@@ -93,6 +100,9 @@
 /* Begin PBXFileReference section */
 		13C17737A4852187EEF4D106 /* Pods_umeiTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_umeiTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E894133B268F52E9CD10036 /* Pods-umeiTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-umeiTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-umeiTime/Pods-umeiTime.release.xcconfig"; sourceTree = "<group>"; };
+		B806DE5A217EC7AC00B298D2 /* UIImageViewSetUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewSetUrl.swift; sourceTree = "<group>"; };
+		B806DE5C217EF0E700B298D2 /* PhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBrowser.swift; sourceTree = "<group>"; };
+		B806DE5E217EF0FE00B298D2 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
 		B8155D482160731700DB9987 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		B8155D4A21607FD500DB9987 /* HomeArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeArticleCell.swift; sourceTree = "<group>"; };
 		B8155D4B21607FD500DB9987 /* HomeArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeArticleCell.xib; sourceTree = "<group>"; };
@@ -121,7 +131,6 @@
 		B83EC6062179A85C001DA128 /* MusicContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicContentView.xib; sourceTree = "<group>"; };
 		B83EC608217A3E2D001DA128 /* 竖屏图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "竖屏图片.png"; sourceTree = "<group>"; };
 		B83EC60A217A3E2E001DA128 /* 电脑横屏图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "电脑横屏图片.png"; sourceTree = "<group>"; };
-		B83EC60C217A3E2E001DA128 /* 横向图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "横向图片.png"; sourceTree = "<group>"; };
 		B83EC612217A3FDB001DA128 /* 窄长图片.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "窄长图片.jpg"; sourceTree = "<group>"; };
 		B83EC614217D9D74001DA128 /* 宽细图片.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "宽细图片.jpg"; sourceTree = "<group>"; };
 		B885D2552174671E00DFB681 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
@@ -151,6 +160,11 @@
 		B8CA9A78215D0E5600906E35 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		B8CA9A7A215D0E8200906E35 /* BaseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
 		B8CA9A7D215D103E00906E35 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		B8CE8CD92186B8660089ECA8 /* MsgListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgListController.swift; sourceTree = "<group>"; };
+		B8CE8CDB2186B96C0089ECA8 /* MsgListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgListCell.swift; sourceTree = "<group>"; };
+		B8CE8CDC2186B96C0089ECA8 /* MsgListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MsgListCell.xib; sourceTree = "<group>"; };
+		B8D20270217DC6D10042BA85 /* PhotoBrowserConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBrowserConfig.swift; sourceTree = "<group>"; };
+		B8D20272217DC8670042BA85 /* BrowserLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserLoadingView.swift; sourceTree = "<group>"; };
 		B8D3AB9D2160C44200D059B7 /* SegmentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentStyle.swift; sourceTree = "<group>"; };
 		B8D3AB9F2160C45700D059B7 /* SegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
 		B8D3ABA12160C46900D059B7 /* ScrollContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollContentView.swift; sourceTree = "<group>"; };
@@ -205,6 +219,14 @@
 				3E894133B268F52E9CD10036 /* Pods-umeiTime.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B806DE59217EC74200B298D2 /* UIImageViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				B806DE5A217EC7AC00B298D2 /* UIImageViewSetUrl.swift */,
+			);
+			path = UIImageViewExtensions;
 			sourceTree = "<group>";
 		};
 		B8155D47216072F000DB9987 /* UIImageExtensions */ = {
@@ -285,7 +307,6 @@
 				B83A27342175DD1D00D25391 /* MGroupInfoHeaderView.swift */,
 				B83A27362175DD2F00D25391 /* MGroupInfoHeaderView.xib */,
 				B83EC60A217A3E2E001DA128 /* 电脑横屏图片.png */,
-				B83EC60C217A3E2E001DA128 /* 横向图片.png */,
 				B83EC608217A3E2D001DA128 /* 竖屏图片.png */,
 				B83EC614217D9D74001DA128 /* 宽细图片.jpg */,
 				B83EC612217A3FDB001DA128 /* 窄长图片.jpg */,
@@ -399,6 +420,7 @@
 			children = (
 				B82FD7A4216063C20082F518 /* MessageController.swift */,
 				B82FD7A5216063C20082F518 /* MessageController.xib */,
+				B8CE8CD92186B8660089ECA8 /* MsgListController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -413,6 +435,8 @@
 		B8951672215DC8B000F459CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B8CE8CDB2186B96C0089ECA8 /* MsgListCell.swift */,
+				B8CE8CDC2186B96C0089ECA8 /* MsgListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -428,6 +452,7 @@
 		B8CA9A61215CE26300906E35 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B8D2026F217DC4C00042BA85 /* PhotoBrowser */,
 				B8D3AB9C2160C41A00D059B7 /* ScrollPageView */,
 				B8CA9A75215D0AFF00906E35 /* UIScreenTools */,
 			);
@@ -457,6 +482,7 @@
 		B8CA9A65215CE26300906E35 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B806DE59217EC74200B298D2 /* UIImageViewExtensions */,
 				B8155D47216072F000DB9987 /* UIImageExtensions */,
 				B895167D215E00CD00F459CB /* FontExtensions */,
 				B8CA9A74215D0ADE00906E35 /* UIViewExtensions */,
@@ -513,6 +539,17 @@
 				B8CA9A7D215D103E00906E35 /* ColorExtensions.swift */,
 			);
 			path = ColorExtensions;
+			sourceTree = "<group>";
+		};
+		B8D2026F217DC4C00042BA85 /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				B8D20270217DC6D10042BA85 /* PhotoBrowserConfig.swift */,
+				B8D20272217DC8670042BA85 /* BrowserLoadingView.swift */,
+				B806DE5C217EF0E700B298D2 /* PhotoBrowser.swift */,
+				B806DE5E217EF0FE00B298D2 /* PhotoItem.swift */,
+			);
+			path = PhotoBrowser;
 			sourceTree = "<group>";
 		};
 		B8D3AB9C2160C41A00D059B7 /* ScrollPageView */ = {
@@ -633,7 +670,6 @@
 				B8F55A7621673F5D00251559 /* HomeClassCell.xib in Resources */,
 				B8F55A7C2167D0B900251559 /* SearchResultController.xib in Resources */,
 				B83EC60F217A3E2E001DA128 /* 电脑横屏图片.png in Resources */,
-				B83EC611217A3E2E001DA128 /* 横向图片.png in Resources */,
 				B8DB33FB213FC50600C78101 /* LaunchScreen.storyboard in Resources */,
 				B82FD7AB216063D20082F518 /* MineController.xib in Resources */,
 				B83A27372175DD2F00D25391 /* MGroupInfoHeaderView.xib in Resources */,
@@ -647,6 +683,7 @@
 				B81C13802174920700C6C2E9 /* UserListCell.xib in Resources */,
 				B8DB33F6213FC50400C78101 /* Main.storyboard in Resources */,
 				B83A273B2175E30900D25391 /* MurmurCell.xib in Resources */,
+				B8CE8CDE2186B96C0089ECA8 /* MsgListCell.xib in Resources */,
 				B8C74FE8216F2463001C27F0 /* MGroupCell.xib in Resources */,
 				B83A27312175D29300D25391 /* MGroupCollectionCell.xib in Resources */,
 			);
@@ -729,6 +766,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B806DE5D217EF0E700B298D2 /* PhotoBrowser.swift in Sources */,
 				B8E55581215F845F00D695B0 /* RootTabBarController.swift in Sources */,
 				B8C74FE7216F2463001C27F0 /* MGroupCell.swift in Sources */,
 				B81C137C217491C700C6C2E9 /* UserListController.swift in Sources */,
@@ -755,11 +793,13 @@
 				B8951674215DF9D500F459CB /* GlobalAppearance.swift in Sources */,
 				B82204952160A62C00BFC8BA /* R.generated.swift in Sources */,
 				B8CA9A7B215D0E8200906E35 /* BaseNavController.swift in Sources */,
+				B8CE8CDD2186B96C0089ECA8 /* MsgListCell.swift in Sources */,
 				B83A272D2175CCD500D25391 /* MGroupCollectionController.swift in Sources */,
 				B8DB33F3213FC50400C78101 /* ViewController.swift in Sources */,
 				B81C137F2174920700C6C2E9 /* UserListCell.swift in Sources */,
 				B8951676215DF9F700F459CB /* GlobalService.swift in Sources */,
 				B895167F215E00E300F459CB /* FontExtensions.swift in Sources */,
+				B8D20271217DC6D10042BA85 /* PhotoBrowserConfig.swift in Sources */,
 				B8C74FE0216F1E8A001C27F0 /* MGroupController.swift in Sources */,
 				B83A27332175DCAD00D25391 /* MGroupInfoController.swift in Sources */,
 				B8AC3347216B55580049A626 /* MineHeaderView.swift in Sources */,
@@ -768,20 +808,24 @@
 				B82FD7A6216063C20082F518 /* MessageController.swift in Sources */,
 				B8D3AB9E2160C44200D059B7 /* SegmentStyle.swift in Sources */,
 				B8155D492160731700DB9987 /* UIImageExtensions.swift in Sources */,
+				B806DE5B217EC7AC00B298D2 /* UIImageViewSetUrl.swift in Sources */,
 				B83EC6032179A7B6001DA128 /* MusicContentView.swift in Sources */,
 				B8CA9A6D215CF30A00906E35 /* UIViewBorderCorner.swift in Sources */,
 				B885D2562174671E00DFB681 /* EditProfileController.swift in Sources */,
 				B8D3ABA22160C46900D059B7 /* ScrollContentView.swift in Sources */,
 				B8E5557A215F741400D695B0 /* HomeListController.swift in Sources */,
 				B8F55A7521673F5D00251559 /* HomeClassCell.swift in Sources */,
+				B8CE8CDA2186B8660089ECA8 /* MsgListController.swift in Sources */,
 				B8CA9A7E215D103E00906E35 /* ColorExtensions.swift in Sources */,
 				B8C74FEC216F42D0001C27F0 /* ProfileView.swift in Sources */,
 				B8155D5021607FE800DB9987 /* HomePicCell.swift in Sources */,
 				B82FD7AA216063D20082F518 /* MineController.swift in Sources */,
 				B82FD7A2216063380082F518 /* MurMurController.swift in Sources */,
 				B83A273A2175E30900D25391 /* MurmurCell.swift in Sources */,
+				B8D20273217DC8670042BA85 /* BrowserLoadingView.swift in Sources */,
 				B8E55576215F73EB00D695B0 /* HomeController.swift in Sources */,
 				B8C74FE2216F1EA9001C27F0 /* MEditController.swift in Sources */,
+				B806DE5F217EF0FE00B298D2 /* PhotoItem.swift in Sources */,
 				B895167A215DFB8800F459CB /* GlobalFontConfig.swift in Sources */,
 				B8C74FE4216F1FC6001C27F0 /* MListController.swift in Sources */,
 			);

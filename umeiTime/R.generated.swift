@@ -373,7 +373,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 16 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 17 nibs.
   struct nib {
     /// Nib `HomeArticleCell`.
     static let homeArticleCell = _R.nib._HomeArticleCell()
@@ -397,6 +397,8 @@ struct R: Rswift.Validatable {
     static let mineController = _R.nib._MineController()
     /// Nib `MineHeaderView`.
     static let mineHeaderView = _R.nib._MineHeaderView()
+    /// Nib `MsgListCell`.
+    static let msgListCell = _R.nib._MsgListCell()
     /// Nib `MurmurCell`.
     static let murmurCell = _R.nib._MurmurCell()
     /// Nib `MusicContentView`.
@@ -461,6 +463,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "MineHeaderView", in: bundle)`
     static func mineHeaderView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mineHeaderView)
+    }
+    
+    /// `UINib(name: "MsgListCell", in: bundle)`
+    static func msgListCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.msgListCell)
     }
     
     /// `UINib(name: "MurmurCell", in: bundle)`
@@ -682,6 +689,17 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MineHeaderView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MineHeaderView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _MsgListCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MsgListCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MsgListCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MsgListCell
       }
       
       fileprivate init() {}

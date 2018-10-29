@@ -25,14 +25,29 @@ class PicContentView: UIView {
             }
         
             if picPathStringsArray.count == 1 {/// 一张图片时
+                
+                let singleImgV = imageViewsArray.first
+                singleImgV?.isHidden = false
+                singleImgV?.x = 0
+                singleImgV?.y = 0
+                //FIXME: - 网络图片要从后端得到图片显示大小
+//                let maxW: CGFloat = 200
+//                let maxH: CGFloat = 180
+//                singleImgV?.size = CGSize(width: maxW, height: maxH)
+                
+//                DispatchQueue.global().async {
+//                    let image = self.image(from: self.picPathStringsArray.first!)
+//                    DispatchQueue.main.async {
+//                        singleImgV?.image = image
+//                        singleImgV?.fitImageViewSize(with: image)
+//                        self.height = (singleImgV?.height)!
+//                    }
+//                }
+                
+                //FIXME: - 加载本地图片
                 guard let image = UIImage(named: picPathStringsArray.first!) else {
                     return
                 }
-                let singleImgV = imageViewsArray.first
-                singleImgV?.isHidden = false
-                singleImgV?.image = image
-                singleImgV?.x = 0
-                singleImgV?.y = 0
                 singleImgV?.fitImageViewSize(with: image)
                 self.height = (singleImgV?.height)!
                 
@@ -42,7 +57,11 @@ class PicContentView: UIView {
                 let itemH = itemW
                 //每行的item数量
                 let perRowItemCount = self.perRowItemCount(for: picPathStringsArray)
-                var lastBottom: CGFloat = 0
+                //先定位置，再加载图片
+                let columnCount = ceilf(Float(picPathStringsArray.count) / Float(perRowItemCount))
+                let h = CGFloat(columnCount) * itemH + CGFloat(columnCount - 1) * gap
+                self.height = h
+                
                 for (index, imgUrl) in picPathStringsArray.enumerated() {
                     // 列
                     let columnIndex = index % perRowItemCount
@@ -52,18 +71,36 @@ class PicContentView: UIView {
                     let imgV = imageViewsArray[index]
                     imgV.isHidden = false
                     //等比缩小，取中间显示
-                    imgV.image = UIImage(named: imgUrl)?.fitSquareImageSize(with: itemW)
-                    imgV.contentMode = .center
+                    //FIXME: - 多张网络图片
+//                    DispatchQueue.global().async {
+//                        let image = self.image(from: imgUrl).fitSquareImageSize(with: itemW)
+//                        DispatchQueue.main.async {
+//                            imgV.image = image
+//                        }
+//                    }
+                    
+                    //FIXME: - 多张本地图片
+//                    imgV.image = UIImage(named: imgUrl)?.fitSquareImageSize(with: itemW)
+                    imgV.image = UIImage(named: imgUrl)
+                    imgV.contentMode = .scaleAspectFill
                     imgV.clipsToBounds = true
                     imgV.frame = CGRect(x: CGFloat(columnIndex) * (itemW + gap),
                                         y: CGFloat(rowIndex) * (itemH + gap),
                                         width: itemW,
                                         height: itemH)
-                    lastBottom = imgV.bottom
                 }
-                self.height = lastBottom
             }
         }
+    }
+    
+    //FIXME: - 加载数据耗时操作 
+    private func image(from path: String) -> UIImage {
+        guard let url = URL(string: path),
+            let imageData = try? Data.init(contentsOf: url),
+            let image = UIImage(data: imageData) else {
+                return UIImage()
+        }
+        return image
     }
     
     /// 每行的item数量
@@ -95,7 +132,7 @@ extension PicContentView {
     
     private func setupImageViews() {
         
-        for index in 1...9 {
+        for index in 0..<9 {
             let imageV = UIImageView()
             self.addSubview(imageV)
             imageV.isUserInteractionEnabled = true
@@ -111,6 +148,19 @@ extension PicContentView {
         let imageV = tap.view
         let index = imageV?.tag
         print("index === \(String(describing: index))")
+        guard let pControl = self.parentViewController else {
+            return
+        }
+        
+        var photos = [PhotoModel]()
+        for (index, imgUrl) in picPathStringsArray.enumerated() {
+            var photoModel = PhotoModel()
+            photoModel.imageURL = imgUrl
+            photoModel.placeholderImage = imageViewsArray[index].image ?? UIImage()
+            photos.append(photoModel)
+        }
+        
+        PhotoBrowser.showPhotoBrowser(from: pControl, type: .present, photos: photos, index: index!)
     }
     
 }
@@ -118,16 +168,18 @@ extension PicContentView {
 //MARK: - 图片等比压缩处理
 extension UIImage {
     
-    public func fitSquareImageSize(with max: CGFloat) -> UIImage {
+    public func fitSquareImageSize(with max: CGFloat) -> UIImage? {
         if self.size.width > self.size.height {//横图
-            return self.scaled(toHeight: max)!
+            return self.scaled(toHeight: max)
         } else {//竖图
-            return self.scaled(toWidth: max)!
+            return self.scaled(toWidth: max)
         }
     }
 }
 
 //MARK: - 单张图片时图片大小调整
+//FIXME: - 需要在model里确定image的宽高，进行合理压缩显示
+//fix - 单张图片情况需要后端返回图片宽高，提前确定图片大小，再填充加载
 extension UIImageView {
     
     public func fitImageViewSize(with image: UIImage) {
