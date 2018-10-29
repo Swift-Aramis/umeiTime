@@ -58,6 +58,9 @@
 		B8C74FEA216F3609001C27F0 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C74FE9216F3609001C27F0 /* ProfileController.swift */; };
 		B8C74FEC216F42D0001C27F0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C74FEB216F42D0001C27F0 /* ProfileView.swift */; };
 		B8C74FEE216F42DB001C27F0 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C74FED216F42DB001C27F0 /* ProfileView.xib */; };
+		B8C8EBFA2186E5EE00518DB6 /* MCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C8EBF82186E5EE00518DB6 /* MCommentCell.swift */; };
+		B8C8EBFB2186E5EE00518DB6 /* MCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C8EBF92186E5EE00518DB6 /* MCommentCell.xib */; };
+		B8C8EBFD2186E7F800518DB6 /* MurInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C8EBFC2186E7F800518DB6 /* MurInfoController.swift */; };
 		B8CA9A67215CE29E00906E35 /* ScreenConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A66215CE29E00906E35 /* ScreenConst.swift */; };
 		B8CA9A69215CE49D00906E35 /* UIViewFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A68215CE49D00906E35 /* UIViewFrame.swift */; };
 		B8CA9A6B215CE65900906E35 /* UIViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA9A6A215CE65900906E35 /* UIViewShadow.swift */; };
@@ -150,6 +153,9 @@
 		B8C74FE9216F3609001C27F0 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		B8C74FEB216F42D0001C27F0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B8C74FED216F42DB001C27F0 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		B8C8EBF82186E5EE00518DB6 /* MCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCommentCell.swift; sourceTree = "<group>"; };
+		B8C8EBF92186E5EE00518DB6 /* MCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCommentCell.xib; sourceTree = "<group>"; };
+		B8C8EBFC2186E7F800518DB6 /* MurInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurInfoController.swift; sourceTree = "<group>"; };
 		B8CA9A66215CE29E00906E35 /* ScreenConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenConst.swift; sourceTree = "<group>"; };
 		B8CA9A68215CE49D00906E35 /* UIViewFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFrame.swift; sourceTree = "<group>"; };
 		B8CA9A6A215CE65900906E35 /* UIViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewShadow.swift; sourceTree = "<group>"; };
@@ -282,6 +288,7 @@
 				B8C74FDF216F1E8A001C27F0 /* MGroupController.swift */,
 				B83A27322175DCAD00D25391 /* MGroupInfoController.swift */,
 				B8C74FE3216F1FC6001C27F0 /* MListController.swift */,
+				B8C8EBFC2186E7F800518DB6 /* MurInfoController.swift */,
 				B8C74FE1216F1EA9001C27F0 /* MEditController.swift */,
 			);
 			path = Controller;
@@ -306,6 +313,8 @@
 				B8C74FE6216F2463001C27F0 /* MGroupCell.xib */,
 				B83A27342175DD1D00D25391 /* MGroupInfoHeaderView.swift */,
 				B83A27362175DD2F00D25391 /* MGroupInfoHeaderView.xib */,
+				B8C8EBF82186E5EE00518DB6 /* MCommentCell.swift */,
+				B8C8EBF92186E5EE00518DB6 /* MCommentCell.xib */,
 				B83EC60A217A3E2E001DA128 /* 电脑横屏图片.png */,
 				B83EC608217A3E2D001DA128 /* 竖屏图片.png */,
 				B83EC614217D9D74001DA128 /* 宽细图片.jpg */,
@@ -686,6 +695,7 @@
 				B8CE8CDE2186B96C0089ECA8 /* MsgListCell.xib in Resources */,
 				B8C74FE8216F2463001C27F0 /* MGroupCell.xib in Resources */,
 				B83A27312175D29300D25391 /* MGroupCollectionCell.xib in Resources */,
+				B8C8EBFB2186E5EE00518DB6 /* MCommentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,11 +798,13 @@
 				B8CA9A6F215CF39D00906E35 /* UIViewParentController.swift in Sources */,
 				B8F55A7B2167D0B900251559 /* SearchResultController.swift in Sources */,
 				B8AC334D216C41C30049A626 /* SystemCellModel.swift in Sources */,
+				B8C8EBFD2186E7F800518DB6 /* MurInfoController.swift in Sources */,
 				B8F55A71216739A300251559 /* HomeClassController.swift in Sources */,
 				B8D3ABA42160C47A00D059B7 /* ScrollPageView.swift in Sources */,
 				B8951674215DF9D500F459CB /* GlobalAppearance.swift in Sources */,
 				B82204952160A62C00BFC8BA /* R.generated.swift in Sources */,
 				B8CA9A7B215D0E8200906E35 /* BaseNavController.swift in Sources */,
+				B8C8EBFA2186E5EE00518DB6 /* MCommentCell.swift in Sources */,
 				B8CE8CDD2186B96C0089ECA8 /* MsgListCell.swift in Sources */,
 				B83A272D2175CCD500D25391 /* MGroupCollectionController.swift in Sources */,
 				B8DB33F3213FC50400C78101 /* ViewController.swift in Sources */,

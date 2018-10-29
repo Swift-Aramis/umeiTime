@@ -14,6 +14,10 @@ class MGroupController: BaseTableViewController {
         super.viewDidLoad()
     }
 
+    override func layoutTableView() {
+        tableView.frame = view.bounds
+    }
+    
     override func setupTableView() {
         tableView.rowHeight = 80
         tableView.register(R.nib.mGroupCell(), forCellReuseIdentifier: R.nib.mGroupCell.name)

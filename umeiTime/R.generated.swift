@@ -21,14 +21,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 6 files.
+  /// This `R.file` struct is generated, and contains static references to 5 files.
   struct file {
     /// Resource file `test.png`.
     static let testPng = Rswift.FileResource(bundle: R.hostingBundle, name: "test", pathExtension: "png")
     /// Resource file `宽细图片.jpg`.
     static let 宽细图片Jpg = Rswift.FileResource(bundle: R.hostingBundle, name: "宽细图片", pathExtension: "jpg")
-    /// Resource file `横向图片.png`.
-    static let 横向图片Png = Rswift.FileResource(bundle: R.hostingBundle, name: "横向图片", pathExtension: "png")
     /// Resource file `电脑横屏图片.png`.
     static let 电脑横屏图片Png = Rswift.FileResource(bundle: R.hostingBundle, name: "电脑横屏图片", pathExtension: "png")
     /// Resource file `窄长图片.jpg`.
@@ -45,12 +43,6 @@ struct R: Rswift.Validatable {
     /// `bundle.url(forResource: "宽细图片", withExtension: "jpg")`
     static func 宽细图片Jpg(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.宽细图片Jpg
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-    
-    /// `bundle.url(forResource: "横向图片", withExtension: "png")`
-    static func 横向图片Png(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.横向图片Png
       return fileResource.bundle.url(forResource: fileResource)
     }
     
@@ -80,7 +72,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 41 images.
+  /// This `R.image` struct is generated, and contains static references to 40 images.
   struct image {
     /// Image `comment_placeholder`.
     static let comment_placeholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "comment_placeholder")
@@ -156,8 +148,6 @@ struct R: Rswift.Validatable {
     static let test = Rswift.ImageResource(bundle: R.hostingBundle, name: "test")
     /// Image `宽细图片.jpg`.
     static let 宽细图片Jpg = Rswift.ImageResource(bundle: R.hostingBundle, name: "宽细图片.jpg")
-    /// Image `横向图片`.
-    static let 横向图片 = Rswift.ImageResource(bundle: R.hostingBundle, name: "横向图片")
     /// Image `电脑横屏图片`.
     static let 电脑横屏图片 = Rswift.ImageResource(bundle: R.hostingBundle, name: "电脑横屏图片")
     /// Image `窄长图片.jpg`.
@@ -350,11 +340,6 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.宽细图片Jpg, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "横向图片", bundle: ..., traitCollection: ...)`
-    static func 横向图片(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.横向图片, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "电脑横屏图片", bundle: ..., traitCollection: ...)`
     static func 电脑横屏图片(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.电脑横屏图片, compatibleWith: traitCollection)
@@ -373,7 +358,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 17 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 18 nibs.
   struct nib {
     /// Nib `HomeArticleCell`.
     static let homeArticleCell = _R.nib._HomeArticleCell()
@@ -385,6 +370,8 @@ struct R: Rswift.Validatable {
     static let homeListController = _R.nib._HomeListController()
     /// Nib `HomePicCell`.
     static let homePicCell = _R.nib._HomePicCell()
+    /// Nib `MCommentCell`.
+    static let mCommentCell = _R.nib._MCommentCell()
     /// Nib `MGroupCell`.
     static let mGroupCell = _R.nib._MGroupCell()
     /// Nib `MGroupCollectionCell`.
@@ -433,6 +420,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "HomePicCell", in: bundle)`
     static func homePicCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.homePicCell)
+    }
+    
+    /// `UINib(name: "MCommentCell", in: bundle)`
+    static func mCommentCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.mCommentCell)
     }
     
     /// `UINib(name: "MGroupCell", in: bundle)`
@@ -624,6 +616,17 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    struct _MCommentCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MCommentCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MCommentCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MCommentCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _MGroupCell: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "MGroupCell"
@@ -715,9 +718,8 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "mur_icon_like", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_like' is used in nib 'MurmurCell', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "mur_arrow_right", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_arrow_right' is used in nib 'MurmurCell', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "mur_arrow_down", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_arrow_down' is used in nib 'MurmurCell', but couldn't be loaded.") }
         if UIKit.UIImage(named: "mur_icon_look", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_look' is used in nib 'MurmurCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "mur_arrow_down", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_arrow_down' is used in nib 'MurmurCell', but couldn't be loaded.") }
         if UIKit.UIImage(named: "mur_icon_comment", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_comment' is used in nib 'MurmurCell', but couldn't be loaded.") }
       }
       

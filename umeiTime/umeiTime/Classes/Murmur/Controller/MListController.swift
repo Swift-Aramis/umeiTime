@@ -26,11 +26,11 @@ class MListController: BaseTableViewController {
     }
     
     override func setupTableView() {
-        if #available(iOS 11.0, *) {
-            tableView.contentInsetAdjustmentBehavior = .never
-        } else {
-            self.automaticallyAdjustsScrollViewInsets = false
-        }
+//        if #available(iOS 11.0, *) {
+//            tableView.contentInsetAdjustmentBehavior = .never
+//        } else {
+//            self.automaticallyAdjustsScrollViewInsets = false
+//        }
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 180
         tableView.register(R.nib.murmurCell(), forCellReuseIdentifier: R.nib.murmurCell.name)
@@ -47,14 +47,14 @@ class MListController: BaseTableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 20
+        return 10
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { 
         return 10
     }
     
