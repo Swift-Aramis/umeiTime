@@ -33,7 +33,7 @@ class GlobalAppearance: NSObject {
 //        UITabBar.appearance().backgroundImage = UIImage(color: UIColor.white, size: CGSize(width: 1, height: 1))
 
         /// UIBarButtonItem【字体色、字体大小】
-        let barButtonAttributes: [NSAttributedStringKey : Any] = [
+        let barButtonAttributes: [NSAttributedString.Key : Any] = [
             .font: AppFont.titleFont,
             .foregroundColor:  AppColor.darkBlack
         ]

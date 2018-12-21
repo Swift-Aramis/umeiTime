@@ -54,7 +54,7 @@ extension ScrollContentView: UIScrollViewDelegate {
                 fatalError("不要添加 UINavigationController 包装后的子控制器")
             }
             
-            parentController.addChildViewController(childController)
+            parentController.addChild(childController)
             scrollView.addSubview(childController.view)
             childController.view.size = scrollView.size
             childController.view.top = scrollView.top

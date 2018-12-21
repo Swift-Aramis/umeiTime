@@ -29,7 +29,7 @@ class MGroupInfoController: BaseTableViewController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: whitePublishImg, style: .plain, handler: { [weak self] in
             
-            let murmurEditVC = MEditController(style: .grouped)
+            let murmurEditVC = MEditController(style: UITableView.Style.grouped)
             self?.navigationController?.pushViewController(murmurEditVC, animated: true)
         })
     }

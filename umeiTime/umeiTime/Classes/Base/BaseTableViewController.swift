@@ -18,9 +18,9 @@ class BaseTableViewController: BaseController, UITableViewDelegate, UITableViewD
     
     //MARK: - Private
     public private(set) var tableView: UITableView!
-    public private(set) var style: UITableViewStyle = .plain
+    public private(set) var style: UITableView.Style = .plain
     
-    convenience init(style: UITableViewStyle = .plain) {
+    convenience init(style: UITableView.Style = .plain) {
         self.init()
         self.style = style
     }

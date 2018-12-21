@@ -45,7 +45,7 @@ class EditProfileController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cellID: String
         var cell: UITableViewCell? = nil
-        var style: UITableViewCellStyle
+        var style: UITableViewCell.CellStyle
         if indexPath.section == 0 {
             cellID = "default"
             style = .default

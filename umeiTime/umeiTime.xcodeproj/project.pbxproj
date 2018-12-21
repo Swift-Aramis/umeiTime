@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B6FC5C65C7D04867E935390 /* Pods_umeiTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C17737A4852187EEF4D106 /* Pods_umeiTime.framework */; };
+		B804AF8D21CD481B0053F676 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804AF8C21CD481B0053F676 /* R.generated.swift */; };
 		B806DE5B217EC7AC00B298D2 /* UIImageViewSetUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806DE5A217EC7AC00B298D2 /* UIImageViewSetUrl.swift */; };
 		B806DE5D217EF0E700B298D2 /* PhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806DE5C217EF0E700B298D2 /* PhotoBrowser.swift */; };
 		B806DE5F217EF0FE00B298D2 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806DE5E217EF0FE00B298D2 /* PhotoItem.swift */; };
@@ -19,7 +20,6 @@
 		B81C137C217491C700C6C2E9 /* UserListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81C137B217491C700C6C2E9 /* UserListController.swift */; };
 		B81C137F2174920700C6C2E9 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81C137D2174920700C6C2E9 /* UserListCell.swift */; };
 		B81C13802174920700C6C2E9 /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B81C137E2174920700C6C2E9 /* UserListCell.xib */; };
-		B82204952160A62C00BFC8BA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82204942160A62C00BFC8BA /* R.generated.swift */; };
 		B82FD7A2216063380082F518 /* MurMurController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FD7A0216063380082F518 /* MurMurController.swift */; };
 		B82FD7A6216063C20082F518 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82FD7A4216063C20082F518 /* MessageController.swift */; };
 		B82FD7A7216063C20082F518 /* MessageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82FD7A5216063C20082F518 /* MessageController.xib */; };
@@ -103,6 +103,7 @@
 /* Begin PBXFileReference section */
 		13C17737A4852187EEF4D106 /* Pods_umeiTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_umeiTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E894133B268F52E9CD10036 /* Pods-umeiTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-umeiTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-umeiTime/Pods-umeiTime.release.xcconfig"; sourceTree = "<group>"; };
+		B804AF8C21CD481B0053F676 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		B806DE5A217EC7AC00B298D2 /* UIImageViewSetUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewSetUrl.swift; sourceTree = "<group>"; };
 		B806DE5C217EF0E700B298D2 /* PhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBrowser.swift; sourceTree = "<group>"; };
 		B806DE5E217EF0FE00B298D2 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
@@ -114,7 +115,6 @@
 		B81C137B217491C700C6C2E9 /* UserListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListController.swift; sourceTree = "<group>"; };
 		B81C137D2174920700C6C2E9 /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		B81C137E2174920700C6C2E9 /* UserListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
-		B82204942160A62C00BFC8BA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		B82FD7A0216063380082F518 /* MurMurController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurMurController.swift; sourceTree = "<group>"; };
 		B82FD7A4216063C20082F518 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		B82FD7A5216063C20082F518 /* MessageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageController.xib; sourceTree = "<group>"; };
@@ -265,7 +265,6 @@
 		B82204932160A60300BFC8BA /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				B82204942160A62C00BFC8BA /* R.generated.swift */,
 			);
 			name = Libs;
 			path = umeiTime/Libs;
@@ -602,6 +601,7 @@
 				B8DB33F2213FC50400C78101 /* ViewController.swift */,
 				B8DB33F4213FC50400C78101 /* Main.storyboard */,
 				B8DB33F7213FC50600C78101 /* Assets.xcassets */,
+				B804AF8C21CD481B0053F676 /* R.generated.swift */,
 				B8DB33F9213FC50600C78101 /* LaunchScreen.storyboard */,
 				B8DB33FC213FC50600C78101 /* Info.plist */,
 			);
@@ -616,8 +616,8 @@
 			buildConfigurationList = B8DB33FF213FC50600C78101 /* Build configuration list for PBXNativeTarget "umeiTime" */;
 			buildPhases = (
 				8EB950F184CEFB6F2EB0E44B /* [CP] Check Pods Manifest.lock */,
-				B8E5556E215F56F700D695B0 /* ShellScript */,
 				B8DB33E9213FC50400C78101 /* Sources */,
+				B8E5556E215F56F700D695B0 /* ShellScript */,
 				B8DB33EA213FC50400C78101 /* Frameworks */,
 				B8DB33EB213FC50400C78101 /* Resources */,
 				D47832146F7201526351EA3F /* [CP] Embed Pods Frameworks */,
@@ -726,12 +726,14 @@
 			files = (
 			);
 			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 		D47832146F7201526351EA3F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -802,8 +804,8 @@
 				B8F55A71216739A300251559 /* HomeClassController.swift in Sources */,
 				B8D3ABA42160C47A00D059B7 /* ScrollPageView.swift in Sources */,
 				B8951674215DF9D500F459CB /* GlobalAppearance.swift in Sources */,
-				B82204952160A62C00BFC8BA /* R.generated.swift in Sources */,
 				B8CA9A7B215D0E8200906E35 /* BaseNavController.swift in Sources */,
+				B804AF8D21CD481B0053F676 /* R.generated.swift in Sources */,
 				B8C8EBFA2186E5EE00518DB6 /* MCommentCell.swift in Sources */,
 				B8CE8CDD2186B96C0089ECA8 /* MsgListCell.swift in Sources */,
 				B83A272D2175CCD500D25391 /* MGroupCollectionController.swift in Sources */,
@@ -993,7 +995,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiyunjia.umeiTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1012,7 +1014,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiyunjia.umeiTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

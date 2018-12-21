@@ -558,7 +558,7 @@ struct _R: Rswift.Validatable {
       let name = "HomeArticleCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HomeArticleCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeArticleCell
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? HomeArticleCell
       }
       
       static func validate() throws {
@@ -573,7 +573,7 @@ struct _R: Rswift.Validatable {
       let name = "HomeClassCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HomeClassCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeClassCell
+        return instantiate(withOwner: ownerOrNil, options: (optionsOrNil as! [UINib.OptionsKey : Any]))[0] as? HomeClassCell
       }
       
       fileprivate init() {}
@@ -584,7 +584,7 @@ struct _R: Rswift.Validatable {
       let name = "HomeClassController"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? UIKit.UIView
       }
       
       fileprivate init() {}
@@ -595,7 +595,7 @@ struct _R: Rswift.Validatable {
       let name = "HomeListController"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? UIKit.UIView
       }
       
       fileprivate init() {}
@@ -606,7 +606,7 @@ struct _R: Rswift.Validatable {
       let name = "HomePicCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HomePicCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomePicCell
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? HomePicCell
       }
       
       static func validate() throws {
@@ -621,7 +621,7 @@ struct _R: Rswift.Validatable {
       let name = "MCommentCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MCommentCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MCommentCell
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MCommentCell
       }
       
       fileprivate init() {}
@@ -632,7 +632,7 @@ struct _R: Rswift.Validatable {
       let name = "MGroupCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MGroupCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MGroupCell
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MGroupCell
       }
       
       fileprivate init() {}
@@ -643,7 +643,7 @@ struct _R: Rswift.Validatable {
       let name = "MGroupCollectionCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MGroupCollectionCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MGroupCollectionCell
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MGroupCollectionCell
       }
       
       fileprivate init() {}
@@ -654,7 +654,7 @@ struct _R: Rswift.Validatable {
       let name = "MGroupInfoHeaderView"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MGroupInfoHeaderView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MGroupInfoHeaderView
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MGroupInfoHeaderView
       }
       
       static func validate() throws {
@@ -669,7 +669,7 @@ struct _R: Rswift.Validatable {
       let name = "MessageController"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? UIKit.UIView
       }
       
       fileprivate init() {}
@@ -680,7 +680,7 @@ struct _R: Rswift.Validatable {
       let name = "MineController"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? UIKit.UIView
       }
       
       fileprivate init() {}
@@ -691,7 +691,7 @@ struct _R: Rswift.Validatable {
       let name = "MineHeaderView"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MineHeaderView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MineHeaderView
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MineHeaderView
       }
       
       fileprivate init() {}
@@ -702,7 +702,7 @@ struct _R: Rswift.Validatable {
       let name = "MsgListCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MsgListCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MsgListCell
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MsgListCell
       }
       
       fileprivate init() {}
@@ -713,7 +713,7 @@ struct _R: Rswift.Validatable {
       let name = "MurmurCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MurmurCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MurmurCell
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MurmurCell
       }
       
       static func validate() throws {
@@ -731,7 +731,7 @@ struct _R: Rswift.Validatable {
       let name = "MusicContentView"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MusicContentView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MusicContentView
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MusicContentView
       }
       
       static func validate() throws {
@@ -746,7 +746,7 @@ struct _R: Rswift.Validatable {
       let name = "ProfileView"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ProfileView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProfileView
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? ProfileView
       }
       
       static func validate() throws {
@@ -761,7 +761,7 @@ struct _R: Rswift.Validatable {
       let name = "SearchResultController"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? UIKit.UIView
       }
       
       fileprivate init() {}
@@ -772,7 +772,7 @@ struct _R: Rswift.Validatable {
       let name = "UserListCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UserListCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UserListCell
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? UserListCell
       }
       
       fileprivate init() {}
