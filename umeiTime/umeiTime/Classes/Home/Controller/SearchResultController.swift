@@ -8,15 +8,11 @@
 
 import UIKit
 
-class SearchResultController: BaseController {
+class SearchResultController: BaseTableViewController {
 
-    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
     }
 
-    private func setupTableView() {
-        tableView.tableFooterView = UIView()
-    }
+    
 }

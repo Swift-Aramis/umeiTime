@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B6FC5C65C7D04867E935390 /* Pods_umeiTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C17737A4852187EEF4D106 /* Pods_umeiTime.framework */; };
-		B804AF8D21CD481B0053F676 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804AF8C21CD481B0053F676 /* R.generated.swift */; };
 		B806DE5B217EC7AC00B298D2 /* UIImageViewSetUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806DE5A217EC7AC00B298D2 /* UIImageViewSetUrl.swift */; };
 		B806DE5D217EF0E700B298D2 /* PhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806DE5C217EF0E700B298D2 /* PhotoBrowser.swift */; };
 		B806DE5F217EF0FE00B298D2 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806DE5E217EF0FE00B298D2 /* PhotoItem.swift */; };
@@ -17,6 +16,8 @@
 		B8155D4D21607FD500DB9987 /* HomeArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8155D4B21607FD500DB9987 /* HomeArticleCell.xib */; };
 		B8155D5021607FE800DB9987 /* HomePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8155D4E21607FE800DB9987 /* HomePicCell.swift */; };
 		B8155D5121607FE800DB9987 /* HomePicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8155D4F21607FE800DB9987 /* HomePicCell.xib */; };
+		B81862A621E3259E006C59AC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81862A521E3259E006C59AC /* R.generated.swift */; };
+		B81862A821E3388F006C59AC /* UMeiShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81862A721E3388F006C59AC /* UMeiShareManager.swift */; };
 		B81C137C217491C700C6C2E9 /* UserListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81C137B217491C700C6C2E9 /* UserListController.swift */; };
 		B81C137F2174920700C6C2E9 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81C137D2174920700C6C2E9 /* UserListCell.swift */; };
 		B81C13802174920700C6C2E9 /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B81C137E2174920700C6C2E9 /* UserListCell.xib */; };
@@ -47,6 +48,11 @@
 		B895167A215DFB8800F459CB /* GlobalFontConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8951679215DFB8800F459CB /* GlobalFontConfig.swift */; };
 		B895167C215DFBA600F459CB /* GlobalColorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895167B215DFBA600F459CB /* GlobalColorConfig.swift */; };
 		B895167F215E00E300F459CB /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895167E215E00E300F459CB /* FontExtensions.swift */; };
+		B8A3F2B521D5F56F007066E1 /* NetConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3F2B421D5F56F007066E1 /* NetConst.swift */; };
+		B8A3F2B721D5F580007066E1 /* NetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3F2B621D5F580007066E1 /* NetTarget.swift */; };
+		B8A3F2B921D5F598007066E1 /* MoyaHandyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3F2B821D5F598007066E1 /* MoyaHandyJson.swift */; };
+		B8A3F2BB21D5F5BD007066E1 /* NetWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3F2BA21D5F5BD007066E1 /* NetWrapper.swift */; };
+		B8A3F2BD21D5FFF5007066E1 /* NetApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3F2BC21D5FFF5007066E1 /* NetApi.swift */; };
 		B8AC3347216B55580049A626 /* MineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AC3346216B55580049A626 /* MineHeaderView.swift */; };
 		B8AC3349216B55620049A626 /* MineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8AC3348216B55620049A626 /* MineHeaderView.xib */; };
 		B8AC334D216C41C30049A626 /* SystemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AC334C216C41C30049A626 /* SystemCellModel.swift */; };
@@ -96,14 +102,12 @@
 		B8F55A7621673F5D00251559 /* HomeClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F55A7421673F5D00251559 /* HomeClassCell.xib */; };
 		B8F55A782167D00E00251559 /* HomeSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F55A772167D00E00251559 /* HomeSearchController.swift */; };
 		B8F55A7B2167D0B900251559 /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F55A792167D0B900251559 /* SearchResultController.swift */; };
-		B8F55A7C2167D0B900251559 /* SearchResultController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F55A7A2167D0B900251559 /* SearchResultController.xib */; };
 		B8F7527E2169F2CF00AB96A6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F7527D2169F2CF00AB96A6 /* BaseTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13C17737A4852187EEF4D106 /* Pods_umeiTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_umeiTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E894133B268F52E9CD10036 /* Pods-umeiTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-umeiTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-umeiTime/Pods-umeiTime.release.xcconfig"; sourceTree = "<group>"; };
-		B804AF8C21CD481B0053F676 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		B806DE5A217EC7AC00B298D2 /* UIImageViewSetUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewSetUrl.swift; sourceTree = "<group>"; };
 		B806DE5C217EF0E700B298D2 /* PhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBrowser.swift; sourceTree = "<group>"; };
 		B806DE5E217EF0FE00B298D2 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 		B8155D4B21607FD500DB9987 /* HomeArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeArticleCell.xib; sourceTree = "<group>"; };
 		B8155D4E21607FE800DB9987 /* HomePicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePicCell.swift; sourceTree = "<group>"; };
 		B8155D4F21607FE800DB9987 /* HomePicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePicCell.xib; sourceTree = "<group>"; };
+		B81862A521E3259E006C59AC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		B81862A721E3388F006C59AC /* UMeiShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMeiShareManager.swift; sourceTree = "<group>"; };
 		B81C137B217491C700C6C2E9 /* UserListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListController.swift; sourceTree = "<group>"; };
 		B81C137D2174920700C6C2E9 /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		B81C137E2174920700C6C2E9 /* UserListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
@@ -142,9 +148,15 @@
 		B8951679215DFB8800F459CB /* GlobalFontConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFontConfig.swift; sourceTree = "<group>"; };
 		B895167B215DFBA600F459CB /* GlobalColorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColorConfig.swift; sourceTree = "<group>"; };
 		B895167E215E00E300F459CB /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
+		B8A3F2B421D5F56F007066E1 /* NetConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetConst.swift; sourceTree = "<group>"; };
+		B8A3F2B621D5F580007066E1 /* NetTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetTarget.swift; sourceTree = "<group>"; };
+		B8A3F2B821D5F598007066E1 /* MoyaHandyJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaHandyJson.swift; sourceTree = "<group>"; };
+		B8A3F2BA21D5F5BD007066E1 /* NetWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWrapper.swift; sourceTree = "<group>"; };
+		B8A3F2BC21D5FFF5007066E1 /* NetApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetApi.swift; sourceTree = "<group>"; };
 		B8AC3346216B55580049A626 /* MineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeaderView.swift; sourceTree = "<group>"; };
 		B8AC3348216B55620049A626 /* MineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHeaderView.xib; sourceTree = "<group>"; };
 		B8AC334C216C41C30049A626 /* SystemCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCellModel.swift; sourceTree = "<group>"; };
+		B8BD244A21E343560047D909 /* umeiTime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "umeiTime-Bridging-Header.h"; sourceTree = "<group>"; };
 		B8C74FDF216F1E8A001C27F0 /* MGroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGroupController.swift; sourceTree = "<group>"; };
 		B8C74FE1216F1EA9001C27F0 /* MEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEditController.swift; sourceTree = "<group>"; };
 		B8C74FE3216F1FC6001C27F0 /* MListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MListController.swift; sourceTree = "<group>"; };
@@ -193,7 +205,6 @@
 		B8F55A7421673F5D00251559 /* HomeClassCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeClassCell.xib; sourceTree = "<group>"; };
 		B8F55A772167D00E00251559 /* HomeSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchController.swift; sourceTree = "<group>"; };
 		B8F55A792167D0B900251559 /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
-		B8F55A7A2167D0B900251559 /* SearchResultController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultController.xib; sourceTree = "<group>"; };
 		B8F7527D2169F2CF00AB96A6 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		F2F280C12D12744214BBFEC6 /* Pods-umeiTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-umeiTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-umeiTime/Pods-umeiTime.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				B8951675215DF9F700F459CB /* GlobalService.swift */,
+				B81862A721E3388F006C59AC /* UMeiShareManager.swift */,
 				B8951673215DF9D500F459CB /* GlobalAppearance.swift */,
 				B8951679215DFB8800F459CB /* GlobalFontConfig.swift */,
 				B895167B215DFBA600F459CB /* GlobalColorConfig.swift */,
@@ -388,7 +400,6 @@
 				B8F55A70216739A300251559 /* HomeClassController.xib */,
 				B8F55A772167D00E00251559 /* HomeSearchController.swift */,
 				B8F55A792167D0B900251559 /* SearchResultController.swift */,
-				B8F55A7A2167D0B900251559 /* SearchResultController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -455,6 +466,42 @@
 				B895167E215E00E300F459CB /* FontExtensions.swift */,
 			);
 			path = FontExtensions;
+			sourceTree = "<group>";
+		};
+		B8A3F2B021D5F52E007066E1 /* MoyaNet */ = {
+			isa = PBXGroup;
+			children = (
+				B8A3F2B221D5F548007066E1 /* Plugin */,
+				B8A3F2B121D5F537007066E1 /* Core */,
+				B8A3F2B321D5F551007066E1 /* Api */,
+			);
+			path = MoyaNet;
+			sourceTree = "<group>";
+		};
+		B8A3F2B121D5F537007066E1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B8A3F2B421D5F56F007066E1 /* NetConst.swift */,
+				B8A3F2B621D5F580007066E1 /* NetTarget.swift */,
+				B8A3F2BC21D5FFF5007066E1 /* NetApi.swift */,
+				B8A3F2B821D5F598007066E1 /* MoyaHandyJson.swift */,
+				B8A3F2BA21D5F5BD007066E1 /* NetWrapper.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B8A3F2B221D5F548007066E1 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
+		B8A3F2B321D5F551007066E1 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		B8CA9A61215CE26300906E35 /* Tools */ = {
@@ -592,6 +639,7 @@
 		B8DB33EF213FC50400C78101 /* umeiTime */ = {
 			isa = PBXGroup;
 			children = (
+				B8A3F2B021D5F52E007066E1 /* MoyaNet */,
 				B8CA9A64215CE26300906E35 /* Classes */,
 				B8CA9A65215CE26300906E35 /* Extensions */,
 				B8CA9A61215CE26300906E35 /* Tools */,
@@ -599,9 +647,10 @@
 				B8CA9A63215CE26300906E35 /* Resources */,
 				B8DB33F0213FC50400C78101 /* AppDelegate.swift */,
 				B8DB33F2213FC50400C78101 /* ViewController.swift */,
-				B8DB33F4213FC50400C78101 /* Main.storyboard */,
+				B81862A521E3259E006C59AC /* R.generated.swift */,
+				B8BD244A21E343560047D909 /* umeiTime-Bridging-Header.h */,
 				B8DB33F7213FC50600C78101 /* Assets.xcassets */,
-				B804AF8C21CD481B0053F676 /* R.generated.swift */,
+				B8DB33F4213FC50400C78101 /* Main.storyboard */,
 				B8DB33F9213FC50600C78101 /* LaunchScreen.storyboard */,
 				B8DB33FC213FC50600C78101 /* Info.plist */,
 			);
@@ -621,6 +670,7 @@
 				B8DB33EA213FC50400C78101 /* Frameworks */,
 				B8DB33EB213FC50400C78101 /* Resources */,
 				D47832146F7201526351EA3F /* [CP] Embed Pods Frameworks */,
+				78C4522834722766A93755AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -677,7 +727,6 @@
 				B8155D4D21607FD500DB9987 /* HomeArticleCell.xib in Resources */,
 				B83EC6072179A85C001DA128 /* MusicContentView.xib in Resources */,
 				B8F55A7621673F5D00251559 /* HomeClassCell.xib in Resources */,
-				B8F55A7C2167D0B900251559 /* SearchResultController.xib in Resources */,
 				B83EC60F217A3E2E001DA128 /* 电脑横屏图片.png in Resources */,
 				B8DB33FB213FC50600C78101 /* LaunchScreen.storyboard in Resources */,
 				B82FD7AB216063D20082F518 /* MineController.xib in Resources */,
@@ -702,6 +751,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		78C4522834722766A93755AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-umeiTime/Pods-umeiTime-resources.sh",
+				"${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-umeiTime/Pods-umeiTime-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8EB950F184CEFB6F2EB0E44B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -747,6 +818,7 @@
 				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/JXPhotoBrowser/JXPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -760,6 +832,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -788,10 +861,12 @@
 				B8CA9A79215D0E5600906E35 /* BaseController.swift in Sources */,
 				B83A27352175DD1D00D25391 /* MGroupInfoHeaderView.swift in Sources */,
 				B83A27302175D29300D25391 /* MGroupCollectionCell.swift in Sources */,
+				B8A3F2B921D5F598007066E1 /* MoyaHandyJson.swift in Sources */,
 				B8CA9A73215CFCD500906E35 /* UIViewLoads.swift in Sources */,
 				B8C74FEA216F3609001C27F0 /* ProfileController.swift in Sources */,
 				B83EC6012179A79B001DA128 /* PicContentView.swift in Sources */,
 				B8155D4C21607FD500DB9987 /* HomeArticleCell.swift in Sources */,
+				B81862A821E3388F006C59AC /* UMeiShareManager.swift in Sources */,
 				B8F55A782167D00E00251559 /* HomeSearchController.swift in Sources */,
 				B895167C215DFBA600F459CB /* GlobalColorConfig.swift in Sources */,
 				B8D3ABA821653F0500D059B7 /* BaseTabBarController.swift in Sources */,
@@ -800,18 +875,19 @@
 				B8CA9A6F215CF39D00906E35 /* UIViewParentController.swift in Sources */,
 				B8F55A7B2167D0B900251559 /* SearchResultController.swift in Sources */,
 				B8AC334D216C41C30049A626 /* SystemCellModel.swift in Sources */,
+				B8A3F2BB21D5F5BD007066E1 /* NetWrapper.swift in Sources */,
 				B8C8EBFD2186E7F800518DB6 /* MurInfoController.swift in Sources */,
 				B8F55A71216739A300251559 /* HomeClassController.swift in Sources */,
 				B8D3ABA42160C47A00D059B7 /* ScrollPageView.swift in Sources */,
 				B8951674215DF9D500F459CB /* GlobalAppearance.swift in Sources */,
 				B8CA9A7B215D0E8200906E35 /* BaseNavController.swift in Sources */,
-				B804AF8D21CD481B0053F676 /* R.generated.swift in Sources */,
 				B8C8EBFA2186E5EE00518DB6 /* MCommentCell.swift in Sources */,
 				B8CE8CDD2186B96C0089ECA8 /* MsgListCell.swift in Sources */,
 				B83A272D2175CCD500D25391 /* MGroupCollectionController.swift in Sources */,
 				B8DB33F3213FC50400C78101 /* ViewController.swift in Sources */,
 				B81C137F2174920700C6C2E9 /* UserListCell.swift in Sources */,
 				B8951676215DF9F700F459CB /* GlobalService.swift in Sources */,
+				B81862A621E3259E006C59AC /* R.generated.swift in Sources */,
 				B895167F215E00E300F459CB /* FontExtensions.swift in Sources */,
 				B8D20271217DC6D10042BA85 /* PhotoBrowserConfig.swift in Sources */,
 				B8C74FE0216F1E8A001C27F0 /* MGroupController.swift in Sources */,
@@ -822,6 +898,7 @@
 				B82FD7A6216063C20082F518 /* MessageController.swift in Sources */,
 				B8D3AB9E2160C44200D059B7 /* SegmentStyle.swift in Sources */,
 				B8155D492160731700DB9987 /* UIImageExtensions.swift in Sources */,
+				B8A3F2B521D5F56F007066E1 /* NetConst.swift in Sources */,
 				B806DE5B217EC7AC00B298D2 /* UIImageViewSetUrl.swift in Sources */,
 				B83EC6032179A7B6001DA128 /* MusicContentView.swift in Sources */,
 				B8CA9A6D215CF30A00906E35 /* UIViewBorderCorner.swift in Sources */,
@@ -835,6 +912,8 @@
 				B8155D5021607FE800DB9987 /* HomePicCell.swift in Sources */,
 				B82FD7AA216063D20082F518 /* MineController.swift in Sources */,
 				B82FD7A2216063380082F518 /* MurMurController.swift in Sources */,
+				B8A3F2B721D5F580007066E1 /* NetTarget.swift in Sources */,
+				B8A3F2BD21D5FFF5007066E1 /* NetApi.swift in Sources */,
 				B83A273A2175E30900D25391 /* MurmurCell.swift in Sources */,
 				B8D20273217DC8670042BA85 /* BrowserLoadingView.swift in Sources */,
 				B8E55576215F73EB00D695B0 /* HomeController.swift in Sources */,
@@ -995,6 +1074,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiyunjia.umeiTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "umeiTime/umeiTime-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1014,6 +1094,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiyunjia.umeiTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "umeiTime/umeiTime-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
