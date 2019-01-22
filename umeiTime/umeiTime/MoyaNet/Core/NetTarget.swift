@@ -23,11 +23,15 @@ extension NetTarget {
     }
     
     var headers: [String: String]? {
-        return nil
+        return ["AccessFrom": "IOS"]
     }
     
     var baseURL: URL {
         return NetConst.serverURL
+    }
+    
+    var sampleData: Data {
+        return Data()
     }
     
     var task: Task {

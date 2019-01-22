@@ -103,6 +103,8 @@
 		B8F55A782167D00E00251559 /* HomeSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F55A772167D00E00251559 /* HomeSearchController.swift */; };
 		B8F55A7B2167D0B900251559 /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F55A792167D0B900251559 /* SearchResultController.swift */; };
 		B8F7527E2169F2CF00AB96A6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F7527D2169F2CF00AB96A6 /* BaseTableViewController.swift */; };
+		B8F84BC921F7058F00272681 /* LoginApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F84BC821F7058F00272681 /* LoginApi.swift */; };
+		B8F84BCC21F70D8E00272681 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F84BCB21F70D8E00272681 /* HUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,6 +208,8 @@
 		B8F55A772167D00E00251559 /* HomeSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchController.swift; sourceTree = "<group>"; };
 		B8F55A792167D0B900251559 /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
 		B8F7527D2169F2CF00AB96A6 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		B8F84BC821F7058F00272681 /* LoginApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApi.swift; sourceTree = "<group>"; };
+		B8F84BCB21F70D8E00272681 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		F2F280C12D12744214BBFEC6 /* Pods-umeiTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-umeiTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-umeiTime/Pods-umeiTime.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -500,6 +504,7 @@
 		B8A3F2B321D5F551007066E1 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				B8F84BC821F7058F00272681 /* LoginApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 		B8CA9A61215CE26300906E35 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B8F84BCA21F70D7200272681 /* HUD */,
 				B8D2026F217DC4C00042BA85 /* PhotoBrowser */,
 				B8D3AB9C2160C41A00D059B7 /* ScrollPageView */,
 				B8CA9A75215D0AFF00906E35 /* UIScreenTools */,
@@ -655,6 +661,14 @@
 				B8DB33FC213FC50600C78101 /* Info.plist */,
 			);
 			path = umeiTime;
+			sourceTree = "<group>";
+		};
+		B8F84BCA21F70D7200272681 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				B8F84BCB21F70D8E00272681 /* HUD.swift */,
+			);
+			path = HUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -824,6 +838,8 @@
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+				"${BUILT_PRODUCTS_DIR}/ZKProgressHUD/ZKProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -838,6 +854,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZKProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -853,6 +871,7 @@
 			files = (
 				B806DE5D217EF0E700B298D2 /* PhotoBrowser.swift in Sources */,
 				B8E55581215F845F00D695B0 /* RootTabBarController.swift in Sources */,
+				B8F84BC921F7058F00272681 /* LoginApi.swift in Sources */,
 				B8C74FE7216F2463001C27F0 /* MGroupCell.swift in Sources */,
 				B81C137C217491C700C6C2E9 /* UserListController.swift in Sources */,
 				B8CA9A69215CE49D00906E35 /* UIViewFrame.swift in Sources */,
@@ -919,6 +938,7 @@
 				B8E55576215F73EB00D695B0 /* HomeController.swift in Sources */,
 				B8C74FE2216F1EA9001C27F0 /* MEditController.swift in Sources */,
 				B806DE5F217EF0FE00B298D2 /* PhotoItem.swift in Sources */,
+				B8F84BCC21F70D8E00272681 /* HUD.swift in Sources */,
 				B895167A215DFB8800F459CB /* GlobalFontConfig.swift in Sources */,
 				B8C74FE4216F1FC6001C27F0 /* MListController.swift in Sources */,
 			);

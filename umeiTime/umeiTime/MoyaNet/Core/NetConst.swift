@@ -10,7 +10,7 @@ import UIKit
 import Moya
 
 struct NetConst {
-    static let serverURL = URL(string: "xxx")!
+    static let serverURL = URL(string: "http://test.umeitime.com/umei")!
 }
 
 public enum NetError: Swift.Error, LocalizedError {

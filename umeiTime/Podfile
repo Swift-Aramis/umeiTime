@@ -16,6 +16,7 @@ target 'umeiTime' do
   pod 'ESTabBarController-swift'
   pod 'Closures'
   pod 'JXPhotoBrowser'
+  pod 'ZKProgressHUD'
 
   # 友盟基础库
   pod 'UMCCommon'

@@ -16,6 +16,11 @@ enum ResultType {
     case none
 }
 
+struct ResultModel: HandyJSON {
+    var code: Int?
+    var msg: String?
+}
+
 extension NetTarget {
     
     //MARK: - request
@@ -29,13 +34,21 @@ extension NetTarget {
             case let .success(response):
                 
                 do {
-                    //如果数据返回成功则直接将结果转为JSON
                     _ = try response.filterSuccessfulStatusCodes()
-//                    let json = try response.mapJSON()
+                    let json = try response.mapString()
+                    
+                    if let result: ResultModel =  ResultModel.deserialize(from: json),
+                        let msg = result.msg {
+                        HUD.showInfo(msg)
+                        errorCallback(result.code ?? 0)
+                        return
+                    }
+                    
                     successCallback(response)
                 }
                 catch let error {
                     //如果数据获取失败，则返回错误状态码
+                    HUD.showInfo("请求错误")
                     errorCallback((error as! MoyaError).response!.statusCode)
                 }
             case let .failure(error):
@@ -45,6 +58,7 @@ extension NetTarget {
                 //      failureCallback)
                 //}
                 //else {
+                HUD.showInfo("网络错误")
                 failureCallback(error)
                 //}
             }
@@ -54,7 +68,7 @@ extension NetTarget {
     //MARK: - result - model
     static func modelResultRequest<T: HandyJSON>(_ target:Self,
                                            _ type: T.Type,
-                                           atKeyPath keyPath: String = "",
+                                           atKeyPath keyPath: String = "data",
                                            successHandler: @escaping (T?) -> Void,
                                            errorHandler: @escaping (Int) -> Void)
     {
@@ -74,7 +88,7 @@ extension NetTarget {
     //MARK: - result - array
     static func arrayResultRequest<T: HandyJSON>(_ target:Self,
                                            _ type: [T].Type,
-                                           atKeyPath keyPath: String = "",
+                                           atKeyPath keyPath: String = "data",
                                            successHandler: @escaping ([T]?) -> Void,
                                            errorHandler: @escaping (Int) -> Void) {
         self.request(target, success: { (response) in
@@ -103,6 +117,5 @@ extension NetTarget {
             //网络问题
         })
     }
-    
     
 }
