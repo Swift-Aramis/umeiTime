@@ -16,62 +16,6 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.color` struct is generated, and contains static references to 0 colors.
-  struct color {
-    fileprivate init() {}
-  }
-  
-  /// This `R.file` struct is generated, and contains static references to 5 files.
-  struct file {
-    /// Resource file `test.png`.
-    static let testPng = Rswift.FileResource(bundle: R.hostingBundle, name: "test", pathExtension: "png")
-    /// Resource file `宽细图片.jpg`.
-    static let 宽细图片Jpg = Rswift.FileResource(bundle: R.hostingBundle, name: "宽细图片", pathExtension: "jpg")
-    /// Resource file `电脑横屏图片.png`.
-    static let 电脑横屏图片Png = Rswift.FileResource(bundle: R.hostingBundle, name: "电脑横屏图片", pathExtension: "png")
-    /// Resource file `窄长图片.jpg`.
-    static let 窄长图片Jpg = Rswift.FileResource(bundle: R.hostingBundle, name: "窄长图片", pathExtension: "jpg")
-    /// Resource file `竖屏图片.png`.
-    static let 竖屏图片Png = Rswift.FileResource(bundle: R.hostingBundle, name: "竖屏图片", pathExtension: "png")
-    
-    /// `bundle.url(forResource: "test", withExtension: "png")`
-    static func testPng(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.testPng
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-    
-    /// `bundle.url(forResource: "宽细图片", withExtension: "jpg")`
-    static func 宽细图片Jpg(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.宽细图片Jpg
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-    
-    /// `bundle.url(forResource: "电脑横屏图片", withExtension: "png")`
-    static func 电脑横屏图片Png(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.电脑横屏图片Png
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-    
-    /// `bundle.url(forResource: "窄长图片", withExtension: "jpg")`
-    static func 窄长图片Jpg(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.窄长图片Jpg
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-    
-    /// `bundle.url(forResource: "竖屏图片", withExtension: "png")`
-    static func 竖屏图片Png(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.竖屏图片Png
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-    
-    fileprivate init() {}
-  }
-  
-  /// This `R.font` struct is generated, and contains static references to 0 fonts.
-  struct font {
-    fileprivate init() {}
-  }
-  
   /// This `R.image` struct is generated, and contains static references to 40 images.
   struct image {
     /// Image `comment_placeholder`.
@@ -358,7 +302,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 18 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 17 nibs.
   struct nib {
     /// Nib `HomeArticleCell`.
     static let homeArticleCell = _R.nib._HomeArticleCell()
@@ -392,111 +336,179 @@ struct R: Rswift.Validatable {
     static let musicContentView = _R.nib._MusicContentView()
     /// Nib `ProfileView`.
     static let profileView = _R.nib._ProfileView()
-    /// Nib `SearchResultController`.
-    static let searchResultController = _R.nib._SearchResultController()
     /// Nib `UserListCell`.
     static let userListCell = _R.nib._UserListCell()
     
     /// `UINib(name: "HomeArticleCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.homeArticleCell) instead")
     static func homeArticleCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.homeArticleCell)
     }
     
     /// `UINib(name: "HomeClassCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.homeClassCell) instead")
     static func homeClassCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.homeClassCell)
     }
     
     /// `UINib(name: "HomeClassController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.homeClassController) instead")
     static func homeClassController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.homeClassController)
     }
     
     /// `UINib(name: "HomeListController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.homeListController) instead")
     static func homeListController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.homeListController)
     }
     
     /// `UINib(name: "HomePicCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.homePicCell) instead")
     static func homePicCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.homePicCell)
     }
     
     /// `UINib(name: "MCommentCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.mCommentCell) instead")
     static func mCommentCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mCommentCell)
     }
     
     /// `UINib(name: "MGroupCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.mGroupCell) instead")
     static func mGroupCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mGroupCell)
     }
     
     /// `UINib(name: "MGroupCollectionCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.mGroupCollectionCell) instead")
     static func mGroupCollectionCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mGroupCollectionCell)
     }
     
     /// `UINib(name: "MGroupInfoHeaderView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.mGroupInfoHeaderView) instead")
     static func mGroupInfoHeaderView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mGroupInfoHeaderView)
     }
     
     /// `UINib(name: "MessageController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.messageController) instead")
     static func messageController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.messageController)
     }
     
     /// `UINib(name: "MineController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.mineController) instead")
     static func mineController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mineController)
     }
     
     /// `UINib(name: "MineHeaderView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.mineHeaderView) instead")
     static func mineHeaderView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mineHeaderView)
     }
     
     /// `UINib(name: "MsgListCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.msgListCell) instead")
     static func msgListCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.msgListCell)
     }
     
     /// `UINib(name: "MurmurCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.murmurCell) instead")
     static func murmurCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.murmurCell)
     }
     
     /// `UINib(name: "MusicContentView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.musicContentView) instead")
     static func musicContentView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.musicContentView)
     }
     
     /// `UINib(name: "ProfileView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.profileView) instead")
     static func profileView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.profileView)
     }
     
-    /// `UINib(name: "SearchResultController", in: bundle)`
-    static func searchResultController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.searchResultController)
-    }
-    
     /// `UINib(name: "UserListCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.userListCell) instead")
     static func userListCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.userListCell)
     }
     
-    fileprivate init() {}
-  }
-  
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
-  struct reuseIdentifier {
-    fileprivate init() {}
-  }
-  
-  /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
-  struct segue {
+    static func homeArticleCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomeArticleCell? {
+      return R.nib.homeArticleCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeArticleCell
+    }
+    
+    static func homeClassCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomeClassCell? {
+      return R.nib.homeClassCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeClassCell
+    }
+    
+    static func homeClassController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.homeClassController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+    
+    static func homeListController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.homeListController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+    
+    static func homePicCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomePicCell? {
+      return R.nib.homePicCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomePicCell
+    }
+    
+    static func mCommentCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MCommentCell? {
+      return R.nib.mCommentCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MCommentCell
+    }
+    
+    static func mGroupCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MGroupCell? {
+      return R.nib.mGroupCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MGroupCell
+    }
+    
+    static func mGroupCollectionCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MGroupCollectionCell? {
+      return R.nib.mGroupCollectionCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MGroupCollectionCell
+    }
+    
+    static func mGroupInfoHeaderView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MGroupInfoHeaderView? {
+      return R.nib.mGroupInfoHeaderView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MGroupInfoHeaderView
+    }
+    
+    static func messageController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.messageController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+    
+    static func mineController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.mineController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+    
+    static func mineHeaderView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MineHeaderView? {
+      return R.nib.mineHeaderView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MineHeaderView
+    }
+    
+    static func msgListCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MsgListCell? {
+      return R.nib.msgListCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MsgListCell
+    }
+    
+    static func murmurCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MurmurCell? {
+      return R.nib.murmurCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MurmurCell
+    }
+    
+    static func musicContentView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MusicContentView? {
+      return R.nib.musicContentView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MusicContentView
+    }
+    
+    static func profileView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ProfileView? {
+      return R.nib.profileView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProfileView
+    }
+    
+    static func userListCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UserListCell? {
+      return R.nib.userListCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UserListCell
+    }
+    
     fileprivate init() {}
   }
   
@@ -520,11 +532,6 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 0 localization tables.
-  struct string {
-    fileprivate init() {}
-  }
-  
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -540,29 +547,32 @@ struct R: Rswift.Validatable {
 
 struct _R: Rswift.Validatable {
   static func validate() throws {
+    try storyboard.validate()
     try nib.validate()
   }
   
   struct nib: Rswift.Validatable {
     static func validate() throws {
-      try _HomePicCell.validate()
-      try _ProfileView.validate()
       try _HomeArticleCell.validate()
+      try _HomePicCell.validate()
       try _MGroupInfoHeaderView.validate()
       try _MurmurCell.validate()
       try _MusicContentView.validate()
+      try _ProfileView.validate()
     }
     
     struct _HomeArticleCell: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "HomeArticleCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HomeArticleCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? HomeArticleCell
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomeArticleCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeArticleCell
       }
       
       static func validate() throws {
         if UIKit.UIImage(named: "mur_icon_look", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_look' is used in nib 'HomeArticleCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+        }
       }
       
       fileprivate init() {}
@@ -572,8 +582,8 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "HomeClassCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HomeClassCell? {
-        return instantiate(withOwner: ownerOrNil, options: (optionsOrNil as! [UINib.OptionsKey : Any]))[0] as? HomeClassCell
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomeClassCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeClassCell
       }
       
       fileprivate init() {}
@@ -583,8 +593,8 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "HomeClassController"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? UIKit.UIView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
       
       fileprivate init() {}
@@ -594,8 +604,8 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "HomeListController"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? UIKit.UIView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
       
       fileprivate init() {}
@@ -605,12 +615,14 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "HomePicCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HomePicCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? HomePicCell
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomePicCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomePicCell
       }
       
       static func validate() throws {
         if UIKit.UIImage(named: "icon_look", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_look' is used in nib 'HomePicCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+        }
       }
       
       fileprivate init() {}
@@ -620,8 +632,8 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "MCommentCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MCommentCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MCommentCell
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MCommentCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MCommentCell
       }
       
       fileprivate init() {}
@@ -631,8 +643,8 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "MGroupCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MGroupCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MGroupCell
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MGroupCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MGroupCell
       }
       
       fileprivate init() {}
@@ -642,8 +654,8 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "MGroupCollectionCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MGroupCollectionCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MGroupCollectionCell
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MGroupCollectionCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MGroupCollectionCell
       }
       
       fileprivate init() {}
@@ -653,12 +665,14 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "MGroupInfoHeaderView"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MGroupInfoHeaderView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MGroupInfoHeaderView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MGroupInfoHeaderView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MGroupInfoHeaderView
       }
       
       static func validate() throws {
         if UIKit.UIImage(named: "test.png", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'test.png' is used in nib 'MGroupInfoHeaderView', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+        }
       }
       
       fileprivate init() {}
@@ -668,8 +682,8 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "MessageController"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? UIKit.UIView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
       
       fileprivate init() {}
@@ -679,8 +693,8 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "MineController"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? UIKit.UIView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
       
       fileprivate init() {}
@@ -690,8 +704,8 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "MineHeaderView"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MineHeaderView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MineHeaderView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MineHeaderView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MineHeaderView
       }
       
       fileprivate init() {}
@@ -701,8 +715,8 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "MsgListCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MsgListCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MsgListCell
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MsgListCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MsgListCell
       }
       
       fileprivate init() {}
@@ -712,15 +726,17 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "MurmurCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MurmurCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MurmurCell
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MurmurCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MurmurCell
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "mur_icon_like", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_like' is used in nib 'MurmurCell', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "mur_icon_look", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_look' is used in nib 'MurmurCell', but couldn't be loaded.") }
         if UIKit.UIImage(named: "mur_arrow_down", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_arrow_down' is used in nib 'MurmurCell', but couldn't be loaded.") }
         if UIKit.UIImage(named: "mur_icon_comment", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_comment' is used in nib 'MurmurCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "mur_icon_like", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_like' is used in nib 'MurmurCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "mur_icon_look", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_look' is used in nib 'MurmurCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+        }
       }
       
       fileprivate init() {}
@@ -730,12 +746,14 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "MusicContentView"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MusicContentView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? MusicContentView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MusicContentView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MusicContentView
       }
       
       static func validate() throws {
         if UIKit.UIImage(named: "mur_icon_pause", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mur_icon_pause' is used in nib 'MusicContentView', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+        }
       }
       
       fileprivate init() {}
@@ -745,23 +763,14 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "ProfileView"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ProfileView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? ProfileView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ProfileView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProfileView
       }
       
       static func validate() throws {
         if UIKit.UIImage(named: "test.png", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'test.png' is used in nib 'ProfileView', but couldn't be loaded.") }
-      }
-      
-      fileprivate init() {}
-    }
-    
-    struct _SearchResultController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "SearchResultController"
-      
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? UIKit.UIView
+        if #available(iOS 11.0, *) {
+        }
       }
       
       fileprivate init() {}
@@ -771,8 +780,8 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "UserListCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UserListCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil as? [UINib.OptionsKey : Any])[0] as? UserListCell
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UserListCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UserListCell
       }
       
       fileprivate init() {}
@@ -781,21 +790,36 @@ struct _R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  struct storyboard {
-    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
+  struct storyboard: Rswift.Validatable {
+    static func validate() throws {
+      try launchScreen.validate()
+      try main.validate()
+    }
+    
+    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UIKit.UIViewController
       
       let bundle = R.hostingBundle
       let name = "LaunchScreen"
       
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+        }
+      }
+      
       fileprivate init() {}
     }
     
-    struct main: Rswift.StoryboardResourceWithInitialControllerType {
+    struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = ViewController
       
       let bundle = R.hostingBundle
       let name = "Main"
+      
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+        }
+      }
       
       fileprivate init() {}
     }

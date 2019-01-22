@@ -21,7 +21,7 @@ class UserListController: BaseTableViewController {
     
     override func setupTableView() {
         tableView.rowHeight = 70
-        tableView.register(R.nib.userListCell(), forCellReuseIdentifier: R.nib.userListCell.name)
+        tableView.register(UINib(resource: R.nib.userListCell), forCellReuseIdentifier: R.nib.userListCell.name)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
