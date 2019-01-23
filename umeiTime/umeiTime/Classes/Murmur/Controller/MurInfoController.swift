@@ -17,8 +17,8 @@ class MurInfoController: BaseTableViewController {
 
     override func setupTableView() {
         tableView.estimatedRowHeight = 180
-        tableView.register(R.nib.murmurCell(), forCellReuseIdentifier: R.nib.murmurCell.name)
-        tableView.register(R.nib.mCommentCell(), forCellReuseIdentifier: R.nib.mCommentCell.name)
+        tableView.register(UINib(resource: R.nib.murmurCell), forCellReuseIdentifier: R.nib.murmurCell.name)
+        tableView.register(UINib(resource: R.nib.mCommentCell), forCellReuseIdentifier: R.nib.mCommentCell.name)
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     

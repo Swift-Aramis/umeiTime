@@ -30,7 +30,7 @@ class MGroupCollectionController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.backgroundColor = UIColor.white
-        self.collectionView!.register(R.nib.mGroupCollectionCell(), forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(UINib(resource: R.nib.mGroupCollectionCell), forCellWithReuseIdentifier: reuseIdentifier)
     }
 
     // MARK: UICollectionViewDataSource

@@ -16,7 +16,7 @@ class MsgListController: BaseTableViewController {
     
     override func setupTableView() {
         tableView.rowHeight = 110
-        tableView.register(R.nib.msgListCell(), forCellReuseIdentifier: R.nib.msgListCell.name)
+        tableView.register(UINib(resource: R.nib.msgListCell), forCellReuseIdentifier: R.nib.msgListCell.name)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -33,7 +33,7 @@ class MListController: BaseTableViewController {
 //        }
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 180
-        tableView.register(R.nib.murmurCell(), forCellReuseIdentifier: R.nib.murmurCell.name)
+        tableView.register(UINib(resource: R.nib.murmurCell), forCellReuseIdentifier: R.nib.murmurCell.name)
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

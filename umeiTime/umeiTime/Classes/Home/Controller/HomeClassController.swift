@@ -22,7 +22,7 @@ class HomeClassController: BaseController {
 extension HomeClassController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private func setupCollectionView() {
-        collectionView.register(R.nib.homeClassCell(), forCellWithReuseIdentifier: R.nib.homeClassCell.name)
+        collectionView.register(UINib(resource: R.nib.homeClassCell), forCellWithReuseIdentifier: R.nib.homeClassCell.name)
     }
     
     // MARK: - UICollectionViewDataSource

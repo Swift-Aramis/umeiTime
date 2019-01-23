@@ -38,11 +38,11 @@ extension HomeListController: UITableViewDelegate, UITableViewDataSource {
         switch listType {
         case .article:
             tableView.rowHeight = 255
-            tableView.register(R.nib.homeArticleCell(), forCellReuseIdentifier: R.nib.homeArticleCell.name)
+            tableView.register(UINib(resource: R.nib.homeArticleCell), forCellReuseIdentifier: R.nib.homeArticleCell.name)
             
         case .pic:
             tableView.rowHeight = 150
-            tableView.register(R.nib.homePicCell(), forCellReuseIdentifier: R.nib.homePicCell.name)
+            tableView.register(UINib(resource: R.nib.homePicCell), forCellReuseIdentifier: R.nib.homePicCell.name)
         }
     }
     

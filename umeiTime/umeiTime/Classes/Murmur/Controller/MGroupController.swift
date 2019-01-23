@@ -20,7 +20,7 @@ class MGroupController: BaseTableViewController {
     
     override func setupTableView() {
         tableView.rowHeight = 80
-        tableView.register(R.nib.mGroupCell(), forCellReuseIdentifier: R.nib.mGroupCell.name)
+        tableView.register(UINib(resource: R.nib.mGroupCell), forCellReuseIdentifier: R.nib.mGroupCell.name)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

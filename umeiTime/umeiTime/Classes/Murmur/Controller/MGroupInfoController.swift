@@ -58,7 +58,7 @@ class MGroupInfoController: BaseTableViewController {
         tableView.tableHeaderView = MGroupSignView(text: "记录生活的点滴，留住最美好的回忆。")
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 180
-        tableView.register(R.nib.murmurCell(), forCellReuseIdentifier: R.nib.murmurCell.name)
+        tableView.register(UINib(resource: R.nib.murmurCell), forCellReuseIdentifier: R.nib.murmurCell.name)
     }
     
     private func setupHeaderView() {
