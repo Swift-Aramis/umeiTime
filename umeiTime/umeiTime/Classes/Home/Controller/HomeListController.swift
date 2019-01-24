@@ -17,6 +17,8 @@ class HomeListController: BaseController {
 
     @IBOutlet weak var tableView: UITableView!
     var listType: HomeListType = .article
+    var page = 1
+    var dataSource: [ArticleListModel]?
     
     convenience init(type: HomeListType) {
         self.init()
@@ -26,8 +28,61 @@ class HomeListController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        view.backgroundColor = UIColor.green
+        setupRefresh()
     }
+    
+    private func setupRefresh() {
+        //添加下拉刷新和上拉加载
+        tableView.addPullToRefreshWithAction({
+            OperationQueue().addOperation {
+                sleep(4)
+                OperationQueue.main.addOperation {
+                    self.tableView.stopPullToRefresh()
+                }
+            }
+        }, withAnimator: refreshAnimator)
+        
+        tableView.es.addInfiniteScrolling {
+            
+        }
+    }
+    
+    private func reloadListData() {
+        page = 1
+        loadListData()
+    }
+    
+    private func loadMoreListData() {
+        page += 1
+        loadListData()
+    }
+    
+    private func loadListData() {
+        var articleType: UMArticleType = .article
+        if listType == .pic {
+            articleType = .picture
+        }
+        ArticleApi.arrayResultRequest(.allList(which: articleType, page: page), [ArticleListModel].self, successHandler: { [weak self] (data) in
+            //停止刷新
+            //停止加载
+            self?.tableView.stopPullToRefresh()
+            self?.tableView.es.stopLoadingMore()
+            guard let data = data else {
+                // 1 - kong - 代理
+
+                // 2 - 没有更多数据
+                self?.tableView.es.noticeNoMoreData()
+                return
+            }
+            
+            if self?.page == 1 {
+                self?.dataSource = data
+            } else {
+//                self?.dataSource?.append(contentsOf: data ?? [])
+            }
+        }, errorHandler: {_ in })
+    }
+    
     
 }
 
@@ -80,6 +135,14 @@ extension HomeListController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

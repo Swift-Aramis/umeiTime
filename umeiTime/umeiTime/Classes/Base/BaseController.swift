@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import FNMatchPull
+import ESPullToRefresh
 
 class BaseController: UIViewController {
-
+    
+    let refreshAnimator: FNMatchPullAnimator = {
+        let matchAnimator = FNMatchPullAnimator(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 80))
+        matchAnimator.text = "UME"
+        matchAnimator.style = .text
+        matchAnimator.lineWidth = 1.5
+        return matchAnimator
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white

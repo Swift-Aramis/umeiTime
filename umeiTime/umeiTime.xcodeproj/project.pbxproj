@@ -45,6 +45,7 @@
 		B83FDF0821F81774007027E4 /* ArticleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83FDF0721F81774007027E4 /* ArticleApi.swift */; };
 		B83FDF0A21F83323007027E4 /* MurApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83FDF0921F83323007027E4 /* MurApi.swift */; };
 		B83FDF0C21F850B5007027E4 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83FDF0B21F850B5007027E4 /* UserApi.swift */; };
+		B83FDF0E21F86887007027E4 /* ArticleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83FDF0D21F86887007027E4 /* ArticleListModel.swift */; };
 		B885D2562174671E00DFB681 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B885D2552174671E00DFB681 /* EditProfileController.swift */; };
 		B8951674215DF9D500F459CB /* GlobalAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8951673215DF9D500F459CB /* GlobalAppearance.swift */; };
 		B8951676215DF9F700F459CB /* GlobalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8951675215DF9F700F459CB /* GlobalService.swift */; };
@@ -150,6 +151,7 @@
 		B83FDF0721F81774007027E4 /* ArticleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleApi.swift; sourceTree = "<group>"; };
 		B83FDF0921F83323007027E4 /* MurApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurApi.swift; sourceTree = "<group>"; };
 		B83FDF0B21F850B5007027E4 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		B83FDF0D21F86887007027E4 /* ArticleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListModel.swift; sourceTree = "<group>"; };
 		B885D2552174671E00DFB681 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		B8951673215DF9D500F459CB /* GlobalAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAppearance.swift; sourceTree = "<group>"; };
 		B8951675215DF9F700F459CB /* GlobalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalService.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 		B895166D215DC8B000F459CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B83FDF0D21F86887007027E4 /* ArticleListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -823,7 +826,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -840,6 +843,7 @@
 				"${BUILT_PRODUCTS_DIR}/Closures/Closures.framework",
 				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/FNMatchPull/FNMatchPull.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/JXPhotoBrowser/JXPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -847,6 +851,7 @@
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 				"${BUILT_PRODUCTS_DIR}/ZKProgressHUD/ZKProgressHUD.framework",
 			);
@@ -856,6 +861,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Closures.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FNMatchPull.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -863,6 +869,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZKProgressHUD.framework",
 			);
@@ -920,6 +927,7 @@
 				B81862A621E3259E006C59AC /* R.generated.swift in Sources */,
 				B895167F215E00E300F459CB /* FontExtensions.swift in Sources */,
 				B8D20271217DC6D10042BA85 /* PhotoBrowserConfig.swift in Sources */,
+				B83FDF0E21F86887007027E4 /* ArticleListModel.swift in Sources */,
 				B8C74FE0216F1E8A001C27F0 /* MGroupController.swift in Sources */,
 				B83A27332175DCAD00D25391 /* MGroupInfoController.swift in Sources */,
 				B8AC3347216B55580049A626 /* MineHeaderView.swift in Sources */,

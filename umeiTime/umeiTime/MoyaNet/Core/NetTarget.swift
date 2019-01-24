@@ -38,9 +38,3 @@ extension NetTarget {
         return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
     }
 }
-
-extension NetTarget {
-    static func provider() -> MoyaProvider<Self> {
-        return NetWrapper.provider()
-    }
-}

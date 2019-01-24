@@ -23,6 +23,10 @@ struct ResultModel: HandyJSON {
 
 extension NetTarget {
     
+    static func provider() -> MoyaProvider<Self> {
+        return NetWrapper.provider()
+    }
+    
     //MARK: - request
     static func request(_ target: Self,
                         success successCallback: @escaping (Response) -> Void,

@@ -1,15 +1,15 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
-#inhibit_all_warnings!
+inhibit_all_warnings!
 
 target 'umeiTime' do
   
   use_frameworks!
-  # Pods for umeiTime
-
+  ## Swift
   pod 'Moya'
   pod 'R.swift'
   pod 'ESPullToRefresh'
+  pod 'FNMatchPull'
   pod 'SnapKit'
   pod 'HandyJSON'
   pod 'Kingfisher'
@@ -17,30 +17,23 @@ target 'umeiTime' do
   pod 'Closures'
   pod 'JXPhotoBrowser'
   pod 'ZKProgressHUD'
+  
+  ## OC
+  pod 'TZImagePickerController'
 
   # 友盟基础库
   pod 'UMCCommon'
   pod 'UMCSecurityPlugins'
-  
   # 统计 SDK
   pod 'UMCAnalytics'
-  
   # U-Share SDK UI模块（分享面板，建议添加）
   pod 'UMCShare/UI'
-  
   # 集成微信(精简版0.2M)
   pod 'UMCShare/Social/ReducedWeChat'
-  # 集成微信(完整版14.4M)
-#  pod 'UMCShare/Social/WeChat'
-  
   # 集成QQ/QZone/TIM(精简版0.5M)
   pod 'UMCShare/Social/ReducedQQ'
-  # 集成QQ/QZone/TIM(完整版7.6M)
-#  pod 'UMCShare/Social/QQ'
-
   # 集成新浪微博(精简版1M)
   pod 'UMCShare/Social/ReducedSina'
-  # 集成新浪微博(完整版25.3M)
-#  pod 'UMCShare/Social/Sina'
+  
 
 end
