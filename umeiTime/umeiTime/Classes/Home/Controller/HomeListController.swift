@@ -8,9 +8,8 @@
 
 import UIKit
 
-enum HomeListType {
-    case article
-    case pic
+enum HomeListType: Int {
+    case article, pic
 }
 
 class HomeListController: BaseController {
@@ -33,15 +32,8 @@ class HomeListController: BaseController {
     }
     
     private func setupRefresh() {
-        //添加下拉刷新和上拉加载
         tableView.addPullToRefreshWithAction({ [weak self] in
             self?.reloadListData()
-//            OperationQueue().addOperation {
-//                sleep(4)
-//                OperationQueue.main.addOperation {
-//                    self.tableView.stopPullToRefresh()
-//                }
-//            }
         }, withAnimator: refreshAnimator)
         
         tableView.es.addInfiniteScrolling { [weak self] in
@@ -72,17 +64,20 @@ class HomeListController: BaseController {
                 return
             }
             
-            DispatchQueue.global().async {
-                if self?.page == 1 {
-                    self?.dataSource = data
-                } else {
-                    self?.dataSource.append(contentsOf: data)
-                }
-                
-                DispatchQueue.main.async {
-                     self?.tableView.reloadData()
-                }
+            if self?.page == 1 {
+                self?.dataSource = data
+            } else {
+                self?.dataSource.append(contentsOf: data)
             }
+            
+            self?.tableView.reloadData()
+//            DispatchQueue.global().async {
+//
+//
+//                DispatchQueue.main.async {
+//
+//                }
+//            }
             
         }, errorHandler: { [weak self] _ in
             self?.endLoadingAnimation(self?.tableView)
@@ -115,13 +110,6 @@ extension HomeListController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
-    //1.图片变形问题
-    /**
-     图片尺寸问题
-     图片太大
-     */
-    //2.滚动卡顿问题
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

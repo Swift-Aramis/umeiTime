@@ -20,13 +20,8 @@ class HomeArticleCell: UITableViewCell {
             imgV.setImage(with: articleModel.cover)
             titleLabel.text = articleModel.title
             tagLabel.text = "#" + articleModel.author + "#"
-            lookBtn.setTitle(articleModel.likecount, for: .normal)
+            lookBtn.setTitle(articleModel.lookNum, for: .normal)
         }
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
     }
 
 }

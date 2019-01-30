@@ -16,8 +16,14 @@ struct ArticleListModel: HandyJSON {
     var createdate : String = ""
     var html : String = ""
     var likecount : String = "0"
-    var liked : Int = 0
+    var liked : Int = 0 
     var readcount : Int = 0
     var title : String = ""
     var type : String = ""
+    
+    var lookNum : String {
+        guard let like = Int(likecount) else { return String(RandomNumber.lookNum)}
+        return String(RandomNumber.lookNum + like)
+    }
+    
 }

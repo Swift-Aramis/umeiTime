@@ -35,6 +35,8 @@
 		B83A273A2175E30900D25391 /* MurmurCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A27382175E30900D25391 /* MurmurCell.swift */; };
 		B83A273B2175E30900D25391 /* MurmurCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83A27392175E30900D25391 /* MurmurCell.xib */; };
 		B83A273D2176D30E00D25391 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = B83A273C2176D30D00D25391 /* test.png */; };
+		B83BDAD522018BDF00CF4DB0 /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BDAD422018BDF00CF4DB0 /* RandomNumber.swift */; };
+		B83BDAD722019CB500CF4DB0 /* ArticleClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BDAD622019CB500CF4DB0 /* ArticleClassModel.swift */; };
 		B83EC6012179A79B001DA128 /* PicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83EC6002179A79B001DA128 /* PicContentView.swift */; };
 		B83EC6032179A7B6001DA128 /* MusicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83EC6022179A7B6001DA128 /* MusicContentView.swift */; };
 		B83EC6072179A85C001DA128 /* MusicContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83EC6062179A85C001DA128 /* MusicContentView.xib */; };
@@ -141,6 +143,8 @@
 		B83A27382175E30900D25391 /* MurmurCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurmurCell.swift; sourceTree = "<group>"; };
 		B83A27392175E30900D25391 /* MurmurCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MurmurCell.xib; sourceTree = "<group>"; };
 		B83A273C2176D30D00D25391 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		B83BDAD422018BDF00CF4DB0 /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
+		B83BDAD622019CB500CF4DB0 /* ArticleClassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleClassModel.swift; sourceTree = "<group>"; };
 		B83EC6002179A79B001DA128 /* PicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicContentView.swift; sourceTree = "<group>"; };
 		B83EC6022179A7B6001DA128 /* MusicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicContentView.swift; sourceTree = "<group>"; };
 		B83EC6062179A85C001DA128 /* MusicContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicContentView.xib; sourceTree = "<group>"; };
@@ -294,6 +298,14 @@
 			path = umeiTime/Libs;
 			sourceTree = SOURCE_ROOT;
 		};
+		B83BDAD022018BA700CF4DB0 /* Othters */ = {
+			isa = PBXGroup;
+			children = (
+				B83BDAD422018BDF00CF4DB0 /* RandomNumber.swift */,
+			);
+			path = Othters;
+			sourceTree = "<group>";
+		};
 		B8951663215DC8B000F459CB /* Murmur */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				B83FDF0D21F86887007027E4 /* ArticleListModel.swift */,
+				B83BDAD622019CB500CF4DB0 /* ArticleClassModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -524,6 +537,7 @@
 		B8CA9A61215CE26300906E35 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B83BDAD022018BA700CF4DB0 /* Othters */,
 				B8F84BCA21F70D7200272681 /* HUD */,
 				B8D2026F217DC4C00042BA85 /* PhotoBrowser */,
 				B8D3AB9C2160C41A00D059B7 /* ScrollPageView */,
@@ -851,6 +865,7 @@
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 				"${BUILT_PRODUCTS_DIR}/ZKProgressHUD/ZKProgressHUD.framework",
@@ -869,6 +884,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZKProgressHUD.framework",
@@ -885,6 +901,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83BDAD522018BDF00CF4DB0 /* RandomNumber.swift in Sources */,
 				B806DE5D217EF0E700B298D2 /* PhotoBrowser.swift in Sources */,
 				B8E55581215F845F00D695B0 /* RootTabBarController.swift in Sources */,
 				B8F84BC921F7058F00272681 /* LoginApi.swift in Sources */,
@@ -919,6 +936,7 @@
 				B8CA9A7B215D0E8200906E35 /* BaseNavController.swift in Sources */,
 				B8C8EBFA2186E5EE00518DB6 /* MCommentCell.swift in Sources */,
 				B8CE8CDD2186B96C0089ECA8 /* MsgListCell.swift in Sources */,
+				B83BDAD722019CB500CF4DB0 /* ArticleClassModel.swift in Sources */,
 				B83A272D2175CCD500D25391 /* MGroupCollectionController.swift in Sources */,
 				B8DB33F3213FC50400C78101 /* ViewController.swift in Sources */,
 				B83FDF0C21F850B5007027E4 /* UserApi.swift in Sources */,

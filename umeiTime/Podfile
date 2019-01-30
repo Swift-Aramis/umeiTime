@@ -17,6 +17,7 @@ target 'umeiTime' do
   pod 'Closures'
   pod 'JXPhotoBrowser'
   pod 'ZKProgressHUD'
+  pod 'SwiftyJSON'
   
   ## OC
   pod 'TZImagePickerController'

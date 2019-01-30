@@ -11,12 +11,30 @@ import UIKit
 class HomeClassController: BaseController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var articleType: UMArticleType = .article
+    var dataSource = [ArticleClassModel]()
+    
+    convenience init(type: UMArticleType) {
+        self.init()
+        self.articleType = type
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "分类"
         setupCollectionView()
+        loadClassData()
     }
-
+    
+    private func loadClassData() {
+        ArticleApi.arrayResultRequest(.catalogList(uid: 1, which: articleType), [ArticleClassModel].self, successHandler: { [weak self] (data) in
+            guard let data = data else {
+                return
+            }
+            self?.dataSource = data
+            self?.collectionView.reloadData()
+        }, errorHandler: { _ in })
+    }
 }
 
 extension HomeClassController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -28,14 +46,12 @@ extension HomeClassController: UICollectionViewDelegate, UICollectionViewDataSou
     // MARK: - UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: HomeClassCell = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.homeClassCell.name, for: indexPath) as! HomeClassCell
-        
-        // Configure the cell
-        
+        cell.classModel = dataSource[indexPath.row]
         return cell
     }
     

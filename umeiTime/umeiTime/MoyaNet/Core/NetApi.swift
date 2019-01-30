@@ -9,6 +9,7 @@
 import UIKit
 import Moya
 import HandyJSON
+import SwiftyJSON
 
 enum ResultType {
     case model
@@ -40,7 +41,10 @@ extension NetTarget {
                 do {
                     _ = try response.filterSuccessfulStatusCodes()
                     let json = try response.mapString()
-                    print("返回结果 ===" + json)
+                    
+                    debugPrint("接口 === \(target.path) \n 参数 === \(target.parameters) 返回值 === ")
+                    let sJson = JSON.init(parseJSON: json)
+                    debugPrint(sJson.dictionary as Any)
                     
                     if let result: ResultModel =  ResultModel.deserialize(from: json),
                         let msg = result.msg,

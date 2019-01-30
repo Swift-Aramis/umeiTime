@@ -10,9 +10,14 @@ import UIKit
 
 class HomeClassCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var imgV: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    var classModel = ArticleClassModel() {
+        didSet {
+            imgV.setImage(with: classModel.image)
+            titleLabel.text = classModel.title
+        }
     }
-
+    
 }

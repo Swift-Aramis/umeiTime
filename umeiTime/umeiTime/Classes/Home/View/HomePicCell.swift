@@ -31,7 +31,7 @@ class HomePicCell: UITableViewCell {
             imgV.setImage(with: picModel.cover)
             titleLabel.text = picModel.title
             tagLabel.text = "#" + picModel.author + "#"
-            lookBtn.setTitle(picModel.likecount, for: .normal)
+            lookBtn.setTitle(picModel.lookNum, for: .normal)
         }
     }
 

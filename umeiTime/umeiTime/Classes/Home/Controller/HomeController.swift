@@ -10,6 +10,8 @@ import UIKit
 
 class HomeController: BaseController {
     
+    var listType: HomeListType = .article
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavItem()
@@ -30,12 +32,13 @@ extension HomeController {
         let segmentView = SegmentView(frame: CGRect(x: 0, y: 0, width: 150, height: 44), segmentStyle: SegmentStyle(), titles: titles, scrollContentView: scrollContentView)
         self.navigationItem.titleView = segmentView
         
-//        segmentView.titleButtonOnClicked = { (text, index) in
-//            scrollContentView.switchToContent(index: index)
-//        }
+        segmentView.titleButtonOnClicked = { [weak self] (text, index) in
+            self?.listType = HomeListType(rawValue: index) ?? .article
+        }
         
-        scrollContentView.contentScrollEnded = { (index) in
+        scrollContentView.contentScrollEnded = { [weak self] (index) in
             segmentView.switchToTitle(index: index)
+            self?.listType = HomeListType(rawValue: index) ?? .article
         }
     }
     
@@ -49,7 +52,12 @@ extension HomeController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_icon_class"), style: .plain, handler: { [weak self] in
             
-            self?.navigationController?.pushViewController(HomeClassController(), animated: true)
+            var articleType: UMArticleType = .article
+            if self?.listType == .pic {
+                articleType = .picture
+            }
+            let classVC = HomeClassController(type: articleType)
+            self?.navigationController?.pushViewController(classVC, animated: true)
         })
     }
 }
