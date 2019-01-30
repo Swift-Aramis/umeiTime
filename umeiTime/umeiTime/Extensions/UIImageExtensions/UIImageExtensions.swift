@@ -38,6 +38,16 @@ public extension UIImage {
         return UIImage(cgImage: image)
     }
     
+    public func scaled(toSize: CGSize) -> UIImage? {
+        let originScale = self.size.width / self.size.height
+        let toScale = toSize.width / toSize.height
+        if originScale > toScale {
+            return self.scaled(toHeight: toSize.height)
+        } else {
+            return self.scaled(toWidth: toSize.width)
+        }
+    }
+    
     /// UIImage scaled to height with respect to aspect ratio.
     ///
     /// - Parameters:

@@ -13,11 +13,9 @@ typealias HUD = ZKProgressHUD
 
 /**
 error: Cannot inherit from non-open class 'ZKProgressHUD' outside of its defining module
-class HUD: ZKProgressHUD {
-}
+
 */
 
 extension HUD {
     //FIXME: - 此处写扩展方法
 }
-

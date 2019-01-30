@@ -40,10 +40,13 @@ extension NetTarget {
                 do {
                     _ = try response.filterSuccessfulStatusCodes()
                     let json = try response.mapString()
+                    print("返回结果 ===" + json)
                     
                     if let result: ResultModel =  ResultModel.deserialize(from: json),
-                        let msg = result.msg {
-                        HUD.showInfo(msg)
+                        let msg = result.msg,
+                        let code = result.code,
+                        code != 200 {
+                        HUD.showMessage(msg)
                         errorCallback(result.code ?? 0)
                         return
                     }
@@ -52,7 +55,7 @@ extension NetTarget {
                 }
                 catch let error {
                     //如果数据获取失败，则返回错误状态码
-                    HUD.showInfo("请求错误")
+                    HUD.showMessage("请求错误")
                     errorCallback((error as! MoyaError).response!.statusCode)
                 }
             case let .failure(error):
@@ -62,7 +65,7 @@ extension NetTarget {
                 //      failureCallback)
                 //}
                 //else {
-                HUD.showInfo("网络错误")
+                HUD.showMessage("网络错误")
                 failureCallback(error)
                 //}
             }

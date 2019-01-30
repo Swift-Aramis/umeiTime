@@ -68,15 +68,15 @@ extension ArticleApi: NetTarget {
     var parameters: [String : Any] {
         switch self {
         case .allList(which: let which, page: let page):
-            return ["which": which, "page": page]
+            return ["which": which.rawValue, "page": page]
         case .commentList(aid: let aid, which: let which, page: let page):
-            return ["aid": aid, "which": which, "page": page]
+            return ["aid": aid, "which": which.rawValue, "page": page]
         case .articleContent(uid: let uid, aid: let aid, which: let which):
-            return ["uid": uid, "aid": aid, "which": which]
+            return ["uid": uid, "aid": aid, "which": which.rawValue]
         case .articleList(uid: let uid, type: let type, which: let which, page: let page):
-            return ["uid": uid, "type": type, "which": which, "page": page]
+            return ["uid": uid, "type": type, "which": which.rawValue, "page": page]
         case .catalogList(uid: let uid, which: let which):
-            return ["uid": uid, "which": which]
+            return ["uid": uid, "which": which.rawValue]
         case .pubArticle(article: let article):
             return ["article": article]
         case .pubPicArticle(article: let article):
@@ -86,13 +86,13 @@ extension ArticleApi: NetTarget {
         case .addComment(uid: let uid, comment: let comment):
             return ["uid": uid, "comment": comment]
         case .deleteComment(uid: let uid, id: let id, dataId: let dataId, which: let which):
-            return ["uid": uid, "id": id, "dataId": dataId, "which": which]
+            return ["uid": uid, "id": id, "dataId": dataId, "which": which.rawValue]
         case .searchArticle(uid: let uid, keyWord: let keyWord, which: let which, page: let page):
-            return ["uid": uid, "keyWord": keyWord, "which": which, "page": page]
+            return ["uid": uid, "keyWord": keyWord, "which": which.rawValue, "page": page]
         case .favArticle(uid: let uid, aid: let aid, which: let which, liked: let liked):
-            return ["uid": uid, "aid": aid, "which": which, "liked": liked.rawValue]
+            return ["uid": uid, "aid": aid, "which": which.rawValue, "liked": liked.rawValue]
         case .userFavedArticleList(uid: let uid, which: let which, page: let page):
-            return ["uid": uid, "which": which, "page": page]
+            return ["uid": uid, "which": which.rawValue, "page": page]
         }
     }
 }

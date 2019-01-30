@@ -20,6 +20,11 @@ class BaseController: UIViewController {
         return matchAnimator
     }()
     
+    public func endLoadingAnimation(_ scrollV: UIScrollView?) {
+        scrollV?.stopPullToRefresh()
+        scrollV?.es.stopLoadingMore()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white

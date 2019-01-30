@@ -13,6 +13,7 @@ class GlobalAppearance: NSObject {
     static func setupUIAppearance() {
         setupNavBarAppearance()
         setupTableViewAppearance()
+        setupHUD()
     }
     
     private class func setupNavBarAppearance() {
@@ -43,5 +44,10 @@ class GlobalAppearance: NSObject {
     
     private class func setupTableViewAppearance() {
         
+    }
+    
+    private class func setupHUD() {
+        HUD.setMaskStyle(.hide)
+        HUD.setAnimationShowStyle(.fade)
     }
 }

@@ -10,9 +10,23 @@ import UIKit
 
 class HomeArticleCell: UITableViewCell {
 
+    @IBOutlet weak var imgV: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var tagLabel: UILabel!
+    @IBOutlet weak var lookBtn: UIButton!
+    
+    var articleModel = ArticleListModel() {
+        didSet {
+            imgV.setImage(with: articleModel.cover)
+            titleLabel.text = articleModel.title
+            tagLabel.text = "#" + articleModel.author + "#"
+            lookBtn.setTitle(articleModel.likecount, for: .normal)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
 }

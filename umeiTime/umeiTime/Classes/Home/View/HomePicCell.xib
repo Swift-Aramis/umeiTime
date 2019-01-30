@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ll1-gE-AKa">
                         <rect key="frame" x="12" y="0.0" width="351" height="149.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qvq-eE-Oh8">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qvq-eE-Oh8">
                                 <rect key="frame" x="191" y="0.0" width="160" height="149.5"/>
                                 <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -45,10 +45,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmz-BW-ngQ">
-                                <rect key="frame" x="122" y="117.5" width="53" height="17"/>
+                                <rect key="frame" x="120" y="117.5" width="55" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="9999" image="icon_look">
+                                <state key="normal" title="9999" image="mur_icon_look">
                                     <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -85,12 +85,15 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bgView" destination="Ll1-gE-AKa" id="s5t-QC-wjh"/>
-                <outlet property="imgV" destination="qvq-eE-Oh8" id="pA1-fw-Ed5"/>
+                <outlet property="imgV" destination="qvq-eE-Oh8" id="20G-gE-lug"/>
+                <outlet property="lookBtn" destination="rmz-BW-ngQ" id="EQg-bX-ZIa"/>
+                <outlet property="tagLabel" destination="QX8-i1-fnN" id="8ON-jQ-XsN"/>
+                <outlet property="titleLabel" destination="wj0-S5-uhz" id="0Nq-yV-5Sy"/>
             </connections>
             <point key="canvasLocation" x="63.200000000000003" y="75.562218890554732"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon_look" width="17" height="13"/>
+        <image name="mur_icon_look" width="19" height="13"/>
     </resources>
 </document>

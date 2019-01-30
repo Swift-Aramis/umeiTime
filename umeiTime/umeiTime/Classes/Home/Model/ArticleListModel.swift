@@ -15,7 +15,7 @@ struct ArticleListModel: HandyJSON {
     var cover : String = ""
     var createdate : String = ""
     var html : String = ""
-    var likecount : Int = 0
+    var likecount : String = "0"
     var liked : Int = 0
     var readcount : Int = 0
     var title : String = ""
