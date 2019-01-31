@@ -9,6 +9,7 @@
 import UIKit
 
 struct ArticleListModel: HandyJSON {
+    //列表
     var aid : Int = 0
     var author : String = ""
     var commentcount : Int = 0
@@ -21,9 +22,12 @@ struct ArticleListModel: HandyJSON {
     var title : String = ""
     var type : String = ""
     
+    //详情
+    var link: String = ""
+    var content: String = ""
+    
     var lookNum : String {
-        guard let like = Int(likecount) else { return String(RandomNumber.lookNum)}
-        return String(RandomNumber.lookNum + like)
+        return String(RandomNumber.lookNum + readcount)
     }
     
 }

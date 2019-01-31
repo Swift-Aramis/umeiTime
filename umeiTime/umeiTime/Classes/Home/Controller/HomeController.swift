@@ -22,8 +22,8 @@ class HomeController: BaseController {
 
 extension HomeController {
     private func setupContentView() {
-        let controllers = [HomeListController(type: .article),
-                           HomeListController(type: .pic)]
+        let controllers = [HomeListController(listType: .article),
+                           HomeListController(listType: .pic)]
         let scrollContentViewFrame = CGRect(x: 0, y: NavBarHeight, width: view.width, height: view.height - NavBarHeight - TabBarHeight)
         let scrollContentView = ScrollContentView(frame: scrollContentViewFrame, childControllers: controllers, parentController: self)
         view.addSubview(scrollContentView)

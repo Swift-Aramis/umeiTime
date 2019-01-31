@@ -28,6 +28,7 @@ class HomeClassController: BaseController {
     
     private func loadClassData() {
         ArticleApi.arrayResultRequest(.catalogList(uid: 1, which: articleType), [ArticleClassModel].self, successHandler: { [weak self] (data) in
+            self?.endLoadingAnimation(self?.collectionView)
             guard let data = data else {
                 return
             }
@@ -41,6 +42,10 @@ extension HomeClassController: UICollectionViewDelegate, UICollectionViewDataSou
     
     private func setupCollectionView() {
         collectionView.register(UINib(resource: R.nib.homeClassCell), forCellWithReuseIdentifier: R.nib.homeClassCell.name)
+        
+        collectionView.addPullToRefreshWithAction({ [weak self] in
+            self?.loadClassData()
+        }, withAnimator: refreshAnimator)
     }
     
     // MARK: - UICollectionViewDataSource
@@ -57,7 +62,20 @@ extension HomeClassController: UICollectionViewDelegate, UICollectionViewDataSou
     
     // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let classModel = dataSource[indexPath.row]
+        switch articleType {
+        case .article:
+            let listVC = HomeListController(listType: .article, classType: classModel.type)
+            listVC.title = classModel.title
+            self.navigationController?.pushViewController(listVC, animated: true)
+        case .picture:
+            let listVC = HomeListController(listType: .pic, classType: classModel.type)
+            listVC.title = classModel.title
+            self.navigationController?.pushViewController(listVC, animated: true)
+        default:
+            let listVC = HomeListController(listType: .article, classType: classModel.type)
+            self.navigationController?.pushViewController(listVC, animated: true)
+        }
     }
     
     //MARK: - UICollectionViewDelegateFlowLayout

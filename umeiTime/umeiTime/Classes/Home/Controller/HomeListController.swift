@@ -15,13 +15,20 @@ enum HomeListType: Int {
 class HomeListController: BaseController {
 
     @IBOutlet weak var tableView: UITableView!
-    var listType: HomeListType = .article
+    var listType: HomeListType = .article //页面用
+    var articleType: UMArticleType = .article //接口用
+    var classType: String?
     var page = 1
     var dataSource = [ArticleListModel]()
     
-    convenience init(type: HomeListType) {
+    convenience init(listType: HomeListType, classType: String? = nil) {
         self.init()
-        self.listType = type
+        self.listType = listType
+        self.classType = classType
+        
+        if listType == .pic {
+            articleType = .picture
+        }
     }
     
     override func viewDidLoad() {
@@ -52,14 +59,14 @@ class HomeListController: BaseController {
     }
     
     private func loadListData() {
-        var articleType: UMArticleType = .article
-        if listType == .pic {
-            articleType = .picture
+        var target: ArticleApi = .allList(which: articleType, page: page)
+        if let classType = classType {
+            target = .articleList(uid: 1, type: classType, which: articleType, page: page)
         }
         
-        ArticleApi.arrayResultRequest(.allList(which: articleType, page: page), [ArticleListModel].self, successHandler: { [weak self] (data) in
+        ArticleApi.arrayResultRequest(target, [ArticleListModel].self, successHandler: { [weak self] (data) in
             self?.endLoadingAnimation(self?.tableView)
-            guard let data = data else {
+            guard let data = data, data.count != 0 else {
                 self?.tableView.es.noticeNoMoreData()
                 return
             }
@@ -71,19 +78,10 @@ class HomeListController: BaseController {
             }
             
             self?.tableView.reloadData()
-//            DispatchQueue.global().async {
-//
-//
-//                DispatchQueue.main.async {
-//
-//                }
-//            }
-            
-        }, errorHandler: { [weak self] _ in
-            self?.endLoadingAnimation(self?.tableView)
+            }, errorHandler: { [weak self] _ in
+                self?.endLoadingAnimation(self?.tableView)
         })
     }
-    
     
 }
 
@@ -150,7 +148,8 @@ extension HomeListController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let infoVC = ArticleInfoController(articleType: articleType, articleModel: dataSource[indexPath.section])
+        self.navigationController?.pushViewController(infoVC, animated: true)
     }
     
 }

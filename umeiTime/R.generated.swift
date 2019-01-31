@@ -302,8 +302,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 17 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 18 nibs.
   struct nib {
+    /// Nib `ArticleCommentCell`.
+    static let articleCommentCell = _R.nib._ArticleCommentCell()
     /// Nib `HomeArticleCell`.
     static let homeArticleCell = _R.nib._HomeArticleCell()
     /// Nib `HomeClassCell`.
@@ -338,6 +340,12 @@ struct R: Rswift.Validatable {
     static let profileView = _R.nib._ProfileView()
     /// Nib `UserListCell`.
     static let userListCell = _R.nib._UserListCell()
+    
+    /// `UINib(name: "ArticleCommentCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.articleCommentCell) instead")
+    static func articleCommentCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.articleCommentCell)
+    }
     
     /// `UINib(name: "HomeArticleCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.homeArticleCell) instead")
@@ -439,6 +447,10 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.userListCell) instead")
     static func userListCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.userListCell)
+    }
+    
+    static func articleCommentCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ArticleCommentCell? {
+      return R.nib.articleCommentCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ArticleCommentCell
     }
     
     static func homeArticleCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomeArticleCell? {
@@ -559,6 +571,17 @@ struct _R: Rswift.Validatable {
       try _MurmurCell.validate()
       try _MusicContentView.validate()
       try _ProfileView.validate()
+    }
+    
+    struct _ArticleCommentCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "ArticleCommentCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ArticleCommentCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ArticleCommentCell
+      }
+      
+      fileprivate init() {}
     }
     
     struct _HomeArticleCell: Rswift.NibResourceType, Rswift.Validatable {

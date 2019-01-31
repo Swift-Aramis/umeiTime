@@ -37,6 +37,15 @@
 		B83A273D2176D30E00D25391 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = B83A273C2176D30D00D25391 /* test.png */; };
 		B83BDAD522018BDF00CF4DB0 /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BDAD422018BDF00CF4DB0 /* RandomNumber.swift */; };
 		B83BDAD722019CB500CF4DB0 /* ArticleClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BDAD622019CB500CF4DB0 /* ArticleClassModel.swift */; };
+		B83CF9A32202B66600322DDA /* ArticleInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83CF9A22202B66600322DDA /* ArticleInfoController.swift */; };
+		B83CF9A52202B91100322DDA /* ArticleInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83CF9A42202B91100322DDA /* ArticleInfoHeader.swift */; };
+		B83CF9A72202C57400322DDA /* ArticleCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83CF9A62202C57400322DDA /* ArticleCommentModel.swift */; };
+		B83CF9AA2202C6E600322DDA /* ArticleCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83CF9A82202C6E600322DDA /* ArticleCommentCell.swift */; };
+		B83CF9AB2202C6E600322DDA /* ArticleCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83CF9A92202C6E600322DDA /* ArticleCommentCell.xib */; };
+		B83CF9AF2202E2CE00322DDA /* CommentV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83CF9AE2202E2CE00322DDA /* CommentV.swift */; };
+		B83CF9B12202E2D700322DDA /* CommentV.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83CF9B02202E2D700322DDA /* CommentV.xib */; };
+		B83CF9B32202E3B900322DDA /* CommentPlaceholderV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83CF9B22202E3B900322DDA /* CommentPlaceholderV.swift */; };
+		B83CF9B52202E3C500322DDA /* CommentPlaceholderV.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83CF9B42202E3C500322DDA /* CommentPlaceholderV.xib */; };
 		B83EC6012179A79B001DA128 /* PicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83EC6002179A79B001DA128 /* PicContentView.swift */; };
 		B83EC6032179A7B6001DA128 /* MusicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83EC6022179A7B6001DA128 /* MusicContentView.swift */; };
 		B83EC6072179A85C001DA128 /* MusicContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83EC6062179A85C001DA128 /* MusicContentView.xib */; };
@@ -145,6 +154,15 @@
 		B83A273C2176D30D00D25391 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		B83BDAD422018BDF00CF4DB0 /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		B83BDAD622019CB500CF4DB0 /* ArticleClassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleClassModel.swift; sourceTree = "<group>"; };
+		B83CF9A22202B66600322DDA /* ArticleInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInfoController.swift; sourceTree = "<group>"; };
+		B83CF9A42202B91100322DDA /* ArticleInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInfoHeader.swift; sourceTree = "<group>"; };
+		B83CF9A62202C57400322DDA /* ArticleCommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentModel.swift; sourceTree = "<group>"; };
+		B83CF9A82202C6E600322DDA /* ArticleCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentCell.swift; sourceTree = "<group>"; };
+		B83CF9A92202C6E600322DDA /* ArticleCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCommentCell.xib; sourceTree = "<group>"; };
+		B83CF9AE2202E2CE00322DDA /* CommentV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentV.swift; sourceTree = "<group>"; };
+		B83CF9B02202E2D700322DDA /* CommentV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentV.xib; sourceTree = "<group>"; };
+		B83CF9B22202E3B900322DDA /* CommentPlaceholderV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPlaceholderV.swift; sourceTree = "<group>"; };
+		B83CF9B42202E3C500322DDA /* CommentPlaceholderV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentPlaceholderV.xib; sourceTree = "<group>"; };
 		B83EC6002179A79B001DA128 /* PicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicContentView.swift; sourceTree = "<group>"; };
 		B83EC6022179A7B6001DA128 /* MusicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicContentView.swift; sourceTree = "<group>"; };
 		B83EC6062179A85C001DA128 /* MusicContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicContentView.xib; sourceTree = "<group>"; };
@@ -420,6 +438,7 @@
 				B8E55574215F73EB00D695B0 /* HomeController.swift */,
 				B8E55578215F741400D695B0 /* HomeListController.swift */,
 				B8E55579215F741400D695B0 /* HomeListController.xib */,
+				B83CF9A22202B66600322DDA /* ArticleInfoController.swift */,
 				B8F55A6F216739A300251559 /* HomeClassController.swift */,
 				B8F55A70216739A300251559 /* HomeClassController.xib */,
 				B8F55A772167D00E00251559 /* HomeSearchController.swift */,
@@ -433,6 +452,7 @@
 			children = (
 				B83FDF0D21F86887007027E4 /* ArticleListModel.swift */,
 				B83BDAD622019CB500CF4DB0 /* ArticleClassModel.swift */,
+				B83CF9A62202C57400322DDA /* ArticleCommentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -440,12 +460,19 @@
 		B895166E215DC8B000F459CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B83CF9A42202B91100322DDA /* ArticleInfoHeader.swift */,
 				B8155D4A21607FD500DB9987 /* HomeArticleCell.swift */,
 				B8155D4B21607FD500DB9987 /* HomeArticleCell.xib */,
 				B8155D4E21607FE800DB9987 /* HomePicCell.swift */,
 				B8155D4F21607FE800DB9987 /* HomePicCell.xib */,
 				B8F55A7321673F5D00251559 /* HomeClassCell.swift */,
 				B8F55A7421673F5D00251559 /* HomeClassCell.xib */,
+				B83CF9A82202C6E600322DDA /* ArticleCommentCell.swift */,
+				B83CF9A92202C6E600322DDA /* ArticleCommentCell.xib */,
+				B83CF9AE2202E2CE00322DDA /* CommentV.swift */,
+				B83CF9B02202E2D700322DDA /* CommentV.xib */,
+				B83CF9B22202E3B900322DDA /* CommentPlaceholderV.swift */,
+				B83CF9B42202E3C500322DDA /* CommentPlaceholderV.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -764,6 +791,7 @@
 				B8AC3349216B55620049A626 /* MineHeaderView.xib in Resources */,
 				B83EC615217D9D74001DA128 /* 宽细图片.jpg in Resources */,
 				B8C74FEE216F42DB001C27F0 /* ProfileView.xib in Resources */,
+				B83CF9B52202E3C500322DDA /* CommentPlaceholderV.xib in Resources */,
 				B8155D4D21607FD500DB9987 /* HomeArticleCell.xib in Resources */,
 				B83EC6072179A85C001DA128 /* MusicContentView.xib in Resources */,
 				B8F55A7621673F5D00251559 /* HomeClassCell.xib in Resources */,
@@ -774,6 +802,8 @@
 				B83EC60D217A3E2E001DA128 /* 竖屏图片.png in Resources */,
 				B8155D5121607FE800DB9987 /* HomePicCell.xib in Resources */,
 				B82FD7A7216063C20082F518 /* MessageController.xib in Resources */,
+				B83CF9AB2202C6E600322DDA /* ArticleCommentCell.xib in Resources */,
+				B83CF9B12202E2D700322DDA /* CommentV.xib in Resources */,
 				B83EC613217A3FDC001DA128 /* 窄长图片.jpg in Resources */,
 				B8F55A72216739A300251559 /* HomeClassController.xib in Resources */,
 				B83A273D2176D30E00D25391 /* test.png in Resources */,
@@ -909,6 +939,8 @@
 				B81C137C217491C700C6C2E9 /* UserListController.swift in Sources */,
 				B8CA9A69215CE49D00906E35 /* UIViewFrame.swift in Sources */,
 				B8F7527E2169F2CF00AB96A6 /* BaseTableViewController.swift in Sources */,
+				B83CF9AF2202E2CE00322DDA /* CommentV.swift in Sources */,
+				B83CF9A32202B66600322DDA /* ArticleInfoController.swift in Sources */,
 				B8CA9A71215CFC9B00906E35 /* UIViewAnimations.swift in Sources */,
 				B8CA9A79215D0E5600906E35 /* BaseController.swift in Sources */,
 				B83A27352175DD1D00D25391 /* MGroupInfoHeaderView.swift in Sources */,
@@ -926,7 +958,9 @@
 				B8CA9A67215CE29E00906E35 /* ScreenConst.swift in Sources */,
 				B8CA9A6F215CF39D00906E35 /* UIViewParentController.swift in Sources */,
 				B8F55A7B2167D0B900251559 /* SearchResultController.swift in Sources */,
+				B83CF9A72202C57400322DDA /* ArticleCommentModel.swift in Sources */,
 				B8AC334D216C41C30049A626 /* SystemCellModel.swift in Sources */,
+				B83CF9A52202B91100322DDA /* ArticleInfoHeader.swift in Sources */,
 				B8A3F2BB21D5F5BD007066E1 /* NetWrapper.swift in Sources */,
 				B83FDF0821F81774007027E4 /* ArticleApi.swift in Sources */,
 				B8C8EBFD2186E7F800518DB6 /* MurInfoController.swift in Sources */,
@@ -946,6 +980,7 @@
 				B895167F215E00E300F459CB /* FontExtensions.swift in Sources */,
 				B8D20271217DC6D10042BA85 /* PhotoBrowserConfig.swift in Sources */,
 				B83FDF0E21F86887007027E4 /* ArticleListModel.swift in Sources */,
+				B83CF9AA2202C6E600322DDA /* ArticleCommentCell.swift in Sources */,
 				B8C74FE0216F1E8A001C27F0 /* MGroupController.swift in Sources */,
 				B83A27332175DCAD00D25391 /* MGroupInfoController.swift in Sources */,
 				B8AC3347216B55580049A626 /* MineHeaderView.swift in Sources */,
@@ -956,6 +991,7 @@
 				B8155D492160731700DB9987 /* UIImageExtensions.swift in Sources */,
 				B8A3F2B521D5F56F007066E1 /* NetConst.swift in Sources */,
 				B806DE5B217EC7AC00B298D2 /* UIImageViewSetUrl.swift in Sources */,
+				B83CF9B32202E3B900322DDA /* CommentPlaceholderV.swift in Sources */,
 				B83EC6032179A7B6001DA128 /* MusicContentView.swift in Sources */,
 				B8CA9A6D215CF30A00906E35 /* UIViewBorderCorner.swift in Sources */,
 				B885D2562174671E00DFB681 /* EditProfileController.swift in Sources */,

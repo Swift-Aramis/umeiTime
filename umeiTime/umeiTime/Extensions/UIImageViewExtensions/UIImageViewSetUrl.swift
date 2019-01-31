@@ -16,7 +16,6 @@ extension UIImageView {
             self.backgroundColor = UIColor.groupTableViewBackground
             return
         }
-        self.backgroundColor = UIColor.clear
         
         let options: KingfisherOptionsInfo = [.transition(.fade(0.2))]
         self.kf.setImage(with: url,
@@ -25,7 +24,11 @@ extension UIImageView {
                          progressBlock: { (receivedSize, totalSize) in
             
         }, completionHandler: { (image, error, cacheType, imageURL) in
-            let img = image?.scaled(toSize: self.size)
+            
+            guard let img = image?.scaled(toSize: self.size) else {
+                return
+            }
+            self.backgroundColor = UIColor.clear
             self.image = img
         })
     }

@@ -87,10 +87,10 @@ class HomeSearchController: BaseController {
         segmentStyle.selectedTextFont = AppFont.secendTextFont.bold
         
         let titles = ["文章", "图片", "微语", "用户"]
-        let controllers = [SearchResultController(),
-                           SearchResultController(),
-                           SearchResultController(),
-                           SearchResultController()]
+        let controllers = [SearchResultController(searchType: .article),
+                           SearchResultController(searchType: .pic),
+                           SearchResultController(searchType: .mur),
+                           SearchResultController(searchType: .user)]
         
         let scrollPageV = ScrollPageView(frame: CGRect(x: 0, y: NavBarHeight, width: view.width, height: view.height - NavBarHeight), segmentStyle: segmentStyle, titles: titles, childControllers: controllers, parentController: self)
         view.addSubview(scrollPageV)
