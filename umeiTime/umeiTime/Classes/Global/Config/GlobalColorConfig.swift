@@ -20,6 +20,9 @@ struct AppColor {
     //MARK: - Blue
     static let linkBlue = Color(hexString: "#5296E8")!
     
+    //MARK: - Green
+    static let normalGreen = Color(hexString: "#70BE7F")!
+    
     //MARK: - TabbarTextColor
     static let tabbarSelectedColor = Color(hexString: "#1E1E1E")!
     static let tabbarNormalColor = Color(hexString: "#979797")!

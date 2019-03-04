@@ -71,6 +71,9 @@
 		B8AC3347216B55580049A626 /* MineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AC3346216B55580049A626 /* MineHeaderView.swift */; };
 		B8AC3349216B55620049A626 /* MineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8AC3348216B55620049A626 /* MineHeaderView.xib */; };
 		B8AC334D216C41C30049A626 /* SystemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AC334C216C41C30049A626 /* SystemCellModel.swift */; };
+		B8B87EF3221BD1DA000295B4 /* CommentInputV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B87EF2221BD1DA000295B4 /* CommentInputV.swift */; };
+		B8B87EF5221BD1E6000295B4 /* CommentInputV.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8B87EF4221BD1E6000295B4 /* CommentInputV.xib */; };
+		B8B87EF8221D0027000295B4 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B87EF7221D0026000295B4 /* UIButtonExtensions.swift */; };
 		B8C74FE0216F1E8A001C27F0 /* MGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C74FDF216F1E8A001C27F0 /* MGroupController.swift */; };
 		B8C74FE2216F1EA9001C27F0 /* MEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C74FE1216F1EA9001C27F0 /* MEditController.swift */; };
 		B8C74FE4216F1FC6001C27F0 /* MListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C74FE3216F1FC6001C27F0 /* MListController.swift */; };
@@ -188,6 +191,9 @@
 		B8AC3346216B55580049A626 /* MineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeaderView.swift; sourceTree = "<group>"; };
 		B8AC3348216B55620049A626 /* MineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHeaderView.xib; sourceTree = "<group>"; };
 		B8AC334C216C41C30049A626 /* SystemCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCellModel.swift; sourceTree = "<group>"; };
+		B8B87EF2221BD1DA000295B4 /* CommentInputV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputV.swift; sourceTree = "<group>"; };
+		B8B87EF4221BD1E6000295B4 /* CommentInputV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentInputV.xib; sourceTree = "<group>"; };
+		B8B87EF7221D0026000295B4 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		B8BD244A21E343560047D909 /* umeiTime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "umeiTime-Bridging-Header.h"; sourceTree = "<group>"; };
 		B8C74FDF216F1E8A001C27F0 /* MGroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGroupController.swift; sourceTree = "<group>"; };
 		B8C74FE1216F1EA9001C27F0 /* MEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEditController.swift; sourceTree = "<group>"; };
@@ -471,6 +477,8 @@
 				B83CF9A92202C6E600322DDA /* ArticleCommentCell.xib */,
 				B83CF9AE2202E2CE00322DDA /* CommentV.swift */,
 				B83CF9B02202E2D700322DDA /* CommentV.xib */,
+				B8B87EF2221BD1DA000295B4 /* CommentInputV.swift */,
+				B8B87EF4221BD1E6000295B4 /* CommentInputV.xib */,
 				B83CF9B22202E3B900322DDA /* CommentPlaceholderV.swift */,
 				B83CF9B42202E3C500322DDA /* CommentPlaceholderV.xib */,
 			);
@@ -561,6 +569,14 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		B8B87EF6221D0014000295B4 /* UIButtonExtentions */ = {
+			isa = PBXGroup;
+			children = (
+				B8B87EF7221D0026000295B4 /* UIButtonExtensions.swift */,
+			);
+			path = UIButtonExtentions;
+			sourceTree = "<group>";
+		};
 		B8CA9A61215CE26300906E35 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +612,7 @@
 		B8CA9A65215CE26300906E35 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B8B87EF6221D0014000295B4 /* UIButtonExtentions */,
 				B806DE59217EC74200B298D2 /* UIImageViewExtensions */,
 				B8155D47216072F000DB9987 /* UIImageExtensions */,
 				B895167D215E00CD00F459CB /* FontExtensions */,
@@ -802,6 +819,7 @@
 				B83EC60D217A3E2E001DA128 /* 竖屏图片.png in Resources */,
 				B8155D5121607FE800DB9987 /* HomePicCell.xib in Resources */,
 				B82FD7A7216063C20082F518 /* MessageController.xib in Resources */,
+				B8B87EF5221BD1E6000295B4 /* CommentInputV.xib in Resources */,
 				B83CF9AB2202C6E600322DDA /* ArticleCommentCell.xib in Resources */,
 				B83CF9B12202E2D700322DDA /* CommentV.xib in Resources */,
 				B83EC613217A3FDC001DA128 /* 窄长图片.jpg in Resources */,
@@ -994,6 +1012,7 @@
 				B83CF9B32202E3B900322DDA /* CommentPlaceholderV.swift in Sources */,
 				B83EC6032179A7B6001DA128 /* MusicContentView.swift in Sources */,
 				B8CA9A6D215CF30A00906E35 /* UIViewBorderCorner.swift in Sources */,
+				B8B87EF3221BD1DA000295B4 /* CommentInputV.swift in Sources */,
 				B885D2562174671E00DFB681 /* EditProfileController.swift in Sources */,
 				B8D3ABA22160C46900D059B7 /* ScrollContentView.swift in Sources */,
 				B8E5557A215F741400D695B0 /* HomeListController.swift in Sources */,
@@ -1003,6 +1022,7 @@
 				B8C74FEC216F42D0001C27F0 /* ProfileView.swift in Sources */,
 				B8155D5021607FE800DB9987 /* HomePicCell.swift in Sources */,
 				B82FD7AA216063D20082F518 /* MineController.swift in Sources */,
+				B8B87EF8221D0027000295B4 /* UIButtonExtensions.swift in Sources */,
 				B82FD7A2216063380082F518 /* MurMurController.swift in Sources */,
 				B8A3F2B721D5F580007066E1 /* NetTarget.swift in Sources */,
 				B8A3F2BD21D5FFF5007066E1 /* NetApi.swift in Sources */,

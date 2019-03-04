@@ -16,7 +16,7 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.image` struct is generated, and contains static references to 40 images.
+  /// This `R.image` struct is generated, and contains static references to 41 images.
   struct image {
     /// Image `comment_placeholder`.
     static let comment_placeholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "comment_placeholder")
@@ -90,6 +90,8 @@ struct R: Rswift.Validatable {
     static let tabbar_murmur_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_murmur_selected")
     /// Image `test`.
     static let test = Rswift.ImageResource(bundle: R.hostingBundle, name: "test")
+    /// Image `zanwupinglun`.
+    static let zanwupinglun = Rswift.ImageResource(bundle: R.hostingBundle, name: "zanwupinglun")
     /// Image `宽细图片.jpg`.
     static let 宽细图片Jpg = Rswift.ImageResource(bundle: R.hostingBundle, name: "宽细图片.jpg")
     /// Image `电脑横屏图片`.
@@ -279,6 +281,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.test, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "zanwupinglun", bundle: ..., traitCollection: ...)`
+    static func zanwupinglun(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.zanwupinglun, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "宽细图片.jpg", bundle: ..., traitCollection: ...)`
     static func 宽细图片Jpg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.宽细图片Jpg, compatibleWith: traitCollection)
@@ -302,10 +309,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 18 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 20 nibs.
   struct nib {
     /// Nib `ArticleCommentCell`.
     static let articleCommentCell = _R.nib._ArticleCommentCell()
+    /// Nib `CommentPlaceholderV`.
+    static let commentPlaceholderV = _R.nib._CommentPlaceholderV()
+    /// Nib `CommentV`.
+    static let commentV = _R.nib._CommentV()
     /// Nib `HomeArticleCell`.
     static let homeArticleCell = _R.nib._HomeArticleCell()
     /// Nib `HomeClassCell`.
@@ -345,6 +356,18 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.articleCommentCell) instead")
     static func articleCommentCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.articleCommentCell)
+    }
+    
+    /// `UINib(name: "CommentPlaceholderV", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.commentPlaceholderV) instead")
+    static func commentPlaceholderV(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.commentPlaceholderV)
+    }
+    
+    /// `UINib(name: "CommentV", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.commentV) instead")
+    static func commentV(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.commentV)
     }
     
     /// `UINib(name: "HomeArticleCell", in: bundle)`
@@ -451,6 +474,14 @@ struct R: Rswift.Validatable {
     
     static func articleCommentCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ArticleCommentCell? {
       return R.nib.articleCommentCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ArticleCommentCell
+    }
+    
+    static func commentPlaceholderV(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CommentPlaceholderV? {
+      return R.nib.commentPlaceholderV.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CommentPlaceholderV
+    }
+    
+    static func commentV(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CommentV? {
+      return R.nib.commentV.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CommentV
     }
     
     static func homeArticleCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomeArticleCell? {
@@ -565,6 +596,7 @@ struct _R: Rswift.Validatable {
   
   struct nib: Rswift.Validatable {
     static func validate() throws {
+      try _CommentPlaceholderV.validate()
       try _HomeArticleCell.validate()
       try _HomePicCell.validate()
       try _MGroupInfoHeaderView.validate()
@@ -579,6 +611,34 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ArticleCommentCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ArticleCommentCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _CommentPlaceholderV: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "CommentPlaceholderV"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CommentPlaceholderV? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CommentPlaceholderV
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "zanwupinglun", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'zanwupinglun' is used in nib 'CommentPlaceholderV', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+        }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _CommentV: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CommentV"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CommentV? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CommentV
       }
       
       fileprivate init() {}

@@ -24,10 +24,11 @@ extension UIImageView {
                          progressBlock: { (receivedSize, totalSize) in
             
         }, completionHandler: { (image, error, cacheType, imageURL) in
-            
+            //调整图片
             guard let img = image?.scaled(toSize: self.size) else {
                 return
             }
+            
             self.backgroundColor = UIColor.clear
             self.image = img
         })

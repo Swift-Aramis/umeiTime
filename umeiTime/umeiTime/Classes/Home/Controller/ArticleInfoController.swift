@@ -14,8 +14,9 @@ class ArticleInfoController: BaseTableViewController {
     var dataSource = [ArticleCommentModel]()
     var articleModel: ArticleListModel!
     var page = 1
-    private let placeholderV: CommentPlaceholderV = CommentPlaceholderV.loadViewFromNib() as! CommentPlaceholderV
-    
+    private lazy var placeholderV: CommentPlaceholderV = CommentPlaceholderV.loadViewFromNib() as! CommentPlaceholderV
+    private let commentV: CommentV = CommentV.loadViewFromNib() as! CommentV
+
     convenience init(articleType: UMArticleType, articleModel: ArticleListModel) {
         self.init(style: .grouped)
         self.articleType = articleType
@@ -25,9 +26,33 @@ class ArticleInfoController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = articleModel.title
-//        tableView.tableHeaderView = ArticleInfoHeader(url: articleModel.html)
+        tableView.tableHeaderView = ArticleInfoHeader(url: articleModel.html)
+        
+        setupUI()
         commentListData()
-        infoData()
+        getInfoData()
+    }
+    
+    private func setupUI() {
+        self.view.addSubview(commentV)
+        commentV.collectAction = { collected in
+            
+        }
+        commentV.shareAction = {
+            
+        }
+    }
+    
+    override func layoutTableView() {
+        commentV.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.height.equalTo(50)
+            make.bottom.equalToSuperview().offset(-SafeAreaBottomInset)
+        }
+        tableView.snp.makeConstraints { (make) in
+            make.top.left.right.equalToSuperview()
+            make.bottom.equalTo(commentV.snp.top)
+        }
     }
     
     override func setupTableView() {
@@ -42,7 +67,7 @@ class ArticleInfoController: BaseTableViewController {
         }
     }
     
-    func infoData() {
+    func getInfoData() {
         ArticleApi.modelResultRequest(.articleContent(uid: 1, aid: articleModel.aid, which: articleType), ArticleListModel.self, successHandler: { (data) in
             let model: ArticleListModel = data!
 //            print(model.content)
